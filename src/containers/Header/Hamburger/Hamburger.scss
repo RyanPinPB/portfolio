@@ -42,7 +42,7 @@
   right: 0px;
 }
 
-.hamburgertext {
+.hamburger-text {
   position: absolute;
   justify-content: space-between;
   font-family: Roboto, sans-serif;
@@ -57,7 +57,7 @@
   letter-spacing: 0.1em;
 }
 
-.menu-icon:hover .hamburgertext {
+.menu-icon:hover .hamburger-text {
   color: var(--orange);
 }
 

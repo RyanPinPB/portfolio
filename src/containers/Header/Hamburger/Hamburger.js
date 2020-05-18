@@ -5,7 +5,7 @@ const Hamburger = (props) => {
   return (
     <div className='menu-icon' onClick={props.menuClicked}>
       <div className='hamburger'></div>
-      <div className='hamburgertext'>MENU</div>
+      <div className='hamburger-text'>MENU</div>
     </div>
   );
 };

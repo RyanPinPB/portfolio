@@ -36,6 +36,7 @@ class Header extends Component {
 
     this.setState({ mobileMenuOpen: !this.state.mobileMenuOpen });
     document.querySelector('.menu-icon').classList.toggle('menu-open');
+    document.querySelector('.hamburger-text').classList.toggle('not-visible');
   };
 
   render() {
