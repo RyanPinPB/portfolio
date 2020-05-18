@@ -1,0 +1,73 @@
+#nav-bar {
+  opacity: 1;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  transition: opacity 2s linear;
+}
+
+.Menu {
+  display: flex;
+}
+
+.Menu a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 0px 20px;
+}
+
+@media (min-width: 769px) {
+  .Menu a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0px 20px;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+}
+
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.95);
+  overflow: hidden;
+  transition: 1s; // used for height/width expansion transition
+}
+
+// Position the content inside the overlay
+.overlay-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+}
+
+// The navigation links inside the overlay
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 3.5em;
+  line-height: 1em;
+  font-weight: 800;
+  color: var(--black);
+  &:hover,
+  &:focus {
+    color: var(--orange);
+  }
+}
+
+// When the height of the screen is less than 450 pixels, change the font-size of the links so they don't overlap
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+}
