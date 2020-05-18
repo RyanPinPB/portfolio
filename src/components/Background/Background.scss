@@ -1,0 +1,144 @@
+// Background Content Formatting
+#bg-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: 60px auto 40px auto;
+}
+
+.bgHeader {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+}
+
+.bgIntro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.storyChanger {
+  display: none;
+}
+
+.storyChanger img {
+  width: 50px;
+  margin: 0 auto 4px auto;
+  transition: all 0.5s;
+}
+
+.storyChanger:hover {
+  transform: scale(1.2);
+  text-decoration: underline;
+}
+
+.bgTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0px 10px;
+  color: var(--white);
+  background: -webkit-linear-gradient(right, var(--orange), var(--gold));
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  font-style: italic;
+  width: fit-content;
+}
+
+.resume {
+  display: none;
+}
+
+#bg-content p {
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+
+#bg-content p a {
+  color: var(--orange);
+  text-decoration: none;
+  &:hover {
+    color: var(--gold);
+  }
+}
+
+.bgShort {
+  flex-direction: column;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1;
+}
+
+.bgLong {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+@media (min-width: 600px) {
+  #bg-content {
+    margin: 80px auto 40px auto;
+  }
+  .storyChanger {
+    display: flex;
+    align-items: center;
+    padding-right: 5px;
+    flex-direction: column;
+    font-size: 1.2rem;
+    color: var(--white);
+    transition: 0.8s;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+
+  .resume {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+
+  .resume:hover {
+    transform: scale(1.2);
+  }
+
+  .resume a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.8s;
+    margin: 0 auto;
+    text-align: center;
+    width: 50px;
+  }
+
+  .resume img {
+    width: 50px;
+    margin: auto;
+  }
+
+  .resume a:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: 1025px) {
+  #bg-content {
+    width: 70%;
+    max-width: 1000px;
+  }
+
+  // #bg-content p {
+  //   font-size: 2rem;
+  //   line-height: 1.5;
+  // }
+}

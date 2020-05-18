@@ -1,0 +1,86 @@
+.Intro {
+  position: relative;
+  top: 40vh;
+  left: 50%;
+  text-align: center;
+  transform: translate3d(-50%, 0, 0);
+}
+
+.Intro span {
+  font-size: 2.5rem;
+  color: var(--white);
+}
+
+.Intro li {
+  font-size: 2.5rem;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  color: var(--orange);
+}
+
+.Intro ul {
+  /* visibility: hidden; */
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  height: 45vh;
+}
+
+.Intro li {
+  position: absolute;
+  list-style: none;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  line-height: 1.2;
+  background: var(--white);
+  background: -webkit-linear-gradient(
+    right,
+    var(--red),
+    var(--orange),
+    var(--gold)
+  );
+  background-clip: border-box;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Intro li.anim1 {
+  animation: cycle 15s linear infinite;
+  animation-delay: 2.8s;
+}
+
+.Intro li.anim2 {
+  animation: cycle2 15s linear infinite;
+  animation-delay: 2.8s;
+}
+
+.Intro li.anim3 {
+  animation: cycle3 15s linear infinite;
+  animation-delay: 2.8s;
+}
+
+.Intro li.anim4 {
+  animation: cycle4 15s linear infinite;
+  animation-delay: 2.8s;
+}
+
+.Intro li.anim5 {
+  animation: cycle5 15s linear infinite;
+  animation-delay: 2.8s;
+}
+
+.Intro:hover li {
+  animation-play-state: paused;
+}
+
+@media (min-width: 400px) {
+  .Intro span,
+  .Intro li {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+}

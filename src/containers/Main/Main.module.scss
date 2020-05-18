@@ -1,0 +1,10 @@
+.Main {
+  position: relative;
+  margin-top: 60px;
+}
+
+@media (min-width: 769px) {
+  .Main {
+    margin-top: 100px;
+  }
+}

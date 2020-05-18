@@ -1,0 +1,58 @@
+footer {
+  display: flex;
+  position: relative;
+  //   bottom: 0;
+  width: 100%;
+}
+
+.social-icons {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  display: flex;
+  z-index: 2;
+}
+
+.social-icons a {
+  padding: 0px 5px;
+  box-sizing: padding-box;
+  transition: padding 0.25s ease-out;
+  &:hover {
+    padding-bottom: 10px;
+  }
+}
+
+svg {
+  width: 45px;
+  cursor: pointer;
+}
+
+.instagram {
+  fill: var(--white);
+  &:hover {
+    fill: url(#ig-gradient);
+  }
+}
+
+.facebook {
+  fill: var(--white);
+  &:hover {
+    fill: rgba(65, 114, 184, 1);
+  }
+}
+
+.linkedin {
+  fill: var(--white);
+  &:hover {
+    fill: rgba(0, 119, 181, 1);
+  }
+}
+
+.twitter {
+  fill: var(--white);
+  &:hover {
+    fill: rgba(29, 161, 242, 1);
+  }
+}

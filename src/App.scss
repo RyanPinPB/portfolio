@@ -1,0 +1,362 @@
+// defining variables - delays for the bars to animate - colors
+// $transition-delay: 0.5s;
+// $transition-delay-step: 0.15s;
+$cubic: cubic-bezier(0.19, 1, 0.22, 1);
+$border-width: 2px;
+// making the box shadow white for the black background but it doesnt look good so opacity is 0
+$shadow-one: 0 4px 12px 0 rgba(255, 255, 255, 0);
+
+//   colors
+$blue: rgba(4, 153, 255, 1);
+$purple: rgba(102, 51, 255, 1);
+$orange: rgba(252, 156, 84, 1);
+$gold: rgba(255, 227, 115, 1);
+$white: rgba(255, 255, 255, 1);
+$black: rgba(0, 0, 0, 1);
+$black-zero: rgba(0, 0, 0, 0);
+$black-twenty: rgba(0, 0, 0, 0.2);
+$red: rgba(253, 94, 83, 1);
+$grey: rgba(200, 200, 200, 1);
+$grey-zero: rgba(200, 200, 200, 0);
+$grey-fifty: rgba(200, 200, 200, 0.5);
+
+//helper classes
+
+.vh100 {
+  min-height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+// #nav-bar {
+//   opacity: 0;
+//   display: inline-flex;
+//   flex-direction: row;
+//   justify-content: space-around;
+//   align-items: center;
+//   width: 100%;
+//   margin: auto;
+//   transition: opacity 2s linear;
+// }
+
+.menu-container {
+  display: flex;
+  flex-direction: row;
+}
+
+// The hamburger menu overlay
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.95);
+  overflow: hidden;
+  transition: 1s; // used for height/width expansion transition
+}
+
+// Position the content inside the overlay
+.overlay-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+}
+
+// The navigation links inside the overlay
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 3.5em;
+  line-height: 1em;
+  font-weight: 800;
+  color: $black;
+  &:hover,
+  &:focus {
+    color: $orange;
+  }
+}
+
+// When the height of the screen is less than 450 pixels, change the font-size of the links so they don't overlap
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+}
+
+.menu-icon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  z-index: 8;
+}
+
+.hamburger {
+  position: absolute;
+  background: $white;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 6px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 2px 5px $black-twenty;
+  transition: 0.8s;
+}
+
+.hamburger:before,
+.hamburger:after {
+  content: '';
+  position: absolute;
+  background: $white;
+  width: 50px;
+  height: 6px;
+  box-shadow: 0px 2px 5px $black-twenty;
+  transition: 0.8s, transform 1s cubic-bezier(0.51, -0.91, 0.24, 1.16);
+  z-index: 8;
+}
+
+.hamburger:before {
+  top: -16px;
+  right: 0px;
+}
+
+.hamburger:after {
+  top: 16px;
+  right: 0px;
+}
+
+.hamburgertext {
+  position: absolute;
+  justify-content: space-between;
+  font-family: Roboto, sans-serif;
+  font-size: 1em;
+  font-weight: 800;
+  color: $white;
+  top: 65px;
+  right: 15.5px;
+  transition: 0.8s;
+  text-align: center;
+  width: 50px;
+  letter-spacing: 0.1em;
+}
+
+.menu-icon:hover .hamburgertext {
+  color: $orange;
+}
+
+.menu-icon:hover .hamburger,
+.menu-icon:hover .hamburger:before,
+.menu-icon:hover .hamburger:after {
+  background: $orange;
+}
+
+.menu-icon.active .hamburger {
+  background: $black-zero;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0);
+}
+
+.menu-icon.active .hamburger:before {
+  transform: rotate(405deg);
+  top: 0;
+}
+
+.menu-icon.active .hamburger:after {
+  transform: rotate(-405deg);
+  top: 0;
+}
+
+.menu-items {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .menu-icon {
+    display: none;
+  }
+
+  .menu-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px auto;
+    transition: 1s;
+  }
+
+  .menu-items ul {
+    display: flex;
+  }
+
+  .menu-items li {
+    font-size: 1.75rem;
+    font-family: Roboto;
+    padding: 0px 10px;
+    transition: 1s;
+    cursor: pointer;
+  }
+
+  // Menu animation
+
+  .menuAnimation {
+    overflow: hidden;
+    position: relative;
+    // box-shadow: $shadow-one; commented out because of black background
+    &:hover {
+      box-shadow: $shadow-one;
+      transform: translateY(-2px);
+    }
+
+    // line animations apply to immediate first span
+    &:before,
+    &:after,
+    > a:before,
+    > a:after {
+      content: '';
+      position: absolute;
+      display: block;
+    }
+
+    // left and right lines
+    &:before,
+    > a:before {
+      width: $border-width;
+      height: 0;
+    }
+    // left line
+    &:before {
+      top: 0;
+      left: 0;
+      background: linear-gradient(to bottom, $gold 0%, $orange 50%, $red 100%);
+    }
+    // right line
+    > a:before {
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(to top, $gold 0%, $orange 50%, $red 100%);
+    }
+    // top and bottom lines
+    &:after,
+    > a:after {
+      height: $border-width;
+      width: 0;
+    }
+    // top line
+    &:after {
+      top: 0;
+      left: 0;
+      background: linear-gradient(to right, $gold 0%, $orange 50%, $red 100%);
+    }
+    // bottom line
+    > a:after {
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(to left, $gold 0%, $orange 50%, $red 100%);
+    }
+    // animate lines on hover
+    &:hover {
+      &:before,
+      > a:before,
+      &:after,
+      > a:after {
+        transition: $cubic 1s;
+      }
+      // left line
+      &:before {
+        animation: to-bottom $cubic 1s 0.05s forwards;
+      }
+      // right line
+      > a:before {
+        animation: to-top $cubic 1s 0.1s forwards;
+      }
+      // top line
+      &:after {
+        animation: to-right $cubic 1s 0.15s forwards;
+      }
+      // bottom line
+      > a:after {
+        animation: to-left $cubic 1s 0.2s forwards;
+      }
+    }
+    &:hover:before,
+    &:hover > a:before {
+      height: 100%;
+    }
+    &:hover:after,
+    &:hover > a:after {
+      width: 100%;
+    }
+  }
+
+  @keyframes to-bottom {
+    to {
+      transform: translateY(100%);
+    }
+  }
+  @keyframes to-top {
+    to {
+      transform: translateY(-100%);
+    }
+  }
+  @keyframes to-left {
+    to {
+      transform: translateX(-101%);
+    }
+  }
+  @keyframes to-right {
+    to {
+      transform: translateX(101%);
+    }
+  }
+
+  .menu-items a {
+    text-decoration: none;
+    color: $white;
+    font-weight: 800;
+    transition: 1s;
+  }
+
+  // adding menu hover underline
+  .underlineAnimation {
+    position: relative;
+  }
+
+  .underlineAnimation:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: -webkit-linear-gradient(right, $orange, $gold);
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+  }
+
+  .underlineAnimation:hover:after {
+    width: 100%;
+    left: 0;
+    background: -webkit-linear-gradient(right, $orange, $gold);
+  }
+
+  li a {
+    transition-duration: 1s;
+    transition-property: opacity;
+  }
+}
+
+@media (min-width: 1025px) {
+  .menu-items li {
+    font-size: 2.25rem;
+    padding: 20px;
+  }
+
+  .home-text {
+    font-size: 4.5rem;
+  }
+}

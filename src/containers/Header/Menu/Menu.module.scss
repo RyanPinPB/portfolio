@@ -1,0 +1,19 @@
+.Menu {
+  display: flex;
+}
+
+.Menu a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 0px 20px;
+}
+
+@media (min-width: 769px) {
+  .Menu a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0px 20px;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+}

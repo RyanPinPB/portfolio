@@ -1,0 +1,243 @@
+$grey: rgba(200, 200, 200, 1);
+$grey-zero: rgba(200, 200, 200, 0);
+$grey-fifty: rgba(200, 200, 200, 0.5);
+
+#exp-content {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 60px;
+}
+
+.job {
+  min-width: 80%;
+  max-width: 100%;
+  margin: 80px auto 0px auto;
+  flex-direction: column;
+  transition: transform 0.8s;
+  box-shadow: 0.5rem 0.5rem 1rem $grey-zero;
+}
+
+// window header tabs will load with slide up
+@for $i from 1 through 5 {
+  .job:nth-child(#{$i}n) div.windowHeader {
+    transition-delay: #{$i * 0.1}s;
+  }
+}
+
+// screen for the window header loads with fade-in
+@for $i from 1 through 5 {
+  .job:nth-child(#{$i}n) div.preview {
+    transition-delay: #{$i * 0.1 + 1}s;
+  }
+}
+
+.job:hover {
+  transform: scale(1.02);
+  box-shadow: 0.5rem 0.5rem 1rem $grey-fifty;
+}
+
+.one,
+.two,
+.three,
+.four {
+  cursor: zoom-in;
+  transition: 1s;
+}
+
+.windowHeader {
+  background: #ddd;
+  position: relative;
+  border-radius: 3px 3px 0px 0px;
+}
+
+.windowTitle {
+  color: #8a8a8a;
+  padding: 3px 0px;
+  font-size: 0.75rem;
+  font-family: MontSerrat, Tahoma, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.browserButton {
+  position: absolute;
+  border-radius: 50%;
+  background: #ffbd2e;
+  width: 10px;
+  height: 10px;
+  top: 25%;
+  left: 20px;
+}
+
+.browserButton::before {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: #ff5f57;
+  width: 10px;
+  height: 10px;
+  left: -14px;
+}
+
+.browserButton::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: #28ca41;
+  width: 10px;
+  height: 10px;
+  left: 14px;
+}
+
+.preview {
+  width: 100%;
+  height: 30vh;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0px 0px 3px 3px;
+}
+
+.jobContent {
+  display: none;
+  flex-direction: column;
+  cursor: default;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.jobData {
+  flex-direction: row;
+  margin: 0px 0px 20px 0px;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.jobData a {
+  color: var(--white);
+}
+
+.dates {
+  font-style: italic;
+}
+
+.employer {
+  padding: 0px 15px;
+  font-weight: 600;
+}
+
+.location {
+  font-style: italic;
+}
+
+.jobSummary {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--white);
+  font-style: italic;
+  margin: 15px;
+}
+
+.tasks li {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  margin: 10px;
+}
+
+.point {
+  background-image: url('../../assets/images/experience/1p21.png');
+}
+
+.ljagent {
+  background-image: url('../../assets/images/experience/ljagent.png');
+}
+
+.nfunding {
+  background-image: url('../../assets/images/experience/nationalfunding.png');
+}
+
+.heller {
+  background-image: url('../../assets/images/experience/heller.png');
+}
+
+@media (min-width: 769px) {
+  .cursor {
+    width: 20px;
+    height: 20px;
+    border: 10px solid var(--white);
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 100ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim 1s infinite alternate;
+    pointer-events: none;
+    opacity: 0.8;
+    z-index: 2;
+  }
+
+  @keyframes cursorAnim {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(0.7);
+    }
+  }
+
+  .cursor::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 15px solid var(--orange);
+    border-radius: 50%;
+    opacity: 1;
+    top: -25px;
+    left: -25px;
+    animation: cursorAnim2 1s infinite alternate;
+  }
+
+  @keyframes cursorAnim2 {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(0.4);
+    }
+  }
+
+  .expand {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    animation: cursorAnim3 0.5s forwards;
+    border: 10px solid var(--red);
+    border-radius: 50%;
+  }
+
+  .job {
+    min-width: 40%;
+    max-width: 90%;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .job {
+    min-width: 42.5%;
+    max-width: 80%;
+    margin: 30px;
+  }
+}

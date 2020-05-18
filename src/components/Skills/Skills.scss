@@ -1,0 +1,232 @@
+// Skills Content Formatting
+
+$transition-delay: 0.5s;
+$transition-delay-step: 0.15s;
+
+#skills-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 95%;
+  margin: auto auto 80px auto;
+  font-size: 0.75rem;
+}
+
+.chart-wrapper {
+  width: 80%;
+  height: 30vh;
+  margin: 50px auto 80px auto;
+  display: flex;
+}
+
+.chart-levels {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding-right: 5px;
+}
+
+.chart-levels li {
+  color: var(--white);
+}
+
+.bar-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.chart-skills li {
+  width: 12%;
+  height: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: height 0.65s cubic-bezier(0.51, 0.91, 0.24, 1.16);
+  color: var(--white);
+}
+
+.w-100 {
+  width: 100%;
+}
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}
+
+.window-opened .chart-skills li:nth-child(odd) {
+  background: linear-gradient(to top, var(--gold), var(--orange));
+}
+
+.window-opened .chart-skills li:nth-child(even) {
+  background: linear-gradient(to bottom, var(--gold), var(--orange));
+}
+
+.window-opened .chart-skills li:nth-child(1) {
+  height: 80%;
+  transition-delay: $transition-delay;
+}
+
+.window-opened .chart-skills li:nth-child(2) {
+  height: 75%;
+  transition-delay: $transition-delay + $transition-delay-step;
+}
+
+.window-opened .chart-skills li:nth-child(3) {
+  height: 50%;
+  transition-delay: $transition-delay + $transition-delay-step * 2;
+}
+
+.window-opened .chart-skills li:nth-child(4) {
+  height: 10%;
+  transition-delay: $transition-delay + $transition-delay-step * 3;
+}
+
+.window-opened .chart-skills li:nth-child(5) {
+  height: 5%;
+  transition-delay: $transition-delay + $transition-delay-step * 4;
+}
+
+.window-opened .chart-skills li:nth-child(6) {
+  height: 55%;
+  transition-delay: $transition-delay + $transition-delay-step * 5;
+}
+
+.window-opened .chart-skills li:nth-child(7) {
+  height: 40%;
+  transition-delay: $transition-delay + $transition-delay-step * 6;
+}
+
+.window-opened .chart-skills li:nth-child(8) {
+  height: 15%;
+  transition-delay: $transition-delay + $transition-delay-step * 7;
+}
+
+.window-opened .chart-skills li:nth-child(9) {
+  height: 80%;
+  transition-delay: $transition-delay + $transition-delay-step * 8;
+}
+
+// only show in larger screen
+
+/* .chart-skills li::before { 
+      content: attr(data-level);
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 100%;
+      font-size: 0.85rem;
+      color: var(--white;
+  } */
+
+.chart-skills span {
+  bottom: 15px;
+  left: 5px;
+  transform: translateY(40px) rotate(45deg);
+}
+
+/* .window-opened .skills-section {
+      transform: none;
+  } */
+
+.otherSkills {
+  width: 100%;
+  margin: auto;
+}
+
+.otherSkills ul {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.otherSkills li {
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  color: var(--black);
+  background: linear-gradient(to right, var(--gold), var(--orange));
+}
+
+@media (min-width: 500px) {
+  .chart-skills span {
+    bottom: 10px;
+  }
+}
+
+@media (min-width: 600px) {
+  #skills-content {
+    width: 85%;
+    font-size: 1rem;
+  }
+
+  .chart-wrapper {
+    width: 80%;
+    margin: 50px auto 80px auto;
+  }
+
+  .chart-skills span {
+    bottom: 5px;
+    left: 0;
+  }
+
+  .otherSkills li {
+    font-size: 1.15rem;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+  }
+}
+
+@media (min-width: 769px) {
+  #skills-content {
+    width: 85%;
+    font-size: 1.25rem;
+  }
+
+  .chart-wrapper {
+    width: 90%;
+    margin: 50px auto 100px auto;
+  }
+
+  .chart-skills span {
+    bottom: -5px;
+    left: 0;
+  }
+
+  .otherSkills li {
+    font-size: 1.35rem;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+  }
+}
+
+@media (min-width: 769px) {
+  #skills-content {
+    width: 75%;
+  }
+
+  .chart-wrapper {
+    width: 100%;
+  }
+
+  .chart-levels li {
+    padding-right: 10px;
+  }
+
+  .chart-skills span {
+    bottom: -15px;
+    left: 0;
+  }
+}

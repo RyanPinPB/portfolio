@@ -1,0 +1,27 @@
+#contact-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactInfo {
+  position: relative;
+  top: 25vh;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--orange);
+  line-height: 1;
+}
+
+.contactInfo div {
+  margin: 30px auto;
+}
+
+#contact-content a {
+  color: var(--gold);
+  text-decoration: none;
+}
+@media (min-width: 1025px) {
+  .contactInfo {
+    font-size: 3rem;
+  }
+}
