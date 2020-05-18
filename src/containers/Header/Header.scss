@@ -1,0 +1,22 @@
+.site-header {
+  width: 100%;
+  top: 0;
+  right: 0;
+  position: relative;
+  z-index: 2;
+  // display: flex;
+  // justify-content: space-evenly;
+  transition: opacity 2s linear;
+  // background: var(--black);
+}
+
+@media (min-width: 769px) {
+  .site-header {
+    position: fixed;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    transition: opacity 2s linear;
+    background: var(--black-twenty);
+  }
+}

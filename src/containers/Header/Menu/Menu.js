@@ -5,24 +5,24 @@ import './Menu.scss';
 class Menu extends Component {
   render() {
     let mobileMenu = (
-      <div id='mobileNav' className='menu-container overlay'>
+      <div className='mobile-nav menu-container overlay'>
         <div className='overlay-content'>
-          <NavLink to='/' exact>
+          <NavLink to='/' exact onClick={this.props.linkClick}>
             Home
           </NavLink>
-          <NavLink to='/projects' exact>
+          <NavLink to='/projects' exact onClick={this.props.linkClick}>
             Projects
           </NavLink>
-          <NavLink to='/skills' exact>
+          <NavLink to='/skills' exact onClick={this.props.linkClick}>
             Skills
           </NavLink>
-          <NavLink to='/experience' exact>
+          <NavLink to='/experience' exact onClick={this.props.linkClick}>
             Experience
           </NavLink>
-          <NavLink to='/background' exact>
+          <NavLink to='/background' exact onClick={this.props.linkClick}>
             Background
           </NavLink>
-          <NavLink to='/contact' exact>
+          <NavLink to='/contact' exact onClick={this.props.linkClick}>
             Contact Ryan
           </NavLink>
         </div>
@@ -30,7 +30,7 @@ class Menu extends Component {
     );
 
     let desktopMenu = (
-      <ul>
+      <div className='desktop-nav'>
         <NavLink to='/' exact>
           Home
         </NavLink>
@@ -49,13 +49,13 @@ class Menu extends Component {
         <NavLink to='/contact' exact>
           Contact Ryan
         </NavLink>
-      </ul>
+      </div>
     );
 
     let menu = mobileMenu;
-    this.props.isDesktop ? (menu = desktopMenu) : (menu = mobileMenu);
+    this.props.desktop ? (menu = desktopMenu) : (menu = mobileMenu);
 
-    return <nav id='nav-bar'>{menu}</nav>;
+    return <nav className='navigation-menu'>{menu}</nav>;
   }
 }
 

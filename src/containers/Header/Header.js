@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// import { NavLink } from 'react-router-dom';
-import classes from './Header.module.scss';
+// import classes from './Header.module.scss';
+import './Header.scss';
 import Menu from './Menu/Menu';
 import Hamburger from './Hamburger/Hamburger';
 
@@ -24,19 +24,35 @@ class Header extends Component {
   };
 
   menuClickHandler = () => {
+    const currentState = this.state.mobileMenuOpen;
+
+    if (!currentState) {
+      document.querySelector('.mobile-nav').style.height = '100%';
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.querySelector('.mobile-nav').style.height = '0';
+      document.body.style.overflow = 'auto';
+    }
+
     this.setState({ mobileMenuOpen: !this.state.mobileMenuOpen });
-    console.log('hamburger clicked');
+    document.querySelector('.menu-icon').classList.toggle('menu-open');
   };
 
   render() {
-    let hamburgerMenu = <Hamburger menuClicked={this.menuClickHandler} />;
-    let menu = hamburgerMenu;
+    let hamburger = <Hamburger menuClicked={this.menuClickHandler} />;
     this.state.isDesktop
-      ? (menu = <Menu isDesktop={this.state.isDesktop} />)
-      : (menu = hamburgerMenu);
-    // this.state.isDesktop ? () mobileMenu = <Menu />) : null;
+      ? (hamburger = null)
+      : (hamburger = <Hamburger menuClicked={this.menuClickHandler} />);
 
-    return <header className={classes.Header}>{menu}</header>;
+    return (
+      <header className='site-header'>
+        {hamburger}
+        <Menu
+          linkClick={this.state.isDesktop ? null : this.menuClickHandler}
+          desktop={this.state.isDesktop}
+        />
+      </header>
+    );
   }
 }
 
