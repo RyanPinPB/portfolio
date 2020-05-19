@@ -5,13 +5,14 @@ $grey-fifty: rgba(200, 200, 200, 0.5);
 #exp-content {
   width: 95%;
   display: flex;
+  position: relative;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: space-around;
   align-items: center;
   justify-items: center;
-  margin-bottom: 60px;
+  margin: 0 auto 40px auto;
 }
 
 .job {
@@ -20,7 +21,12 @@ $grey-fifty: rgba(200, 200, 200, 0.5);
   margin: 80px auto 0px auto;
   flex-direction: column;
   transition: transform 0.8s;
-  box-shadow: 0.5rem 0.5rem 1rem $grey-zero;
+  box-shadow: 0px 0px 10px 5px $grey-zero;
+}
+
+.job:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 10px 5px $grey-fifty;
 }
 
 // window header tabs will load with slide up
@@ -37,70 +43,12 @@ $grey-fifty: rgba(200, 200, 200, 0.5);
   }
 }
 
-.job:hover {
-  transform: scale(1.02);
-  box-shadow: 0.5rem 0.5rem 1rem $grey-fifty;
-}
-
 .one,
 .two,
 .three,
 .four {
   cursor: zoom-in;
   transition: 1s;
-}
-
-.windowHeader {
-  background: #ddd;
-  position: relative;
-  border-radius: 3px 3px 0px 0px;
-}
-
-.windowTitle {
-  color: #8a8a8a;
-  padding: 3px 0px;
-  font-size: 0.75rem;
-  font-family: MontSerrat, Tahoma, Arial, sans-serif;
-  font-weight: 700;
-}
-
-.browserButton {
-  position: absolute;
-  border-radius: 50%;
-  background: #ffbd2e;
-  width: 10px;
-  height: 10px;
-  top: 25%;
-  left: 20px;
-}
-
-.browserButton::before {
-  content: '';
-  position: absolute;
-  border-radius: 50%;
-  background: #ff5f57;
-  width: 10px;
-  height: 10px;
-  left: -14px;
-}
-
-.browserButton::after {
-  content: '';
-  position: absolute;
-  border-radius: 50%;
-  background: #28ca41;
-  width: 10px;
-  height: 10px;
-  left: 14px;
-}
-
-.preview {
-  width: 100%;
-  height: 30vh;
-  background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 0px 0px 3px 3px;
 }
 
 .jobContent {
@@ -202,8 +150,8 @@ $grey-fifty: rgba(200, 200, 200, 0.5);
     border: 15px solid var(--orange);
     border-radius: 50%;
     opacity: 1;
-    top: -25px;
-    left: -25px;
+    top: -15px;
+    left: -15px;
     animation: cursorAnim2 1s infinite alternate;
   }
 

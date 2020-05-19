@@ -34,6 +34,7 @@ class App extends Component {
 
     return (
       <BrowserRouter>
+        <div className='cursor'></div>
         <Header />
         <Main />
         {footer}

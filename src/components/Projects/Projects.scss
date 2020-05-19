@@ -132,7 +132,7 @@
   height: auto;
   padding: 5px;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 800;
   color: var(--black);
   background: linear-gradient(to right, var(--gold), var(--orange));
@@ -143,16 +143,17 @@
 .viewProject {
   color: var(--white);
   margin: 10px;
-  font-size: 1rem;
-  font-weight: 800;
-}
-
-.travel {
-  background-image: url('../../assets/images/projects/travel.png');
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 .pbhomes {
   background-image: url('../../assets/images/projects/pbhomes.png');
+}
+
+.travel {
+  background-image: url('../../assets/images/projects/travel.png');
 }
 
 .samport {
@@ -167,12 +168,12 @@
   background-image: url('../../assets/images/projects/gates.png');
 }
 
-.portfolio {
-  background-image: url('../../assets/images/projects/portfolio.png');
+.jamming {
+  background-image: url('../../assets/images/projects/jamming.png');
 }
 
-.choreDoor {
-  background-image: url('../../assets/images/projects/choreDoor.png');
+.ravenous {
+  background-image: url('../../assets/images/projects/ravenous.png');
 }
 
 .musicon {
@@ -183,12 +184,12 @@
   background-image: url('../../assets/images/projects/TeaCozy.png');
 }
 
-.jamming {
-  background-image: url('../../assets/images/projects/jamming.png');
+.portfolio {
+  background-image: url('../../assets/images/projects/portfolio.png');
 }
 
-.ravenous {
-  background-image: url('../../assets/images/projects/ravenous.png');
+.choreDoor {
+  background-image: url('../../assets/images/projects/choreDoor.png');
 }
 
 @media (min-width: 600px) {
@@ -220,5 +221,13 @@
 
   .projectContainer {
     max-width: 22%;
+  }
+
+  .projectSkills li {
+    font-size: 1.8rem;
+  }
+
+  .viewProject {
+    font-size: 1.8rem;
   }
 }

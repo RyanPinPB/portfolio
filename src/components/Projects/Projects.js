@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
-// import classes from './Projects.module.css';
 import './Projects.scss';
 
 class Projects extends Component {
   render() {
     return (
       <section id='projects-content'>
-        <div class='projectContainer'>
-          <div class='windowHeader slide-up'>
-            <div class='browserButton'></div>
-            <div class='browserButton'></div>
-            <div class='browserButton'></div>
-            <div class='windowTitle'>Pacific Beach Homes</div>
+        <div className='projectContainer'>
+          <div className='windowHeader slide-up'>
+            <div className='browserButton'></div>
+            <div className='browserButton'></div>
+            <div className='browserButton'></div>
+            <div className='windowTitle'>Pacific Beach Homes</div>
           </div>
-          <div class='preview pbhomes fade-in'>
-            <div class='projectContent pbhomesContent'>
-              <ul class='projectSkills'>
+          <div className='preview pbhomes fade-in'>
+            <div className='projectContent pbhomesContent'>
+              <ul className='projectSkills'>
                 <li>HTML</li>
                 <li>SCSS</li>
                 <li>Javascript</li>
@@ -27,7 +26,7 @@ class Projects extends Component {
                 <li>Content</li>
               </ul>
               <a
-                class='viewProject'
+                className='viewProject'
                 href='https://pacificbeachhomes.com'
                 target='blank'
               >
@@ -37,16 +36,16 @@ class Projects extends Component {
           </div>
         </div>
 
-        <div class='projectContainer'>
-          <div class='windowHeader slide-up'>
-            <div class='browserButton'></div>
-            <div class='browserButton'></div>
-            <div class='browserButton'></div>
-            <div class='windowTitle'>Travel Theme</div>
+        <div className='projectContainer'>
+          <div className='windowHeader slide-up'>
+            <div className='browserButton'></div>
+            <div className='browserButton'></div>
+            <div className='browserButton'></div>
+            <div className='windowTitle'>Travel Theme</div>
           </div>
-          <div class='preview travel fade-in'>
-            <div class='projectContent travelContent'>
-              <ul class='projectSkills'>
+          <div className='preview travel fade-in'>
+            <div className='projectContent travelContent'>
+              <ul className='projectSkills'>
                 <li>HTML</li>
                 <li>SCSS</li>
                 <li>Javascript</li>
@@ -56,7 +55,7 @@ class Projects extends Component {
                 <li>Advanced Custom Fields</li>
               </ul>
               <a
-                class='viewProject'
+                className='viewProject'
                 href='https://travel.ryanpearson.website'
                 target='blank'
               >
@@ -66,16 +65,16 @@ class Projects extends Component {
           </div>
         </div>
 
-        <div class='projectContainer'>
-          <div class='windowHeader slide-up'>
-            <div class='browserButton'></div>
-            <div class='browserButton'></div>
-            <div class='browserButton'></div>
-            <div class='windowTitle'>La Jolla Agent</div>
+        <div className='projectContainer'>
+          <div className='windowHeader slide-up'>
+            <div className='browserButton'></div>
+            <div className='browserButton'></div>
+            <div className='browserButton'></div>
+            <div className='windowTitle'>La Jolla Agent</div>
           </div>
-          <div class='preview ljagent fade-in'>
-            <div class='projectContent ljagentContent'>
-              <ul class='projectSkills'>
+          <div className='preview ljagent fade-in'>
+            <div className='projectContent ljagentContent'>
+              <ul className='projectSkills'>
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>SEO</li>
@@ -84,7 +83,7 @@ class Projects extends Component {
                 <li>Content</li>
               </ul>
               <a
-                class='viewProject'
+                className='viewProject'
                 href='https://lajollaagent.com'
                 target='blank'
               >
@@ -94,16 +93,16 @@ class Projects extends Component {
           </div>
         </div>
 
-        <div class='projectContainer'>
-          <div class='windowHeader slide-up'>
-            <div class='browserButton'></div>
-            <div class='browserButton'></div>
-            <div class='browserButton'></div>
-            <div class='windowTitle'>Sam's Portfolio</div>
+        <div className='projectContainer'>
+          <div className='windowHeader slide-up'>
+            <div className='browserButton'></div>
+            <div className='browserButton'></div>
+            <div className='browserButton'></div>
+            <div className='windowTitle'>Sam's Portfolio</div>
           </div>
-          <div class='preview samport fade-in'>
-            <div class='projectContent samportContent'>
-              <ul class='projectSkills'>
+          <div className='preview samport fade-in'>
+            <div className='projectContent samportContent'>
+              <ul className='projectSkills'>
                 <li>HTML</li>
                 <li>SCSS</li>
                 <li>Javascript</li>
@@ -112,7 +111,7 @@ class Projects extends Component {
                 <li>Advanced Custom Fields</li>
               </ul>
               <a
-                class='viewProject'
+                className='viewProject'
                 href='https://sampearson.digital'
                 target='blank'
               >
@@ -122,22 +121,22 @@ class Projects extends Component {
           </div>
         </div>
 
-        <div class='projectContainer'>
-          <div class='windowHeader slide-up'>
-            <div class='browserButton'></div>
-            <div class='browserButton'></div>
-            <div class='browserButton'></div>
-            <div class='windowTitle'>R.H. Bishop Books</div>
+        <div className='projectContainer'>
+          <div className='windowHeader slide-up'>
+            <div className='browserButton'></div>
+            <div className='browserButton'></div>
+            <div className='browserButton'></div>
+            <div className='windowTitle'>R.H. Bishop Books</div>
           </div>
-          <div class='preview bishop fade-in'>
-            <div class='projectContent bishopContent'>
-              <ul class='projectSkills'>
+          <div className='preview bishop fade-in'>
+            <div className='projectContent bishopContent'>
+              <ul className='projectSkills'>
                 <li>Squarespace</li>
                 <li>CSS</li>
                 <li>XD</li>
               </ul>
               <a
-                class='viewProject'
+                className='viewProject'
                 href='https://www.rhbishopbooks.com/'
                 target='blank'
               >
@@ -147,16 +146,16 @@ class Projects extends Component {
           </div>
         </div>
 
-        <div class='projectContainer'>
-          <div class='windowHeader slide-up'>
-            <div class='browserButton'></div>
-            <div class='browserButton'></div>
-            <div class='browserButton'></div>
-            <div class='windowTitle'>Gates Vacation Homes</div>
+        <div className='projectContainer'>
+          <div className='windowHeader slide-up'>
+            <div className='browserButton'></div>
+            <div className='browserButton'></div>
+            <div className='browserButton'></div>
+            <div className='windowTitle'>Gates Vacation Homes</div>
           </div>
-          <div class='preview gatesVacation fade-in'>
-            <div class='projectContent gatesContent'>
-              <ul class='projectSkills'>
+          <div className='preview gatesVacation fade-in'>
+            <div className='projectContent gatesContent'>
+              <ul className='projectSkills'>
                 <li>HTML</li>
                 <li>SCSS</li>
                 <li>PHP</li>
@@ -167,16 +166,16 @@ class Projects extends Component {
           </div>
         </div>
 
-        <div class='projectContainer'>
-          <div class='windowHeader slide-up'>
-            <div class='browserButton'></div>
-            <div class='browserButton'></div>
-            <div class='browserButton'></div>
-            <div class='windowTitle'>Jamming</div>
+        <div className='projectContainer'>
+          <div className='windowHeader slide-up'>
+            <div className='browserButton'></div>
+            <div className='browserButton'></div>
+            <div className='browserButton'></div>
+            <div className='windowTitle'>Jamming</div>
           </div>
-          <div class='preview jamming fade-in'>
-            <div class='projectContent jammingContent'>
-              <ul class='projectSkills'>
+          <div className='preview jamming fade-in'>
+            <div className='projectContent jammingContent'>
+              <ul className='projectSkills'>
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>Javascript</li>
@@ -187,16 +186,16 @@ class Projects extends Component {
           </div>
         </div>
 
-        <div class='projectContainer'>
-          <div class='windowHeader slide-up'>
-            <div class='browserButton'></div>
-            <div class='browserButton'></div>
-            <div class='browserButton'></div>
-            <div class='windowTitle'>Ravenous</div>
+        <div className='projectContainer'>
+          <div className='windowHeader slide-up'>
+            <div className='browserButton'></div>
+            <div className='browserButton'></div>
+            <div className='browserButton'></div>
+            <div className='windowTitle'>Ravenous</div>
           </div>
-          <div class='preview ravenous fade-in'>
-            <div class='projectContent ravenousContent'>
-              <ul class='projectSkills'>
+          <div className='preview ravenous fade-in'>
+            <div className='projectContent ravenousContent'>
+              <ul className='projectSkills'>
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>Javascript</li>
@@ -207,16 +206,16 @@ class Projects extends Component {
           </div>
         </div>
 
-        <div class='projectContainer'>
-          <div class='windowHeader slide-up'>
-            <div class='browserButton'></div>
-            <div class='browserButton'></div>
-            <div class='browserButton'></div>
-            <div class='windowTitle'>Musicon</div>
+        <div className='projectContainer'>
+          <div className='windowHeader slide-up'>
+            <div className='browserButton'></div>
+            <div className='browserButton'></div>
+            <div className='browserButton'></div>
+            <div className='windowTitle'>Musicon</div>
           </div>
-          <div class='preview musicon fade-in'>
-            <div class='projectContent musiconContent'>
-              <ul class='projectSkills'>
+          <div className='preview musicon fade-in'>
+            <div className='projectContent musiconContent'>
+              <ul className='projectSkills'>
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>Javascript</li>
@@ -225,16 +224,16 @@ class Projects extends Component {
           </div>
         </div>
 
-        <div class='projectContainer'>
-          <div class='windowHeader slide-up'>
-            <div class='browserButton'></div>
-            <div class='browserButton'></div>
-            <div class='browserButton'></div>
-            <div class='windowTitle'>TeaCozy</div>
+        <div className='projectContainer'>
+          <div className='windowHeader slide-up'>
+            <div className='browserButton'></div>
+            <div className='browserButton'></div>
+            <div className='browserButton'></div>
+            <div className='windowTitle'>TeaCozy</div>
           </div>
-          <div class='preview teaCozy fade-in'>
-            <div class='projectContent teaCozyContent'>
-              <ul class='projectSkills'>
+          <div className='preview teaCozy fade-in'>
+            <div className='projectContent teaCozyContent'>
+              <ul className='projectSkills'>
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>Javascript</li>
@@ -243,16 +242,16 @@ class Projects extends Component {
           </div>
         </div>
 
-        <div class='projectContainer'>
-          <div class='windowHeader slide-up'>
-            <div class='browserButton'></div>
-            <div class='browserButton'></div>
-            <div class='browserButton'></div>
-            <div class='windowTitle'>RyanPearson portfolio</div>
+        <div className='projectContainer'>
+          <div className='windowHeader slide-up'>
+            <div className='browserButton'></div>
+            <div className='browserButton'></div>
+            <div className='browserButton'></div>
+            <div className='windowTitle'>RyanPearson portfolio</div>
           </div>
-          <div class='preview portfolio fade-in'>
-            <div class='projectContent portfolioContent'>
-              <ul class='projectSkills'>
+          <div className='preview portfolio fade-in'>
+            <div className='projectContent portfolioContent'>
+              <ul className='projectSkills'>
                 <li>HTML</li>
                 <li>CSS</li>
               </ul>
@@ -260,16 +259,16 @@ class Projects extends Component {
           </div>
         </div>
 
-        <div class='projectContainer'>
-          <div class='windowHeader slide-up'>
-            <div class='browserButton'></div>
-            <div class='browserButton'></div>
-            <div class='browserButton'></div>
-            <div class='windowTitle'>Chore Door game</div>
+        <div className='projectContainer'>
+          <div className='windowHeader slide-up'>
+            <div className='browserButton'></div>
+            <div className='browserButton'></div>
+            <div className='browserButton'></div>
+            <div className='windowTitle'>Chore Door game</div>
           </div>
-          <div class='preview choreDoor fade-in'>
-            <div class='projectContent choreDoorContent'>
-              <ul class='projectSkills'>
+          <div className='preview choreDoor fade-in'>
+            <div className='projectContent choreDoorContent'>
+              <ul className='projectSkills'>
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>Javascript</li>

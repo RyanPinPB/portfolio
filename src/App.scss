@@ -24,3 +24,63 @@ $grey-fifty: rgba(200, 200, 200, 0.5);
 .not-visible {
   opacity: 0;
 }
+
+//global classes
+
+.cursor {
+  display: none;
+}
+
+.windowHeader {
+  background: #ddd;
+  position: relative;
+  border-radius: 3px 3px 0px 0px;
+}
+
+.windowTitle {
+  color: #8a8a8a;
+  padding: 3px 0px;
+  font-size: 1.2rem;
+  font-family: 'MontSerrat', Tahoma, Arial, sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+.browserButton {
+  position: absolute;
+  border-radius: 50%;
+  background: #ffbd2e;
+  width: 10px;
+  height: 10px;
+  top: 25%;
+  left: 20px;
+}
+
+.browserButton::before {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: #ff5f57;
+  width: 10px;
+  height: 10px;
+  left: -14px;
+}
+
+.browserButton::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: #28ca41;
+  width: 10px;
+  height: 10px;
+  left: 14px;
+}
+
+.preview {
+  width: 100%;
+  height: 30vh;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0px 0px 3px 3px;
+}

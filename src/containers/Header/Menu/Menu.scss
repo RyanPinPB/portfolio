@@ -73,18 +73,19 @@ $cubic: cubic-bezier(0.19, 1, 0.22, 1);
       display: flex;
       padding: 10px 20px;
       transition: transform 0.3s ease-in-out;
-      // line-height: 1.4;
       a {
         display: flex;
-        // padding: 10px 0px;
-        color: var(--white);
+        color: rgba(255, 255, 255, 0.8);
         text-decoration: none;
-        // line-height: 1.2;
         font-size: 2rem;
         font-weight: 700;
         transition: font-size 0.3s ease-in-out;
       }
     }
+  }
+
+  .desktop-nav a.active {
+    color: var(--white);
   }
 
   // Menu animation

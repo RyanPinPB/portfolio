@@ -2,9 +2,11 @@ import React from 'react';
 import classes from './Intro.module.scss';
 
 const Intro = (props) => {
-  setTimeout(() => {
-    document.querySelector('.slider').style.visibility = 'visible';
-  }, 2800);
+  if (document.querySelector('.slider')) {
+    setTimeout(() => {
+      document.querySelector('.slider').style.visibility = 'visible';
+    }, 2800);
+  }
 
   return (
     <div className={classes.Intro}>

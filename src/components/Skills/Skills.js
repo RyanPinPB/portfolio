@@ -1,51 +1,53 @@
 import React from 'react';
-// import classes from './Skills.module.css';
 import './Skills.scss';
 
 const Skills = () => {
+  setTimeout(() => {
+    document.querySelector('#skills-content').classList.add('window-opened');
+  }, 1500);
   return (
     <section id='skills-content'>
-      <div class='chart-wrapper'>
+      <div className='chart-wrapper'>
         {/* removed y axis labels
-    <ul class="chart-levels">
+    <ul className="chart-levels">
       <li>Could teach it</li>
       <li>Used a bunch</li>
       <li>Used in a few projects</li>
       <li>Practiced this a bit</li>
       <li>Learned but need to practice</li>
     </ul> */}
-        <ul class='bar-container chart-skills'>
-          <li class='position-relative bg-red' data-level=''>
-            <span class='position-absolute w-100'>HTML</span>
+        <ul className='bar-container chart-skills'>
+          <li className='position-relative' data-level=''>
+            <span className='position-absolute w-100'>HTML</span>
           </li>
-          <li class='position-relative bg-red' data-level=''>
-            <span class='position-absolute w-100'>CSS</span>
+          <li className='position-relative' data-level=''>
+            <span className='position-absolute w-100'>CSS</span>
           </li>
-          <li class='position-relative bg-red' data-level=''>
-            <span class='position-absolute w-100'>Javascript</span>
+          <li className='position-relative' data-level=''>
+            <span className='position-absolute w-100'>Javascript</span>
           </li>
-          <li class='position-relative bg-red' data-level=''>
-            <span class='position-absolute w-100'>React</span>
+          <li className='position-relative' data-level=''>
+            <span className='position-absolute w-100'>React</span>
           </li>
-          <li class='position-relative bg-red' data-level=''>
-            <span class='position-absolute w-100'>Express</span>
+          <li className='position-relative' data-level=''>
+            <span className='position-absolute w-100'>Express</span>
           </li>
-          <li class='position-relative bg-red' data-level=''>
-            <span class='position-absolute w-100'>Wordpress</span>
+          <li className='position-relative' data-level=''>
+            <span className='position-absolute w-100'>Wordpress</span>
           </li>
-          <li class='position-relative bg-red' data-level=''>
-            <span class='position-absolute w-100'>PHP</span>
+          <li className='position-relative' data-level=''>
+            <span className='position-absolute w-100'>PHP</span>
           </li>
-          <li class='position-relative bg-red' data-level=''>
-            <span class='position-absolute w-100'>SQL</span>
+          <li className='position-relative' data-level=''>
+            <span className='position-absolute w-100'>SQL</span>
           </li>
-          <li class='position-relative bg-red' data-level=''>
-            <span class='position-absolute w-100'>SEO</span>
+          <li className='position-relative' data-level=''>
+            <span className='position-absolute w-100'>SEO</span>
           </li>
         </ul>
       </div>
 
-      <div class='otherSkills'>
+      <div className='otherSkills'>
         <ul>
           <li>Node</li>
           <li>SASS</li>

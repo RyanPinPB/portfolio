@@ -1,5 +1,4 @@
 // Skills Content Formatting
-
 $transition-delay: 0.5s;
 $transition-delay-step: 0.15s;
 
@@ -9,7 +8,6 @@ $transition-delay-step: 0.15s;
   justify-content: center;
   width: 95%;
   margin: auto auto 80px auto;
-  font-size: 0.75rem;
 }
 
 .chart-wrapper {
@@ -46,6 +44,7 @@ $transition-delay-step: 0.15s;
   border-top-right-radius: 10px;
   transition: height 0.65s cubic-bezier(0.51, 0.91, 0.24, 1.16);
   color: var(--white);
+  font-size: 1.2rem;
 }
 
 .w-100 {
@@ -129,10 +128,6 @@ $transition-delay-step: 0.15s;
   transform: translateY(40px) rotate(45deg);
 }
 
-/* .window-opened .skills-section {
-      transform: none;
-  } */
-
 .otherSkills {
   width: 100%;
   margin: auto;
@@ -147,13 +142,19 @@ $transition-delay-step: 0.15s;
 }
 
 .otherSkills li {
-  font-size: 0.85rem;
+  font-size: 1.4rem;
   font-weight: 700;
   border-radius: 10px;
   padding: 10px;
   margin: 5px;
   color: var(--black);
   background: linear-gradient(to right, var(--gold), var(--orange));
+}
+
+@media (min-width: 370px) {
+  .chart-skills li {
+    font-size: 1.4rem;
+  }
 }
 
 @media (min-width: 500px) {
@@ -165,12 +166,6 @@ $transition-delay-step: 0.15s;
 @media (min-width: 600px) {
   #skills-content {
     width: 85%;
-    font-size: 1rem;
-  }
-
-  .chart-wrapper {
-    width: 80%;
-    margin: 50px auto 80px auto;
   }
 
   .chart-skills span {
@@ -178,55 +173,42 @@ $transition-delay-step: 0.15s;
     left: 0;
   }
 
+  .chart-skills li {
+    font-size: 1.6rem;
+  }
+
   .otherSkills li {
-    font-size: 1.15rem;
-    font-weight: 700;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 5px;
+    font-size: 1.8rem;
   }
 }
 
 @media (min-width: 769px) {
-  #skills-content {
-    width: 85%;
-    font-size: 1.25rem;
-  }
-
   .chart-wrapper {
     width: 90%;
     margin: 50px auto 100px auto;
   }
 
   .chart-skills span {
-    bottom: -5px;
-    left: 0;
+    bottom: -10px;
   }
 
-  .otherSkills li {
-    font-size: 1.35rem;
-    font-weight: 700;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 5px;
-  }
-}
-
-@media (min-width: 769px) {
-  #skills-content {
-    width: 75%;
-  }
-
-  .chart-wrapper {
-    width: 100%;
+  .chart-skills li {
+    font-size: 1.8rem;
   }
 
   .chart-levels li {
     padding-right: 10px;
   }
+}
 
+@media (min-width: 1025px) {
   .chart-skills span {
-    bottom: -15px;
-    left: 0;
+    bottom: -20px;
+  }
+  .chart-skills li {
+    font-size: 2rem;
+  }
+  .otherSkills li {
+    font-size: 2rem;
   }
 }

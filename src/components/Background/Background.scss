@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   width: 95%;
-  margin: 60px auto 40px auto;
+  margin: 0 auto 40px auto;
 }
 
 .bgHeader {
@@ -86,8 +86,9 @@
 
 @media (min-width: 600px) {
   #bg-content {
-    margin: 80px auto 40px auto;
+    margin: 0px auto 40px auto;
   }
+
   .storyChanger {
     display: flex;
     align-items: center;
@@ -136,9 +137,4 @@
     width: 70%;
     max-width: 1000px;
   }
-
-  // #bg-content p {
-  //   font-size: 2rem;
-  //   line-height: 1.5;
-  // }
 }
