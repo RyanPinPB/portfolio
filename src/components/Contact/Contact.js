@@ -10,37 +10,40 @@ class Contact extends Component {
       : document.querySelectorAll('.social-icon').forEach((icon) => {
           icon.style.width = '45px';
         });
-
-    this.customCursor();
+    if (window.innerWidth > 768) {
+      // document.querySelector('.cursor').style.display = 'block';
+      document.addEventListener('mousemove', (e) => this.customCursorFollow(e));
+      document.addEventListener('click', this.customCursorClick);
+    }
   }
 
   componentWillUnmount() {
     console.log('Leaving Contact section');
     document.body.style.overflow = 'auto';
-    document.removeEventListener('mousemove', this.customCursor, false);
-    document.removeEventListener('click', this.customCursor, false);
-    document.querySelector('.cursor').style.display = 'none';
+    if (window.innerWidth > 768) {
+      document.removeEventListener('mousemove', (e) =>
+        this.customCursorFollow(e)
+      );
+      document.removeEventListener('click', this.customCursorClick);
+      // document.querySelector('.cursor').style.display = 'none';
+    }
   }
 
-  customCursor() {
-    if (window.innerWidth > 768) {
-      document.addEventListener('mousemove', (e) => {
-        const cursor = document.querySelector('.cursor');
-        cursor.setAttribute(
-          'style',
-          'top: ' + (e.pageY - 20) + 'px; left: ' + (e.pageX - 20) + 'px;'
-        );
-      });
+  customCursorFollow(e) {
+    const cursor = document.querySelector('.cursor');
+    cursor.setAttribute(
+      'style',
+      'top: ' + (e.pageY - 20) + 'px; left: ' + (e.pageX - 20) + 'px;'
+    );
+  }
 
-      document.addEventListener('click', () => {
-        const cursor = document.querySelector('.cursor');
-        cursor.classList.add('expand');
+  customCursorClick() {
+    const cursor = document.querySelector('.cursor');
+    cursor.classList.add('expand');
 
-        setTimeout(() => {
-          cursor.classList.remove('expand');
-        }, 500);
-      });
-    }
+    setTimeout(() => {
+      cursor.classList.remove('expand');
+    }, 500);
   }
 
   render() {
