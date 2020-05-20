@@ -68,25 +68,6 @@ class Experience extends Component {
   }
 
   render() {
-    //custom cursor
-    // if (window.innerWidth > 768) {
-    //   document.addEventListener('mousemove', (e) => {
-    //     const cursor = document.querySelector('.cursor');
-    //     cursor.setAttribute(
-    //       'style',
-    //       'top: ' + (e.pageY - 12) + 'px; left: ' + (e.pageX - 12) + 'px;'
-    //     );
-    //   });
-
-    //   document.addEventListener('click', () => {
-    //     const cursor = document.querySelector('.cursor');
-    //     cursor.classList.add('expand');
-
-    //     setTimeout(() => {
-    //       cursor.classList.remove('expand');
-    //     }, 500);
-    //   });
-    // }
     let job = null;
 
     if (this.state.active === 'initial') {

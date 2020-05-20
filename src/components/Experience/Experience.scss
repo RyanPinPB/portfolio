@@ -176,62 +176,6 @@ $grey-fifty: rgba(200, 200, 200, 0.5);
     padding-top: 80px;
   }
 
-  .cursor {
-    width: 20px;
-    height: 20px;
-    border: 10px solid var(--white);
-    border-radius: 50%;
-    position: absolute;
-    transition-duration: 100ms;
-    transition-timing-function: ease-out;
-    animation: cursorAnim 1s infinite alternate;
-    pointer-events: none;
-    opacity: 0.8;
-    z-index: 2;
-  }
-
-  @keyframes cursorAnim {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(0.7);
-    }
-  }
-
-  .cursor::after {
-    content: '';
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    border: 15px solid var(--orange);
-    border-radius: 50%;
-    opacity: 1;
-    top: -15px;
-    left: -15px;
-    animation: cursorAnim2 1s infinite alternate;
-  }
-
-  @keyframes cursorAnim2 {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(0.4);
-    }
-  }
-
-  .expand {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    animation: cursorAnim3 0.5s forwards;
-    border: 10px solid var(--red);
-    border-radius: 50%;
-  }
-
   .jobContainer {
     .job {
       min-width: 60%;

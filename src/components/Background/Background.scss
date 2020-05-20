@@ -63,7 +63,7 @@
 #bg-content p {
   font-size: 1.8rem;
   line-height: 1.4;
-  color: var(--grey);
+  color: rgba(135, 135, 135, 1);
   strong {
     color: var(--white);
   }
@@ -154,5 +154,12 @@
 @media (min-width: 1350px) {
   #bg-content {
     padding-top: 120px;
+  }
+}
+
+@media (min-width: 1350px) {
+  #bg-content p {
+    font-size: 2.6rem;
+    line-height: 1.4;
   }
 }

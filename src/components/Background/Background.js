@@ -39,12 +39,12 @@ class Background extends Component {
           </p>
           <p>Switched focus to digital marketing.</p>
           <p>
-            Found myself tinkering on sites and fell in love with front-end web
-            development, mostly HTML, CSS and Javascript.
+            Found myself tinkering on sites and{' '}
+            <strong>fell in love with front-end web development</strong>, mostly
+            HTML, CSS and Javascript.
           </p>
           <p>
-            Keeping up with the Code-ashians. Constantly learning new skills
-            from
+            Constantly learning new skills from
             <a href='https://www.codecademy.com/' target='blank'>
               {' '}
               Codecademy
@@ -59,8 +59,8 @@ class Background extends Component {
               {' '}
               TeamTreehouse
             </a>{' '}
-            and other resources to learn as many useful languages as time
-            permits.
+            and other resources to learn as many useful languages and tools as
+            time permits.
           </p>
         </div>
       );
@@ -74,7 +74,7 @@ class Background extends Component {
             with Apple products. My mother is a dental assistant who is, what
             most would call, a "neat freak". I credit her for my necisity of
             organization. I declared myself a future "architect" in grade school
-            and loved playing with blocks, legos, kinects and games. In high
+            and loved playing with blocks, legos, K'NEX and games. In high
             school I was interested in math and the sciences, winning the senior
             year "Math Award" (given to one male and one female student in the
             school) and passing two years of college level (AP) calculus. The
@@ -84,12 +84,12 @@ class Background extends Component {
           </p>
           <p>
             After entering college at the
-            <strong> University of California, Santa Barbara</strong>
+            <strong> University of California, Santa Barbara </strong>
             as an Electrical Engineering student, I became interested in other
             subjects. The strict path for Electrical Engineering had me
-            plan/schedule every className of my 4 years of college before I had
-            even stepped into my dorm. I became interested in bio-psychology and
-            how the brain works, philosophy, and eventually graduated ahead of
+            plan/schedule every class of my 4 years of college before I had even
+            stepped into my dorm. I became interested in bio-psychology and how
+            the brain works, philosophy, and eventually graduated ahead of
             schedule with a{' '}
             <strong>
               BA in Economics and a certificate of Technology Entrepreneurship.
@@ -98,21 +98,24 @@ class Background extends Component {
           <p>
             After graduating, I went door-to-door in the Village of La Jolla
             looking for work and got into real estate. I used my computer and
-            technical skills to help with web development, marketing, database
-            organization and implemented systems to increase efficiency. While
-            helping with marketing I obtained my real estate license and was
-            eager to learn about the sales process. The sales process was
-            important for me to learn, as my communication skills were far
-            behind my technical skills. Prospecting leads and building
-            relationships all while learning the real estate contracts and
-            elements of a sale was exciting for several years. However, I soon
-            learned that the prospecting process of sales was frustrating and
-            seemed like an inneficient use of time. My focus shifted towards
-            digital marketing and I became interested in learning about SEO,
-            PPC, social media and web development.
+            technical skills to{' '}
+            <strong>
+              help with web development, marketing, database organization
+            </strong>{' '}
+            and implemented systems to increase efficiency. While helping with
+            marketing I obtained my real estate license and was eager to learn
+            about the sales process. The sales process was important for me to
+            learn, as my communication skills were far behind my technical
+            skills. Prospecting leads and building relationships all while
+            learning the real estate contracts and elements of a sale was
+            exciting for several years. However, I soon learned that the
+            prospecting process of sales is frustrating for me and seemed like
+            an inneficient use of time. My focus shifted towards digital
+            marketing and I became interested in learning about SEO, PPC, social
+            media and web development.
           </p>
           <p>
-            I'm continuously taking classNamees from
+            I'm continuously taking classes from
             <a href='https://www.codecademy.com/' target='blank'>
               {' '}
               Codecademy
@@ -127,12 +130,14 @@ class Background extends Component {
               {' '}
               TeamTreehouse{' '}
             </a>
-            and other resources to learn as many useful languages as time
-            permits. While I built my first website in middle school, I have
-            learned most of my web development skills over the last 9 years in
-            case-by-case situations upon project requirements. I am a life-long
-            learner who's always interested in expanding my knowledge and taking
-            on projects.
+            and other resources to learn as many useful languages and tools as
+            time permits. I built my first website in middle school and have
+            learned most of my skills over the last 9 years in case-by-case
+            situations upon project requirements. I am a life-long learner who's{' '}
+            <strong>
+              always interested in expanding my knowledge and taking on
+              projects.
+            </strong>
           </p>
         </div>
       );
