@@ -10,9 +10,38 @@ $grey-fifty: rgba(200, 200, 200, 0.5);
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: space-around;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+
+.jobsContainer {
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
   align-items: center;
   justify-items: center;
-  margin: 0 auto 40px auto;
+  .preview {
+    cursor: zoom-in;
+  }
+}
+
+.jobContainer {
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+  justify-items: center;
+  .preview {
+    cursor: zoom-out;
+  }
 }
 
 .job {
@@ -22,6 +51,9 @@ $grey-fifty: rgba(200, 200, 200, 0.5);
   flex-direction: column;
   transition: transform 0.8s;
   box-shadow: 0px 0px 10px 5px $grey-zero;
+  button {
+    cursor: pointer;
+  }
 }
 
 .job:hover {
@@ -47,12 +79,11 @@ $grey-fifty: rgba(200, 200, 200, 0.5);
 .two,
 .three,
 .four {
-  cursor: zoom-in;
   transition: 1s;
 }
 
 .jobContent {
-  display: none;
+  display: flex;
   flex-direction: column;
   cursor: default;
 }
@@ -62,13 +93,16 @@ $grey-fifty: rgba(200, 200, 200, 0.5);
   font-weight: 800;
   color: var(--white);
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .jobData {
   flex-direction: row;
   margin: 0px 0px 20px 0px;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 400;
+  text-align: center;
+  color: var(--grey);
 }
 
 .jobData a {
@@ -94,10 +128,13 @@ $grey-fifty: rgba(200, 200, 200, 0.5);
   color: var(--white);
   font-style: italic;
   margin: 15px;
+  text-align: center;
 }
 
 .tasks li {
-  font-size: 1.25rem;
+  list-style: inside;
+  color: var(--grey);
+  font-size: 1.5rem;
   line-height: 1.25;
   margin: 10px;
 }
@@ -118,7 +155,27 @@ $grey-fifty: rgba(200, 200, 200, 0.5);
   background-image: url('../../assets/images/experience/heller.png');
 }
 
+@media (min-width: 500px) {
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .jobData {
+    font-size: 1.8rem;
+  }
+  .jobSummary {
+    font-size: 2.5rem;
+  }
+  .tasks li {
+    font-size: 1.8rem;
+  }
+}
+
 @media (min-width: 769px) {
+  #exp-content {
+    padding-top: 80px;
+  }
+
   .cursor {
     width: 20px;
     height: 20px;
@@ -175,6 +232,13 @@ $grey-fifty: rgba(200, 200, 200, 0.5);
     border-radius: 50%;
   }
 
+  .jobContainer {
+    .job {
+      min-width: 60%;
+      // max-width: 600px;
+    }
+  }
+
   .job {
     min-width: 40%;
     max-width: 90%;
@@ -183,9 +247,18 @@ $grey-fifty: rgba(200, 200, 200, 0.5);
 }
 
 @media (min-width: 1025px) {
+  #exp-content {
+    padding-top: 100px;
+  }
   .job {
     min-width: 42.5%;
     max-width: 80%;
     margin: 30px;
   }
 }
+
+// @media (min-width: 1350px) {
+//   #exp-content {
+// padding-top: 120px;
+//   }
+// }

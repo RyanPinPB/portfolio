@@ -3,7 +3,7 @@ import './Experience.scss';
 
 class Experience extends Component {
   state = {
-    active: 'all',
+    active: 'initial',
   };
 
   oneClick = () => {
@@ -22,36 +22,164 @@ class Experience extends Component {
     this.setState({ active: 'four' });
   };
 
-  render() {
-    if (window.innerWidth > 768) {
-      document.addEventListener('mousemove', (e) => {
-        const cursor = document.querySelector('.cursor');
-        cursor.setAttribute(
-          'style',
-          'top: ' + (e.pageY - 12) + 'px; left: ' + (e.pageX - 12) + 'px;'
-        );
+  closeJob = () => {
+    this.setState({ active: 'all' });
+  };
+
+  componentDidMount() {
+    const faders = document.querySelectorAll('.fade-in:not(.appear)');
+    const sliders = document.querySelectorAll('.slide-up:not(.appear)');
+
+    if ('IntersectionObserver' in window) {
+      const appearOptions = {
+        threshold: 0.3,
+        // rootMargin: "0px 0px 60px 0px"
+      };
+
+      const appearOnScroll = new IntersectionObserver(function (
+        entries,
+        appearOnScroll
+      ) {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          } else {
+            entry.target.classList.add('appear');
+            appearOnScroll.unobserve(entry.target);
+          }
+        });
+      },
+      appearOptions);
+      faders.forEach((fader) => {
+        appearOnScroll.observe(fader);
       });
 
-      document.addEventListener('click', () => {
-        const cursor = document.querySelector('.cursor');
-        cursor.classList.add('expand');
-
-        setTimeout(() => {
-          cursor.classList.remove('expand');
-        }, 500);
+      sliders.forEach((slider) => {
+        appearOnScroll.observe(slider);
+      });
+    } else {
+      document.querySelectorAll('.fade-in:not(.appear)').forEach((fader) => {
+        fader.classList.add('appear');
+      });
+      document.querySelectorAll('.slide-up:not(.appear)').forEach((slider) => {
+        slider.classList.add('appear');
       });
     }
+  }
 
-    return (
-      <section id='exp-content'>
-        <div className='job one' onClick={this.oneClick}>
-          <div className='windowHeader slide-up'>
-            <div className='browserButton'></div>
-            <div className='windowTitle'>1P21 Interactive</div>
+  render() {
+    //custom cursor
+    // if (window.innerWidth > 768) {
+    //   document.addEventListener('mousemove', (e) => {
+    //     const cursor = document.querySelector('.cursor');
+    //     cursor.setAttribute(
+    //       'style',
+    //       'top: ' + (e.pageY - 12) + 'px; left: ' + (e.pageX - 12) + 'px;'
+    //     );
+    //   });
+
+    //   document.addEventListener('click', () => {
+    //     const cursor = document.querySelector('.cursor');
+    //     cursor.classList.add('expand');
+
+    //     setTimeout(() => {
+    //       cursor.classList.remove('expand');
+    //     }, 500);
+    //   });
+    // }
+    let job = null;
+
+    if (this.state.active === 'initial') {
+      job = (
+        <div className='jobsContainer'>
+          <div className='job one'>
+            <div className='windowHeader slide-up'>
+              <button className='browser-button-close'>x</button>
+              <button className='browser-button-minimize'>−</button>
+              <button className='browser-button-expand' onClick={this.oneClick}>
+                +
+              </button>
+              <div className='windowTitle'>1P21 Interactive</div>
+            </div>
+            <div
+              className='preview point fade-in'
+              onClick={this.oneClick}
+            ></div>
           </div>
-          <div className='preview point fade-in'></div>
 
-          <div id='oneContent' className='jobContent'>
+          <div className='job two'>
+            <div className='windowHeader slide-up'>
+              <button className='browser-button-close'>x</button>
+              <button className='browser-button-minimize'>−</button>
+              <button className='browser-button-expand' onClick={this.twoClick}>
+                +
+              </button>
+              <div className='windowTitle'>La Jolla Agent</div>
+            </div>
+            <div
+              className='preview ljagent fade-in'
+              onClick={this.twoClick}
+            ></div>
+          </div>
+
+          <div className='job three'>
+            <div className='windowHeader slide-up'>
+              <button className='browser-button-close'>x</button>
+              <button className='browser-button-minimize'>−</button>
+              <button
+                className='browser-button-expand'
+                onClick={this.threeClick}
+              >
+                +
+              </button>
+              <div className='windowTitle'>National Funding</div>
+            </div>
+            <div
+              className='preview nfunding fade-in'
+              onClick={this.threeClick}
+            ></div>
+          </div>
+
+          <div className='job four'>
+            <div className='windowHeader slide-up'>
+              <button className='browser-button-close'>x</button>
+              <button className='browser-button-minimize'>−</button>
+              <button
+                className='browser-button-expand'
+                onClick={this.fourClick}
+              >
+                +
+              </button>
+              <div className='windowTitle'>Heller Real Estate</div>
+            </div>
+            <div
+              className='preview heller fade-in'
+              onClick={this.fourClick}
+            ></div>
+          </div>
+        </div>
+      );
+    } else if (this.state.active === 'one') {
+      job = (
+        <div className='jobContainer'>
+          <div className='job one'>
+            <div className='windowHeader slide-up appear'>
+              <button className='browser-button-close'>x</button>
+              <button
+                className='browser-button-minimize'
+                onClick={this.closeJob}
+              >
+                −
+              </button>
+              <button className='browser-button-expand'>+</button>
+              <div className='windowTitle'>1P21 Interactive</div>
+            </div>
+            <div
+              className='preview point fade-in appear'
+              onClick={this.closeJob}
+            ></div>
+          </div>
+          <div id='oneContent' className='jobContent' onClick={this.closeJob}>
             <h3 className='title'>
               Digital Account Manager and Project Manager
             </h3>
@@ -83,18 +211,31 @@ class Experience extends Component {
             </ul>
           </div>
         </div>
-
-        <div className='job two' onClick={this.twoClick}>
-          <div className='windowHeader slide-up'>
-            <div className='browserButton'></div>
-            <div className='windowTitle'>La Jolla Agent</div>
+      );
+    } else if (this.state.active === 'two') {
+      job = (
+        <div className='jobContainer'>
+          <div className='job two'>
+            <div className='windowHeader slide-up appear'>
+              <button className='browser-button-close'>x</button>
+              <button
+                className='browser-button-minimize'
+                onClick={this.closeJob}
+              >
+                −
+              </button>
+              <button className='browser-button-expand'>+</button>
+              <div className='windowTitle'>La Jolla Agent</div>
+            </div>
+            <div
+              className='preview ljagent fade-in appear'
+              onClick={this.closeJob}
+            ></div>
           </div>
-          <div className='preview ljagent fade-in'></div>
-
-          <div id='twoContent' className='jobContent'>
+          <div id='twoContent' className='jobContent' onClick={this.closeJob}>
             <h3 className='title'>Digital Marketing Manager and Realtor</h3>
             <div className='jobData'>
-              <span className='dates'>2011-13 & 2015-18</span>
+              <span className='dates'>2011-13 and 2015-18</span>
               <a href='https://www.lajollaagent.com/' target='blank'>
                 <span className='employer'>LaJollaAgent.com</span>
               </a>
@@ -121,14 +262,28 @@ class Experience extends Component {
             </ul>
           </div>
         </div>
-
-        <div className='job three' onClick={this.threeClick}>
-          <div className='windowHeader slide-up'>
-            <div className='browserButton'></div>
-            <div className='windowTitle'>National Funding</div>
+      );
+    } else if (this.state.active === 'three') {
+      job = (
+        <div className='jobContainer'>
+          <div className='job three'>
+            <div className='windowHeader slide-up appear'>
+              <button className='browser-button-close'>x</button>
+              <button
+                className='browser-button-minimize'
+                onClick={this.closeJob}
+              >
+                −
+              </button>
+              <button className='browser-button-expand'>+</button>
+              <div className='windowTitle'>National Funding</div>
+            </div>
+            <div
+              className='preview nfunding fade-in appear'
+              onClick={this.closeJob}
+            ></div>
           </div>
-          <div className='preview nfunding fade-in'></div>
-          <div id='threeContent' className='jobContent'>
+          <div id='threeContent' className='jobContent' onClick={this.closeJob}>
             <h3 className='title'>Business Finance Consultant</h3>
             <div className='jobData'>
               <span className='dates'>2014 – 2015</span>
@@ -147,14 +302,28 @@ class Experience extends Component {
             </ul>
           </div>
         </div>
-
-        <div className='job four' onClick={this.fourClick}>
-          <div className='windowHeader slide-up'>
-            <div className='browserButton'></div>
-            <div className='windowTitle'>Heller Real Estate</div>
+      );
+    } else if (this.state.active === 'four') {
+      job = (
+        <div className='jobContainer'>
+          <div className='job four'>
+            <div className='windowHeader slide-up appear'>
+              <button className='browser-button-close'>x</button>
+              <button
+                className='browser-button-minimize'
+                onClick={this.closeJob}
+              >
+                −
+              </button>
+              <button className='browser-button-expand'>+</button>
+              <div className='windowTitle'>Heller Real Estate</div>
+            </div>
+            <div
+              className='preview heller fade-in appear'
+              onClick={this.closeJob}
+            ></div>
           </div>
-          <div className='preview heller fade-in'></div>
-          <div id='fourContent' className='jobContent'>
+          <div id='fourContent' className='jobContent' onClick={this.closeJob}>
             <h3 className='title'>Digital Marketing Manager and Realtor</h3>
             <div className='jobData'>
               <span className='dates'>2013 – 2014</span>
@@ -184,8 +353,80 @@ class Experience extends Component {
             </ul>
           </div>
         </div>
-      </section>
-    );
+      );
+    } else if (this.state.active === 'all') {
+      job = (
+        <div className='jobsContainer'>
+          <div className='job one'>
+            <div className='windowHeader slide-up appear'>
+              <button className='browser-button-close'>x</button>
+              <button className='browser-button-minimize'>−</button>
+              <button className='browser-button-expand' onClick={this.oneClick}>
+                +
+              </button>
+              <div className='windowTitle'>1P21 Interactive</div>
+            </div>
+            <div
+              className='preview point fade-in appear'
+              onClick={this.oneClick}
+            ></div>
+          </div>
+
+          <div className='job two'>
+            <div className='windowHeader slide-up appear'>
+              <button className='browser-button-close'>x</button>
+              <button className='browser-button-minimize'>−</button>
+              <button className='browser-button-expand' onClick={this.twoClick}>
+                +
+              </button>
+              <div className='windowTitle'>La Jolla Agent</div>
+            </div>
+            <div
+              className='preview ljagent fade-in appear'
+              onClick={this.twoClick}
+            ></div>
+          </div>
+
+          <div className='job three'>
+            <div className='windowHeader slide-up appear'>
+              <button className='browser-button-close'>x</button>
+              <button className='browser-button-minimize'>−</button>
+              <button
+                className='browser-button-expand'
+                onClick={this.threeClick}
+              >
+                +
+              </button>
+              <div className='windowTitle'>National Funding</div>
+            </div>
+            <div
+              className='preview nfunding fade-in appear'
+              onClick={this.threeClick}
+            ></div>
+          </div>
+
+          <div className='job four'>
+            <div className='windowHeader slide-up appear'>
+              <button className='browser-button-close'>x</button>
+              <button className='browser-button-minimize'>−</button>
+              <button
+                className='browser-button-expand'
+                onClick={this.fourClick}
+              >
+                +
+              </button>
+              <div className='windowTitle'>Heller Real Estate</div>
+            </div>
+            <div
+              className='preview heller fade-in appear'
+              onClick={this.fourClick}
+            ></div>
+          </div>
+        </div>
+      );
+    }
+
+    return <section id='exp-content'>{job}</section>;
   }
 }
 

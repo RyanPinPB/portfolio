@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import './Animations/animations.scss';
-import './Animations/Animations';
 import './App.scss';
+import './Animations/Animations.scss';
 import Header from './containers/Header/Header';
 import Main from './containers/Main/Main';
-import Footer from './containers/Footer/Footer';
 
 class App extends Component {
   state = {
-    footerShown: false,
+    activePage: 'Intro',
   };
 
   render() {
@@ -24,20 +22,16 @@ class App extends Component {
       document.documentElement.style.setProperty('--vh', `${vh}px`);
     });
 
-    let footer = null;
-    this.state.footerShown ? (footer = <Footer />) : (footer = null);
-
     // delayed fade-in of menu
-    setTimeout(() => {
-      document.querySelector('.site-header').style.opacity = '1';
-    }, 3800);
+    // setTimeout(() => {
+    //   document.querySelector('.site-header').style.opacity = '1';
+    // }, 3800);
 
     return (
       <BrowserRouter>
         <div className='cursor'></div>
         <Header />
         <Main />
-        {footer}
       </BrowserRouter>
     );
   }

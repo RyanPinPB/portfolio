@@ -6,6 +6,7 @@ import Skills from '../../components/Skills/Skills';
 import Experience from '../../components/Experience/Experience';
 import Background from '../../components/Background/Background';
 import Contact from '../../components/Contact/Contact';
+import Footer from '../Footer/Footer';
 import classes from './Main.module.scss';
 
 class Main extends Component {
@@ -21,6 +22,7 @@ class Main extends Component {
           <Route path='/' component={Intro} />
           <Route render={() => <h1>Not found</h1>} />
         </Switch>
+        <Footer />
       </main>
     );
   }

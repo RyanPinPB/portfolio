@@ -1,7 +1,8 @@
 footer {
   display: flex;
-  position: relative;
-  //   bottom: 0;
+  // position: relative;
+  position: absolute;
+  bottom: 0;
   width: 100%;
 }
 
@@ -25,8 +26,9 @@ footer {
 }
 
 svg {
-  width: 45px;
+  width: 0px;
   cursor: pointer;
+  transition: width 0.3s ease-in-out;
 }
 
 .instagram {

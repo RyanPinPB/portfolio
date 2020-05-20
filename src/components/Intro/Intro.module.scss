@@ -1,6 +1,6 @@
 .Intro {
   position: relative;
-  top: 35vh;
+  top: 40vh;
   left: 50%;
   text-align: center;
   transform: translate3d(-50%, 0, 0);
@@ -22,7 +22,7 @@
   position: relative;
   overflow: hidden;
   height: 45vh;
-  visibility: hidden;
+  // visibility: hidden;
 }
 
 .Intro li {
@@ -82,9 +82,9 @@
 }
 
 @media (min-width: 769px) {
-  .Intro {
-    top: 25vh;
-  }
+  // .Intro {
+  //   top: 25vh;
+  // }
   .Intro span,
   .Intro li {
     font-size: 6rem;

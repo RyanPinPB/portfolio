@@ -1,16 +1,16 @@
 //   colors
-$blue: rgba(4, 153, 255, 1);
-$purple: rgba(102, 51, 255, 1);
-$orange: rgba(252, 156, 84, 1);
-$gold: rgba(255, 227, 115, 1);
-$white: rgba(255, 255, 255, 1);
-$black: rgba(0, 0, 0, 1);
-$black-zero: rgba(0, 0, 0, 0);
-$black-twenty: rgba(0, 0, 0, 0.2);
-$red: rgba(253, 94, 83, 1);
-$grey: rgba(200, 200, 200, 1);
-$grey-zero: rgba(200, 200, 200, 0);
-$grey-fifty: rgba(200, 200, 200, 0.5);
+// $blue: rgba(4, 153, 255, 1);
+// $purple: rgba(102, 51, 255, 1);
+// $orange: rgba(252, 156, 84, 1);
+// $gold: rgba(255, 227, 115, 1);
+// $white: rgba(255, 255, 255, 1);
+// $black: rgba(0, 0, 0, 1);
+// $black-zero: rgba(0, 0, 0, 0);
+// $black-twenty: rgba(0, 0, 0, 0.2);
+// $red: rgba(253, 94, 83, 1);
+// $grey: rgba(200, 200, 200, 1);
+// $grey-zero: rgba(200, 200, 200, 0);
+// $grey-fifty: rgba(200, 200, 200, 0.5);
 
 //helper classes
 
@@ -35,6 +35,15 @@ $grey-fifty: rgba(200, 200, 200, 0.5);
   background: #ddd;
   position: relative;
   border-radius: 3px 3px 0px 0px;
+  &:hover .browser-button-close {
+    color: rgba(0, 0, 0, 0.7);
+  }
+  &:hover .browser-button-minimize {
+    color: rgba(0, 0, 0, 0.7);
+  }
+  &:hover .browser-button-expand {
+    color: rgba(0, 0, 0, 0.7);
+  }
 }
 
 .windowTitle {
@@ -46,34 +55,58 @@ $grey-fifty: rgba(200, 200, 200, 0.5);
   text-align: center;
 }
 
-.browserButton {
+.browser-button-close {
+  position: absolute;
+  border-radius: 50%;
+  background: #ff5f57;
+  width: 10px;
+  height: 10px;
+  top: 25%;
+  left: 4px;
+  padding: 0;
+  border: none;
+  line-height: 1;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0);
+  transition: color 0.3s ease-in-out;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.browser-button-minimize {
   position: absolute;
   border-radius: 50%;
   background: #ffbd2e;
   width: 10px;
   height: 10px;
   top: 25%;
-  left: 20px;
+  left: 18px;
+  padding: 0;
+  border: none;
+  line-height: 1;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0);
+  transition: color 0.3s ease-in-out;
+  text-align: center;
+  vertical-align: middle;
 }
 
-.browserButton::before {
-  content: '';
-  position: absolute;
-  border-radius: 50%;
-  background: #ff5f57;
-  width: 10px;
-  height: 10px;
-  left: -14px;
-}
-
-.browserButton::after {
-  content: '';
+.browser-button-expand {
   position: absolute;
   border-radius: 50%;
   background: #28ca41;
   width: 10px;
   height: 10px;
-  left: 14px;
+  top: 25%;
+  left: 32px;
+  padding: 0;
+  border: none;
+  line-height: 1;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0);
+  transition: color 0.3s ease-in-out;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .preview {

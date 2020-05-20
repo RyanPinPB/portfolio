@@ -8,7 +8,7 @@ class Footer extends Component {
         <div className='social-icons'>
           <a href='https://www.linkedin.com/in/ryanpinpb/' target='blank'>
             <svg
-              className='linkedin'
+              className='linkedin social-icon'
               role='img'
               viewBox='0 0 24 24'
               xmlns='http://www.w3.org/2000/svg'
@@ -19,7 +19,7 @@ class Footer extends Component {
           </a>
           <a href='https://www.facebook.com/ryanpinpb/' target='blank'>
             <svg
-              className='facebook'
+              className='facebook social-icon'
               role='img'
               viewBox='0 0 24 24'
               xmlns='http://www.w3.org/2000/svg'
@@ -30,7 +30,7 @@ class Footer extends Component {
           </a>
           <a href='https://www.twitter.com/ryanpinpb/' target='blank'>
             <svg
-              className='twitter'
+              className='twitter social-icon'
               role='img'
               viewBox='0 0 24 24'
               xmlns='http://www.w3.org/2000/svg'
@@ -41,7 +41,7 @@ class Footer extends Component {
           </a>
           <a href='https://www.instagram.com/ryanpinpb/' target='blank'>
             <svg
-              className='instagram'
+              className='instagram social-icon'
               role='img'
               viewBox='0 0 24 24'
               xmlns='http://www.w3.org/2000/svg'

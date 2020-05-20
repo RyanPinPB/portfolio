@@ -25,6 +25,7 @@ class Header extends Component {
 
   menuClickHandler = () => {
     const currentState = this.state.mobileMenuOpen;
+    document.body.style.overflow = 'auto';
 
     if (!currentState) {
       document.querySelector('.mobile-nav').style.height = '100%';
@@ -51,6 +52,7 @@ class Header extends Component {
         <Menu
           linkClick={this.state.isDesktop ? null : this.menuClickHandler}
           desktop={this.state.isDesktop}
+          showContact={this.props.showFooter}
         />
       </header>
     );

@@ -2,14 +2,57 @@ import React, { Component } from 'react';
 import './Projects.scss';
 
 class Projects extends Component {
+  componentDidMount() {
+    const faders = document.querySelectorAll('.fade-in');
+    const sliders = document.querySelectorAll('.slide-up');
+
+    // document.addEventListener("DOMContentLoaded", function() {
+
+    if ('IntersectionObserver' in window) {
+      const appearOptions = {
+        threshold: 0.3,
+        // rootMargin: "0px 0px 60px 0px"
+      };
+
+      const appearOnScroll = new IntersectionObserver(function (
+        entries,
+        appearOnScroll
+      ) {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          } else {
+            entry.target.classList.add('appear');
+            appearOnScroll.unobserve(entry.target);
+          }
+        });
+      },
+      appearOptions);
+
+      faders.forEach((fader) => {
+        appearOnScroll.observe(fader);
+      });
+
+      sliders.forEach((slider) => {
+        appearOnScroll.observe(slider);
+      });
+    } else {
+      while (faders.length > 0) {
+        faders[0].classList.add('appear');
+      }
+      while (sliders.length > 0) {
+        sliders[0].classList.add('appear');
+      }
+    }
+  }
   render() {
     return (
       <section id='projects-content'>
         <div className='projectContainer'>
           <div className='windowHeader slide-up'>
-            <div className='browserButton'></div>
-            <div className='browserButton'></div>
-            <div className='browserButton'></div>
+            <div className='browser-button-close'></div>
+            <div className='browser-button-minimize'></div>
+            <div className='browser-button-expand'></div>
             <div className='windowTitle'>Pacific Beach Homes</div>
           </div>
           <div className='preview pbhomes fade-in'>
@@ -38,9 +81,9 @@ class Projects extends Component {
 
         <div className='projectContainer'>
           <div className='windowHeader slide-up'>
-            <div className='browserButton'></div>
-            <div className='browserButton'></div>
-            <div className='browserButton'></div>
+            <div className='browser-button-close'></div>
+            <div className='browser-button-minimize'></div>
+            <div className='browser-button-expand'></div>
             <div className='windowTitle'>Travel Theme</div>
           </div>
           <div className='preview travel fade-in'>
@@ -67,9 +110,9 @@ class Projects extends Component {
 
         <div className='projectContainer'>
           <div className='windowHeader slide-up'>
-            <div className='browserButton'></div>
-            <div className='browserButton'></div>
-            <div className='browserButton'></div>
+            <div className='browser-button-close'></div>
+            <div className='browser-button-minimize'></div>
+            <div className='browser-button-expand'></div>
             <div className='windowTitle'>La Jolla Agent</div>
           </div>
           <div className='preview ljagent fade-in'>
@@ -95,9 +138,9 @@ class Projects extends Component {
 
         <div className='projectContainer'>
           <div className='windowHeader slide-up'>
-            <div className='browserButton'></div>
-            <div className='browserButton'></div>
-            <div className='browserButton'></div>
+            <div className='browser-button-close'></div>
+            <div className='browser-button-minimize'></div>
+            <div className='browser-button-expand'></div>
             <div className='windowTitle'>Sam's Portfolio</div>
           </div>
           <div className='preview samport fade-in'>
@@ -123,9 +166,9 @@ class Projects extends Component {
 
         <div className='projectContainer'>
           <div className='windowHeader slide-up'>
-            <div className='browserButton'></div>
-            <div className='browserButton'></div>
-            <div className='browserButton'></div>
+            <div className='browser-button-close'></div>
+            <div className='browser-button-minimize'></div>
+            <div className='browser-button-expand'></div>
             <div className='windowTitle'>R.H. Bishop Books</div>
           </div>
           <div className='preview bishop fade-in'>
@@ -148,9 +191,9 @@ class Projects extends Component {
 
         <div className='projectContainer'>
           <div className='windowHeader slide-up'>
-            <div className='browserButton'></div>
-            <div className='browserButton'></div>
-            <div className='browserButton'></div>
+            <div className='browser-button-close'></div>
+            <div className='browser-button-minimize'></div>
+            <div className='browser-button-expand'></div>
             <div className='windowTitle'>Gates Vacation Homes</div>
           </div>
           <div className='preview gatesVacation fade-in'>
@@ -168,9 +211,9 @@ class Projects extends Component {
 
         <div className='projectContainer'>
           <div className='windowHeader slide-up'>
-            <div className='browserButton'></div>
-            <div className='browserButton'></div>
-            <div className='browserButton'></div>
+            <div className='browser-button-close'></div>
+            <div className='browser-button-minimize'></div>
+            <div className='browser-button-expand'></div>
             <div className='windowTitle'>Jamming</div>
           </div>
           <div className='preview jamming fade-in'>
@@ -188,9 +231,9 @@ class Projects extends Component {
 
         <div className='projectContainer'>
           <div className='windowHeader slide-up'>
-            <div className='browserButton'></div>
-            <div className='browserButton'></div>
-            <div className='browserButton'></div>
+            <div className='browser-button-close'></div>
+            <div className='browser-button-minimize'></div>
+            <div className='browser-button-expand'></div>
             <div className='windowTitle'>Ravenous</div>
           </div>
           <div className='preview ravenous fade-in'>
@@ -208,9 +251,9 @@ class Projects extends Component {
 
         <div className='projectContainer'>
           <div className='windowHeader slide-up'>
-            <div className='browserButton'></div>
-            <div className='browserButton'></div>
-            <div className='browserButton'></div>
+            <div className='browser-button-close'></div>
+            <div className='browser-button-minimize'></div>
+            <div className='browser-button-expand'></div>
             <div className='windowTitle'>Musicon</div>
           </div>
           <div className='preview musicon fade-in'>
@@ -226,9 +269,9 @@ class Projects extends Component {
 
         <div className='projectContainer'>
           <div className='windowHeader slide-up'>
-            <div className='browserButton'></div>
-            <div className='browserButton'></div>
-            <div className='browserButton'></div>
+            <div className='browser-button-close'></div>
+            <div className='browser-button-minimize'></div>
+            <div className='browser-button-expand'></div>
             <div className='windowTitle'>TeaCozy</div>
           </div>
           <div className='preview teaCozy fade-in'>
@@ -244,9 +287,9 @@ class Projects extends Component {
 
         <div className='projectContainer'>
           <div className='windowHeader slide-up'>
-            <div className='browserButton'></div>
-            <div className='browserButton'></div>
-            <div className='browserButton'></div>
+            <div className='browser-button-close'></div>
+            <div className='browser-button-minimize'></div>
+            <div className='browser-button-expand'></div>
             <div className='windowTitle'>RyanPearson portfolio</div>
           </div>
           <div className='preview portfolio fade-in'>
@@ -261,9 +304,9 @@ class Projects extends Component {
 
         <div className='projectContainer'>
           <div className='windowHeader slide-up'>
-            <div className='browserButton'></div>
-            <div className='browserButton'></div>
-            <div className='browserButton'></div>
+            <div className='browser-button-close'></div>
+            <div className='browser-button-minimize'></div>
+            <div className='browser-button-expand'></div>
             <div className='windowTitle'>Chore Door game</div>
           </div>
           <div className='preview choreDoor fade-in'>

@@ -4,7 +4,9 @@
   display: flex;
   flex-direction: column;
   width: 95%;
-  margin: 0 auto 40px auto;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 80px;
 }
 
 .bgHeader {
@@ -61,6 +63,10 @@
 #bg-content p {
   font-size: 1.8rem;
   line-height: 1.4;
+  color: var(--grey);
+  strong {
+    color: var(--white);
+  }
 }
 
 #bg-content p a {
@@ -86,7 +92,7 @@
 
 @media (min-width: 600px) {
   #bg-content {
-    margin: 0px auto 40px auto;
+    padding-top: 90px;
   }
 
   .storyChanger {
@@ -136,5 +142,17 @@
   #bg-content {
     width: 70%;
     max-width: 1000px;
+    padding-top: 100px;
+  }
+
+  #bg-content p {
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 1350px) {
+  #bg-content {
+    padding-top: 120px;
   }
 }
