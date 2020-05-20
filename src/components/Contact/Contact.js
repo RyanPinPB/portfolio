@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import './Contact.scss';
 
 class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.customCursorFollow = this.customCursorFollow.bind(this);
+    this.customCursorClick = this.customCursorClick.bind(this);
+  }
   componentDidMount() {
     document.body.style.overflow = 'hidden';
 
@@ -11,8 +16,7 @@ class Contact extends Component {
           icon.style.width = '45px';
         });
     if (window.innerWidth > 768) {
-      // document.querySelector('.cursor').style.display = 'block';
-      document.addEventListener('mousemove', (e) => this.customCursorFollow(e));
+      document.addEventListener('mousemove', this.customCursorFollow);
       document.addEventListener('click', this.customCursorClick);
     }
   }
@@ -21,11 +25,9 @@ class Contact extends Component {
     console.log('Leaving Contact section');
     document.body.style.overflow = 'auto';
     if (window.innerWidth > 768) {
-      document.removeEventListener('mousemove', (e) =>
-        this.customCursorFollow(e)
-      );
+      document.removeEventListener('mousemove', this.customCursorFollow);
       document.removeEventListener('click', this.customCursorClick);
-      // document.querySelector('.cursor').style.display = 'none';
+      document.querySelector('.cursor').style.opacity = '0';
     }
   }
 
@@ -33,7 +35,7 @@ class Contact extends Component {
     const cursor = document.querySelector('.cursor');
     cursor.setAttribute(
       'style',
-      'top: ' + (e.pageY - 20) + 'px; left: ' + (e.pageX - 20) + 'px;'
+      'top: ' + (e.pageY - 20) + 'px; left: ' + (e.pageX - 20) + 'px; opacity:1'
     );
   }
 
