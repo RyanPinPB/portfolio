@@ -27,22 +27,39 @@
 
 //global classes
 
-.cursor {
-  opacity: 0;
-}
-
 .windowHeader {
   background: #ddd;
   position: relative;
   border-radius: 3px 3px 0px 0px;
-  &:hover .browser-button-close {
-    color: rgba(0, 0, 0, 0.7);
+
+  .browser-button-close,
+  .browser-button-minimize,
+  .browser-button-expand {
+    position: absolute;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    top: 25%;
+    padding: 0;
+    border: none;
+    svg {
+      transition: fill 0.3s ease-in-out;
+    }
   }
-  &:hover .browser-button-minimize {
-    color: rgba(0, 0, 0, 0.7);
+
+  .browser-button-close:focus,
+  .browser-button-minimize:focus,
+  .browser-button-expand:focus {
+    outline: none;
   }
-  &:hover .browser-button-expand {
-    color: rgba(0, 0, 0, 0.7);
+  &:hover .browser-button-close svg {
+    fill: rgba(0, 0, 0, 0.7);
+  }
+  &:hover .browser-button-minimize svg {
+    fill: rgba(0, 0, 0, 0.7);
+  }
+  &:hover .browser-button-expand svg {
+    fill: rgba(0, 0, 0, 0.7);
   }
 }
 
@@ -56,57 +73,19 @@
 }
 
 .browser-button-close {
-  position: absolute;
-  border-radius: 50%;
   background: #ff5f57;
-  width: 10px;
-  height: 10px;
-  top: 25%;
   left: 4px;
-  padding: 0;
-  border: none;
-  line-height: 1;
-  font-size: 10px;
-  color: rgba(0, 0, 0, 0);
-  transition: color 0.3s ease-in-out;
-  text-align: center;
-  vertical-align: middle;
 }
 
 .browser-button-minimize {
-  position: absolute;
-  border-radius: 50%;
   background: #ffbd2e;
-  width: 10px;
-  height: 10px;
   top: 25%;
   left: 18px;
-  padding: 0;
-  border: none;
-  line-height: 1;
-  font-size: 10px;
-  color: rgba(0, 0, 0, 0);
-  transition: color 0.3s ease-in-out;
-  text-align: center;
-  vertical-align: middle;
 }
 
 .browser-button-expand {
-  position: absolute;
-  border-radius: 50%;
   background: #28ca41;
-  width: 10px;
-  height: 10px;
-  top: 25%;
   left: 32px;
-  padding: 0;
-  border: none;
-  line-height: 1;
-  font-size: 10px;
-  color: rgba(0, 0, 0, 0);
-  transition: color 0.3s ease-in-out;
-  text-align: center;
-  vertical-align: middle;
 }
 
 .preview {

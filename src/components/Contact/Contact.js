@@ -35,7 +35,11 @@ class Contact extends Component {
     const cursor = document.querySelector('.cursor');
     cursor.setAttribute(
       'style',
-      'top: ' + (e.pageY - 20) + 'px; left: ' + (e.pageX - 20) + 'px; opacity:1'
+      'top: ' +
+        (e.pageY - 20) +
+        'px; left: ' +
+        (e.pageX - 20) +
+        'px; opacity:.8'
     );
   }
 
@@ -51,6 +55,7 @@ class Contact extends Component {
   render() {
     return (
       <section id='contact-content'>
+        <span className='watermark'>RYAN</span>
         <div className='contactInfo'>
           <div>
             Cell:

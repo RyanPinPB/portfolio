@@ -3,14 +3,61 @@
   flex-direction: column;
 }
 
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type(
+  $min-vw: 320px,
+  $max-vw: 2000px,
+  $min-font-size: 100px,
+  $max-font-size: 700px
+) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(
+          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+        );
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+.watermark {
+  position: absolute;
+  color: rgba(255, 255, 255, 0);
+  top: 45vh;
+  left: 0;
+  right: 0;
+  width: fit-content;
+  margin: auto;
+  opacity: 1;
+  @include fluid-type($min-font-size: 100px, $max-font-size: 700px);
+  transform: translate3D(0, -50%, 0);
+  -webkit-text-stroke: 4px rgba(255, 255, 255, 0.08);
+  cursor: none;
+}
+
 .contactInfo {
   position: relative;
-  top: 35vh;
+  top: 45vh;
   font-size: 2rem;
   font-weight: 800;
   color: var(--orange);
   line-height: 1;
   text-align: center;
+  transform: translate3D(0, -50%, 0);
 }
 
 .contactInfo div {
@@ -66,7 +113,7 @@
     // transition-timing-function: ease-out;
     animation: cursorAnim 1s infinite alternate;
     pointer-events: none;
-    opacity: 0.8;
+    opacity: 0;
     z-index: 2;
   }
 

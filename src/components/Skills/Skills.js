@@ -57,6 +57,8 @@ class Skills extends Component {
             <li>SQL</li>
             <li>Webpack</li>
             <li>jQuery</li>
+            <li>Firebase</li>
+            <li>Redux</li>
             <li>Bootstrap</li>
             <li>Mocha</li>
             <li>Chai</li>

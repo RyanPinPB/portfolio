@@ -53,6 +53,9 @@ $grey-fifty: rgba(200, 200, 200, 0.5);
   box-shadow: 0px 0px 10px 5px $grey-zero;
   button {
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

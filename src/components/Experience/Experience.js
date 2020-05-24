@@ -75,10 +75,38 @@ class Experience extends Component {
         <div className='jobsContainer'>
           <div className='job one'>
             <div className='windowHeader slide-up'>
-              <button className='browser-button-close'>x</button>
-              <button className='browser-button-minimize'>−</button>
+              <button className='browser-button-close'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z' />
+                </svg>
+              </button>
+              <button className='browser-button-minimize'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M0 10h24v4h-24z' />
+                </svg>
+              </button>
               <button className='browser-button-expand' onClick={this.oneClick}>
-                +
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z' />
+                </svg>
               </button>
               <div className='windowTitle'>1P21 Interactive</div>
             </div>
@@ -90,10 +118,38 @@ class Experience extends Component {
 
           <div className='job two'>
             <div className='windowHeader slide-up'>
-              <button className='browser-button-close'>x</button>
-              <button className='browser-button-minimize'>−</button>
+              <button className='browser-button-close'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z' />
+                </svg>
+              </button>
+              <button className='browser-button-minimize'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M0 10h24v4h-24z' />
+                </svg>
+              </button>
               <button className='browser-button-expand' onClick={this.twoClick}>
-                +
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z' />
+                </svg>
               </button>
               <div className='windowTitle'>La Jolla Agent</div>
             </div>
@@ -105,13 +161,41 @@ class Experience extends Component {
 
           <div className='job three'>
             <div className='windowHeader slide-up'>
-              <button className='browser-button-close'>x</button>
-              <button className='browser-button-minimize'>−</button>
+              <button className='browser-button-close'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z' />
+                </svg>
+              </button>
+              <button className='browser-button-minimize'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M0 10h24v4h-24z' />
+                </svg>
+              </button>
               <button
                 className='browser-button-expand'
                 onClick={this.threeClick}
               >
-                +
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z' />
+                </svg>
               </button>
               <div className='windowTitle'>National Funding</div>
             </div>
@@ -123,13 +207,41 @@ class Experience extends Component {
 
           <div className='job four'>
             <div className='windowHeader slide-up'>
-              <button className='browser-button-close'>x</button>
-              <button className='browser-button-minimize'>−</button>
+              <button className='browser-button-close'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z' />
+                </svg>
+              </button>
+              <button className='browser-button-minimize'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M0 10h24v4h-24z' />
+                </svg>
+              </button>
               <button
                 className='browser-button-expand'
                 onClick={this.fourClick}
               >
-                +
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z' />
+                </svg>
               </button>
               <div className='windowTitle'>Heller Real Estate</div>
             </div>
@@ -145,14 +257,42 @@ class Experience extends Component {
         <div className='jobContainer'>
           <div className='job one'>
             <div className='windowHeader slide-up appear'>
-              <button className='browser-button-close'>x</button>
+              <button className='browser-button-close'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z' />
+                </svg>
+              </button>
               <button
                 className='browser-button-minimize'
                 onClick={this.closeJob}
               >
-                −
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M0 10h24v4h-24z' />
+                </svg>
               </button>
-              <button className='browser-button-expand'>+</button>
+              <button className='browser-button-expand'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z' />
+                </svg>
+              </button>
               <div className='windowTitle'>1P21 Interactive</div>
             </div>
             <div
@@ -198,14 +338,42 @@ class Experience extends Component {
         <div className='jobContainer'>
           <div className='job two'>
             <div className='windowHeader slide-up appear'>
-              <button className='browser-button-close'>x</button>
+              <button className='browser-button-close'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z' />
+                </svg>
+              </button>
               <button
                 className='browser-button-minimize'
                 onClick={this.closeJob}
               >
-                −
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M0 10h24v4h-24z' />
+                </svg>
               </button>
-              <button className='browser-button-expand'>+</button>
+              <button className='browser-button-expand'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z' />
+                </svg>
+              </button>
               <div className='windowTitle'>La Jolla Agent</div>
             </div>
             <div
@@ -249,14 +417,42 @@ class Experience extends Component {
         <div className='jobContainer'>
           <div className='job three'>
             <div className='windowHeader slide-up appear'>
-              <button className='browser-button-close'>x</button>
+              <button className='browser-button-close'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z' />
+                </svg>
+              </button>
               <button
                 className='browser-button-minimize'
                 onClick={this.closeJob}
               >
-                −
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M0 10h24v4h-24z' />
+                </svg>
               </button>
-              <button className='browser-button-expand'>+</button>
+              <button className='browser-button-expand'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z' />
+                </svg>
+              </button>
               <div className='windowTitle'>National Funding</div>
             </div>
             <div
@@ -289,14 +485,42 @@ class Experience extends Component {
         <div className='jobContainer'>
           <div className='job four'>
             <div className='windowHeader slide-up appear'>
-              <button className='browser-button-close'>x</button>
+              <button className='browser-button-close'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z' />
+                </svg>
+              </button>
               <button
                 className='browser-button-minimize'
                 onClick={this.closeJob}
               >
-                −
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M0 10h24v4h-24z' />
+                </svg>
               </button>
-              <button className='browser-button-expand'>+</button>
+              <button className='browser-button-expand'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z' />
+                </svg>
+              </button>
               <div className='windowTitle'>Heller Real Estate</div>
             </div>
             <div
@@ -340,10 +564,38 @@ class Experience extends Component {
         <div className='jobsContainer'>
           <div className='job one'>
             <div className='windowHeader slide-up appear'>
-              <button className='browser-button-close'>x</button>
-              <button className='browser-button-minimize'>−</button>
+              <button className='browser-button-close'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z' />
+                </svg>
+              </button>
+              <button className='browser-button-minimize'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M0 10h24v4h-24z' />
+                </svg>
+              </button>
               <button className='browser-button-expand' onClick={this.oneClick}>
-                +
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z' />
+                </svg>
               </button>
               <div className='windowTitle'>1P21 Interactive</div>
             </div>
@@ -355,10 +607,38 @@ class Experience extends Component {
 
           <div className='job two'>
             <div className='windowHeader slide-up appear'>
-              <button className='browser-button-close'>x</button>
-              <button className='browser-button-minimize'>−</button>
+              <button className='browser-button-close'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z' />
+                </svg>
+              </button>
+              <button className='browser-button-minimize'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M0 10h24v4h-24z' />
+                </svg>
+              </button>
               <button className='browser-button-expand' onClick={this.twoClick}>
-                +
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z' />
+                </svg>
               </button>
               <div className='windowTitle'>La Jolla Agent</div>
             </div>
@@ -370,13 +650,41 @@ class Experience extends Component {
 
           <div className='job three'>
             <div className='windowHeader slide-up appear'>
-              <button className='browser-button-close'>x</button>
-              <button className='browser-button-minimize'>−</button>
+              <button className='browser-button-close'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z' />
+                </svg>
+              </button>
+              <button className='browser-button-minimize'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M0 10h24v4h-24z' />
+                </svg>
+              </button>
               <button
                 className='browser-button-expand'
                 onClick={this.threeClick}
               >
-                +
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z' />
+                </svg>
               </button>
               <div className='windowTitle'>National Funding</div>
             </div>
@@ -388,13 +696,41 @@ class Experience extends Component {
 
           <div className='job four'>
             <div className='windowHeader slide-up appear'>
-              <button className='browser-button-close'>x</button>
-              <button className='browser-button-minimize'>−</button>
+              <button className='browser-button-close'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z' />
+                </svg>
+              </button>
+              <button className='browser-button-minimize'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M0 10h24v4h-24z' />
+                </svg>
+              </button>
               <button
                 className='browser-button-expand'
                 onClick={this.fourClick}
               >
-                +
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='6px'
+                  height='6px'
+                  fill='rgba(0,0,0,0)'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z' />
+                </svg>
               </button>
               <div className='windowTitle'>Heller Real Estate</div>
             </div>

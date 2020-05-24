@@ -1,6 +1,3 @@
-$transition-delay: 0.5s;
-$transition-delay-step: 0.15s;
-
 #skills-content {
   display: flex;
   flex-direction: column;
@@ -63,6 +60,9 @@ $transition-delay-step: 0.15s;
 .chart-skills li:nth-child(even) {
   background: linear-gradient(to bottom, var(--gold), var(--orange));
 }
+
+$transition-delay: 0.8s;
+$transition-delay-step: 0.15s;
 
 @for $i from 1 through 9 {
   .chart-skills li:nth-child(#{$i}n) {

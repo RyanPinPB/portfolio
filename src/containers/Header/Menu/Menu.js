@@ -69,25 +69,6 @@ class Menu extends Component {
           </NavLink>
         </li>
       </ul>
-      // <NavLink to='/' exact>
-      //   Home
-      // </NavLink>
-      // <NavLink className='menu-animation' to='/projects' exact>
-      //   Projects
-      // </NavLink>
-      // <NavLink className='menu-animation' to='/skills' exact>
-      //   Skills
-      // </NavLink>
-      // <NavLink className='menu-animation' to='/experience' exact>
-      //   Experience
-      // </NavLink>
-      // <NavLink className='menu-animation' to='/background' exact>
-      //   Background
-      // </NavLink>
-      // <NavLink className='menu-animation' to='/contact' exact>
-      //   Contact Ryan
-      // </NavLink>
-      // </div>
     );
 
     let menu = mobileMenu;
