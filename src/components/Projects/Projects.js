@@ -84,35 +84,6 @@ class Projects extends Component {
             <div className='browser-button-close'></div>
             <div className='browser-button-minimize'></div>
             <div className='browser-button-expand'></div>
-            <div className='windowTitle'>Travel Theme</div>
-          </div>
-          <div className='preview travel fade-in'>
-            <div className='projectContent travelContent'>
-              <ul className='projectSkills'>
-                <li>HTML</li>
-                <li>SCSS</li>
-                <li>Javascript</li>
-                <li>PHP</li>
-                <li>GIT</li>
-                <li>Wordpress</li>
-                <li>Advanced Custom Fields</li>
-              </ul>
-              <a
-                className='viewProject'
-                href='https://travel.ryanpearson.website'
-                target='blank'
-              >
-                View Project
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className='projectContainer'>
-          <div className='windowHeader slide-up'>
-            <div className='browser-button-close'></div>
-            <div className='browser-button-minimize'></div>
-            <div className='browser-button-expand'></div>
             <div className='windowTitle'>La Jolla Agent</div>
           </div>
           <div className='preview ljagent fade-in'>
@@ -181,6 +152,35 @@ class Projects extends Component {
               <a
                 className='viewProject'
                 href='https://www.rhbishopbooks.com/'
+                target='blank'
+              >
+                View Project
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className='projectContainer'>
+          <div className='windowHeader slide-up'>
+            <div className='browser-button-close'></div>
+            <div className='browser-button-minimize'></div>
+            <div className='browser-button-expand'></div>
+            <div className='windowTitle'>Travel Theme</div>
+          </div>
+          <div className='preview travel fade-in'>
+            <div className='projectContent travelContent'>
+              <ul className='projectSkills'>
+                <li>HTML</li>
+                <li>SCSS</li>
+                <li>Javascript</li>
+                <li>PHP</li>
+                <li>GIT</li>
+                <li>Wordpress</li>
+                <li>Advanced Custom Fields</li>
+              </ul>
+              <a
+                className='viewProject'
+                href='https://travel.ryanpearson.website'
                 target='blank'
               >
                 View Project

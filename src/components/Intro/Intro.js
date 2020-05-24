@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import classes from './Intro.module.scss';
 
 class Intro extends Component {
@@ -61,6 +62,7 @@ class Intro extends Component {
             I love organization
           </li>
         </ul>
+        <Link to='/projects'>View my work</Link>
       </div>
     );
   }
