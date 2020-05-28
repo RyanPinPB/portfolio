@@ -143,10 +143,16 @@
 
 .viewProject {
   color: var(--white);
-  margin: 10px;
-  font-size: 1.4rem;
+  margin: 20px 10px 10px 10px;
+  font-size: 1.8rem;
   font-weight: 700;
   text-align: center;
+  transition: all 0.3s ease-in-out;
+  line-height: 1;
+  &:hover {
+    transform: scale(1.05);
+    text-decoration: none;
+  }
 }
 
 .pbhomes {
@@ -189,8 +195,8 @@
   background-image: url('../../assets/images/projects/portfolio.png');
 }
 
-.choreDoor {
-  background-image: url('../../assets/images/projects/choreDoor.png');
+.robot {
+  background-image: url('../../assets/images/projects/robot.png');
 }
 
 @media (min-width: 600px) {
@@ -229,7 +235,7 @@
   }
 
   .viewProject {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 }
 

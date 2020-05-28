@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Intro from '../../components/Intro/Intro';
 import Projects from '../../components/Projects/Projects';
+import Project from '../../components/Projects/Project/Project';
 import Skills from '../../components/Skills/Skills';
 import Experience from '../../components/Experience/Experience';
 import Background from '../../components/Background/Background';
@@ -14,6 +15,7 @@ class Main extends Component {
     return (
       <main className={classes.Main}>
         <Switch>
+          <Route path='/projects/project' component={Project} />
           <Route path='/projects' component={Projects} />
           <Route path='/skills' component={Skills} />
           <Route path='/experience' component={Experience} />

@@ -7,10 +7,31 @@
   padding-bottom: 80px;
 }
 
+.skills-intro {
+  position: relative;
+  color: var(--white);
+  margin: 30px 80px 25px 25px;
+  font-size: 1.6rem;
+  text-align: center;
+  &:after {
+    content: 'SKILLS';
+    position: absolute;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    left: 50%;
+    // right: 0;
+    margin: auto;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.1);
+  }
+}
+
 .chart-wrapper {
   width: 80%;
   height: 30vh;
-  margin: 80px auto 100px auto;
+  margin: 20px auto 100px auto;
   display: flex;
 }
 
@@ -19,11 +40,23 @@
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-around;
-  padding-right: 5px;
+  padding-right: 10px;
+  max-width: 55px;
+  margin-left: -25px;
 }
 
 .chart-levels li {
   color: var(--white);
+  position: relative;
+  width: 100%;
+  &:after {
+    content: '—';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    opacity: 0.95;
+  }
 }
 
 .bar-container {
@@ -117,6 +150,12 @@ $transition-delay-step: 0.15s;
   }
 }
 
+@media (min-width: 487px) {
+  .skills-intro {
+    margin: 40px auto 25px auto;
+  }
+}
+
 @media (min-width: 500px) {
   .chart-skills span {
     bottom: 5px;
@@ -143,9 +182,13 @@ $transition-delay-step: 0.15s;
 }
 
 @media (min-width: 769px) {
+  .skills-intro {
+    margin: 120px auto 25px auto;
+  }
+
   .chart-wrapper {
     width: 90%;
-    margin: 80px auto 120px auto;
+    margin: 25px auto 120px auto;
   }
 
   .chart-skills span {
@@ -162,6 +205,17 @@ $transition-delay-step: 0.15s;
 }
 
 @media (min-width: 1025px) {
+  .skills-intro {
+    margin: 140px auto 25px auto;
+  }
+
+  .chart-levels {
+    max-width: 85px;
+    li {
+      font-size: 1.6rem;
+    }
+  }
+
   .chart-skills span {
     bottom: -20px;
   }
@@ -174,8 +228,12 @@ $transition-delay-step: 0.15s;
 }
 
 @media (min-width: 1350px) {
+  .skills-intro {
+    margin: 180px auto 25px auto;
+  }
+
   .chart-wrapper {
     width: 90%;
-    margin: 120px auto 120px auto;
+    margin: 25px auto 120px auto;
   }
 }

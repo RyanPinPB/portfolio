@@ -20,8 +20,8 @@ class Background extends Component {
       content = (
         <div className='bgShort'>
           <p>
-            Made first website in 2000 in middle school. Played around with
-            photoshop in high school.
+            Made first website in 2000. Started using Photoshop in 2005 and
+            casually played around with website code.
           </p>
           <p>
             Graduated from

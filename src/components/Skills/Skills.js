@@ -11,41 +11,45 @@ class Skills extends Component {
 
     return (
       <section id='skills-content'>
+        <span className='skills-intro'>
+          Listing <strong>skills</strong> without a chart is really boring,{' '}
+          <span style={{ whiteSpace: 'nowrap' }}>so . . .</span>
+        </span>
         <div className='chart-wrapper'>
-          {/* removed y axis labels
-    <ul className="chart-levels">
-      <li>Could teach it</li>
-      <li>Used a bunch</li>
-      <li>Used in a few projects</li>
-      <li>Practiced this a bit</li>
-      <li>Learned but need to practice</li>
-    </ul> */}
+          {/* removed y axis labels */}
+          <ul className='chart-levels'>
+            <li>Can teach it</li>
+            <li>Extensive experience</li>
+            <li>Experienced</li>
+            <li>Practiced it</li>
+            <li>Learned it</li>
+          </ul>
           <ul className='bar-container chart-skills'>
-            <li className='chart-skill' data-level='80'>
+            <li className='chart-skill' data-level='95'>
               <span className='chart-skill-text '>HTML</span>
             </li>
-            <li className='chart-skill' data-level='75'>
+            <li className='chart-skill' data-level='90'>
               <span className='chart-skill-text '>CSS</span>
             </li>
-            <li className='chart-skill' data-level='55'>
+            <li className='chart-skill' data-level='85'>
               <span className='chart-skill-text '>Javascript</span>
             </li>
-            <li className='chart-skill' data-level='20'>
+            <li className='chart-skill' data-level='50'>
               <span className='chart-skill-text '>React</span>
             </li>
-            <li className='chart-skill' data-level='5'>
+            <li className='chart-skill' data-level='25'>
               <span className='chart-skill-text '>Express</span>
             </li>
-            <li className='chart-skill' data-level='55'>
+            <li className='chart-skill' data-level='90'>
               <span className='chart-skill-text '>Wordpress</span>
             </li>
-            <li className='chart-skill' data-level='40'>
+            <li className='chart-skill' data-level='85'>
               <span className='chart-skill-text '>PHP</span>
             </li>
-            <li className='chart-skill' data-level='65'>
+            <li className='chart-skill' data-level='90'>
               <span className='chart-skill-text '>SASS</span>
             </li>
-            <li className='chart-skill' data-level='80'>
+            <li className='chart-skill' data-level='95'>
               <span className='chart-skill-text '>SEO</span>
             </li>
           </ul>
@@ -53,13 +57,14 @@ class Skills extends Component {
 
         <div className='otherSkills'>
           <ul>
-            <li>Node</li>
-            <li>SQL</li>
             <li>Webpack</li>
             <li>jQuery</li>
             <li>Firebase</li>
+            <li>Styled Components</li>
             <li>Redux</li>
             <li>Bootstrap</li>
+            <li>Node</li>
+            <li>SQL</li>
             <li>Mocha</li>
             <li>Chai</li>
             <li>Phantom</li>
@@ -69,7 +74,7 @@ class Skills extends Component {
             <li>Control Panel</li>
             <li>myPHPAdmin</li>
             <li>Xd</li>
-            <li>Terminal</li>
+            <li>Command Line</li>
             <li>Advanced Custom Fields</li>
             <li>Squarespace</li>
             <li>Mailchimp</li>
@@ -83,12 +88,12 @@ class Skills extends Component {
             <li>Google Docs</li>
             <li>Salesforce</li>
             <li>Insightly</li>
-            <li>Active Collab / Flux</li>
+            <li>Active Collab</li>
             <li>Asana</li>
             <li>Basecamp</li>
             <li>Top Producer</li>
             <li>Digital marketing consulting</li>
-            <li>content and proof reading</li>
+            <li>Content and proof reading</li>
             <li>Sales</li>
             <li>CA R.E. License #01899669</li>
           </ul>

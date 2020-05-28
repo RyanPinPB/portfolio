@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
 import './Projects.scss';
 
 class Projects extends Component {
@@ -145,9 +147,10 @@ class Projects extends Component {
           <div className='preview bishop fade-in'>
             <div className='projectContent bishopContent'>
               <ul className='projectSkills'>
-                <li>Squarespace</li>
+                <li>HTML</li>
                 <li>CSS</li>
-                <li>XD</li>
+                <li>Squarespace</li>
+                <li>Design</li>
               </ul>
               <a
                 className='viewProject'
@@ -185,6 +188,27 @@ class Projects extends Component {
               >
                 View Project
               </a>
+            </div>
+          </div>
+        </div>
+
+        <div className='projectContainer'>
+          <div className='windowHeader slide-up'>
+            <div className='browser-button-close'></div>
+            <div className='browser-button-minimize'></div>
+            <div className='browser-button-expand'></div>
+            <div className='windowTitle'>Mr Robot</div>
+          </div>
+          <div className='preview robot fade-in'>
+            <div className='projectContent robotContent'>
+              <ul className='projectSkills'>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+              </ul>
+              <Link to='/projects/project' className='viewProject'>
+                View Project
+              </Link>
             </div>
           </div>
         </div>
@@ -297,24 +321,6 @@ class Projects extends Component {
               <ul className='projectSkills'>
                 <li>HTML</li>
                 <li>CSS</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div className='projectContainer'>
-          <div className='windowHeader slide-up'>
-            <div className='browser-button-close'></div>
-            <div className='browser-button-minimize'></div>
-            <div className='browser-button-expand'></div>
-            <div className='windowTitle'>Chore Door game</div>
-          </div>
-          <div className='preview choreDoor fade-in'>
-            <div className='projectContent choreDoorContent'>
-              <ul className='projectSkills'>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Javascript</li>
               </ul>
             </div>
           </div>
