@@ -197,6 +197,37 @@ class Projects extends Component {
             <div className='browser-button-close'></div>
             <div className='browser-button-minimize'></div>
             <div className='browser-button-expand'></div>
+            <div className='windowTitle'>Burger Builder</div>
+          </div>
+          <div className='preview burger fade-in'>
+            <div className='projectContent burgerContent'>
+              <ul className='projectSkills'>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+                <li>React</li>
+                <li>Redux</li>
+                <li>User Authentication</li>
+                <li>Local Storage</li>
+                <li>Jest</li>
+                <li>Firebase</li>
+              </ul>
+              <a
+                className='viewProject'
+                href='https://react-my-burger-7ef03.web.app/'
+                target='blank'
+              >
+                View Project
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className='projectContainer'>
+          <div className='windowHeader slide-up'>
+            <div className='browser-button-close'></div>
+            <div className='browser-button-minimize'></div>
+            <div className='browser-button-expand'></div>
             <div className='windowTitle'>Mr Robot</div>
           </div>
           <div className='preview robot fade-in'>
@@ -206,7 +237,7 @@ class Projects extends Component {
                 <li>CSS</li>
                 <li>Javascript</li>
               </ul>
-              <Link to='/projects/project' className='viewProject'>
+              <Link to='/projects/robot' className='viewProject'>
                 View Project
               </Link>
             </div>
@@ -304,23 +335,6 @@ class Projects extends Component {
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>Javascript</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div className='projectContainer'>
-          <div className='windowHeader slide-up'>
-            <div className='browser-button-close'></div>
-            <div className='browser-button-minimize'></div>
-            <div className='browser-button-expand'></div>
-            <div className='windowTitle'>RyanPearson portfolio</div>
-          </div>
-          <div className='preview portfolio fade-in'>
-            <div className='projectContent portfolioContent'>
-              <ul className='projectSkills'>
-                <li>HTML</li>
-                <li>CSS</li>
               </ul>
             </div>
           </div>
