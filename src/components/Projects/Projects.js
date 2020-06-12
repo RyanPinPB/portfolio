@@ -73,7 +73,8 @@ class Projects extends Component {
               <a
                 className='viewProject'
                 href='https://pacificbeachhomes.com'
-                target='blank'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 View Project
               </a>
@@ -101,7 +102,35 @@ class Projects extends Component {
               <a
                 className='viewProject'
                 href='https://lajollaagent.com'
-                target='blank'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                View Project
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className='projectContainer'>
+          <div className='windowHeader slide-up'>
+            <div className='browser-button-close'></div>
+            <div className='browser-button-minimize'></div>
+            <div className='browser-button-expand'></div>
+            <div className='windowTitle'>R.H. Bishop Books</div>
+          </div>
+          <div className='preview bishop fade-in'>
+            <div className='projectContent bishopContent'>
+              <ul className='projectSkills'>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Squarespace</li>
+                <li>Design</li>
+              </ul>
+              <a
+                className='viewProject'
+                href='https://www.rhbishopbooks.com/'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 View Project
               </a>
@@ -129,33 +158,8 @@ class Projects extends Component {
               <a
                 className='viewProject'
                 href='https://sampearson.digital'
-                target='blank'
-              >
-                View Project
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className='projectContainer'>
-          <div className='windowHeader slide-up'>
-            <div className='browser-button-close'></div>
-            <div className='browser-button-minimize'></div>
-            <div className='browser-button-expand'></div>
-            <div className='windowTitle'>R.H. Bishop Books</div>
-          </div>
-          <div className='preview bishop fade-in'>
-            <div className='projectContent bishopContent'>
-              <ul className='projectSkills'>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Squarespace</li>
-                <li>Design</li>
-              </ul>
-              <a
-                className='viewProject'
-                href='https://www.rhbishopbooks.com/'
-                target='blank'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 View Project
               </a>
@@ -184,7 +188,8 @@ class Projects extends Component {
               <a
                 className='viewProject'
                 href='https://travel.ryanpearson.website'
-                target='blank'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 View Project
               </a>
@@ -215,7 +220,8 @@ class Projects extends Component {
               <a
                 className='viewProject'
                 href='https://react-my-burger-7ef03.web.app/'
-                target='blank'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 View Project
               </a>
@@ -304,7 +310,7 @@ class Projects extends Component {
           </div>
         </div>
 
-        <div className='projectContainer'>
+        {/* <div className='projectContainer'>
           <div className='windowHeader slide-up'>
             <div className='browser-button-close'></div>
             <div className='browser-button-minimize'></div>
@@ -338,7 +344,7 @@ class Projects extends Component {
               </ul>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
     );
   }

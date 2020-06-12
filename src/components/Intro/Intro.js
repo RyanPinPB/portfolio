@@ -18,48 +18,43 @@ class Intro extends Component {
 
     return (
       <div className={classes.Intro}>
-        <span>Hi, I'm Ryan and</span>
+        <span>Hi, I'm Ryan and I</span>
         <ul className='slider'>
           <li
             style={{
               animation: 'cycle 15s linear infinite',
-              // animationDelay: '2.8s',
             }}
             className='anim1'
           >
-            I am a web dev.
+            am a web developer
           </li>
           <li
             style={{
               animation: 'cycle2 15s linear infinite',
-              // animationDelay: '2.8s',
             }}
           >
-            this is my portfolio
+            help business owners
           </li>
           <li
             style={{
               animation: 'cycle3 15s linear infinite',
-              // animationDelay: '2.8s',
             }}
           >
-            I love learning
+            bond users with products
           </li>
           <li
             style={{
               animation: 'cycle4 15s linear infinite',
-              // animationDelay: '2.8s',
             }}
           >
-            I love efficiency
+            live in San Diego
           </li>
           <li
             style={{
               animation: 'cycle5 15s linear infinite',
-              // animationDelay: '2.8s',
             }}
           >
-            I love organization
+            am a positive person
           </li>
         </ul>
         <Link to='/projects'>View my work</Link>

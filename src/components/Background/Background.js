@@ -34,8 +34,8 @@ class Background extends Component {
             Learned some C++ and Matlab in college.
           </p>
           <p>
-            Got into real estate out of college. Learned that the prospecting
-            process of sales was frustrating.
+            Got into real estate. Learned that the prospecting process of sales
+            was frustrating.
           </p>
           <p>Switched focus to digital marketing.</p>
           <p>
@@ -45,17 +45,29 @@ class Background extends Component {
           </p>
           <p>
             Constantly learning new skills from
-            <a href='https://www.codecademy.com/' target='blank'>
+            <a
+              href='https://www.codecademy.com/'
+              rel='noopener noreferrer'
+              target='_blank'
+            >
               {' '}
               Codecademy
             </a>
             ,
-            <a href='https://www.udemy.com/' target='blank'>
+            <a
+              href='https://www.udemy.com/'
+              rel='noopener noreferrer'
+              target='_blank'
+            >
               {' '}
               Udemy
             </a>
             ,
-            <a href='https://www.teamtreehouse.com/' target='blank'>
+            <a
+              href='https://www.teamtreehouse.com/'
+              rel='noopener noreferrer'
+              target='_blank'
+            >
               {' '}
               TeamTreehouse
             </a>{' '}
@@ -74,23 +86,22 @@ class Background extends Component {
             with Apple products. My mother is a dental assistant who is, what
             most would call, a "neat freak". I credit her for my necisity of
             organization. I declared myself a future "architect" in grade school
-            and loved playing with blocks, legos, K'NEX and games. In high
-            school I was interested in math and the sciences, winning the senior
-            year "Math Award" (given to one male and one female student in the
-            school) and passing two years of college level (AP) calculus. The
-            second year was self-taught, as the school did not have a teacher
-            assigned to 2nd year calculus - so I read a book, practiced, and
-            passed the college AP test.
+            and loved playing with blocks, legos, K'NEX and games.
+          </p>
+          <p>
+            In high school I was interested in math and the sciences, winning
+            the senior year "Math Award" (given to one male and one female
+            student in the school) and passing two years of college level (AP)
+            calculus. The second year was self-taught, as the school did not
+            have a teacher assigned to 2nd year calculus - so I read a book,
+            practiced, and passed the college AP test.
           </p>
           <p>
             After entering college at the
             <strong> University of California, Santa Barbara </strong>
             as an Electrical Engineering student, I became interested in other
-            subjects. The strict path for Electrical Engineering had me
-            plan/schedule every class of my 4 years of college before I had even
-            stepped into my dorm. I became interested in bio-psychology and how
-            the brain works, philosophy, and eventually graduated ahead of
-            schedule with a{' '}
+            subjects. After studying bio-psychology, how the brain works and
+            philosophy, I eventually graduated ahead of schedule with a{' '}
             <strong>
               BA in Economics and a certificate of Technology Entrepreneurship.
             </strong>
@@ -108,32 +119,47 @@ class Background extends Component {
             learn, as my communication skills were far behind my technical
             skills. Prospecting leads and building relationships all while
             learning the real estate contracts and elements of a sale was
-            exciting for several years. However, I soon learned that the
-            prospecting process of sales is frustrating for me and seemed like
-            an inneficient use of time. My focus shifted towards digital
-            marketing and I became interested in learning about SEO, PPC, social
-            media and web development.
+            exciting for several years.
+          </p>
+
+          <p>
+            However, I soon learned that the prospecting process of sales is
+            frustrating for me and seemed like an inneficient use of time. My
+            <strong> focus shifted towards digital marketing</strong> and I
+            became interested in learning about SEO, PPC, social media and web
+            development.
           </p>
           <p>
-            I'm continuously taking classes from
-            <a href='https://www.codecademy.com/' target='blank'>
+            I thoroughly enjoy web development, and I'm continuously taking
+            classes from
+            <a
+              href='https://www.codecademy.com/'
+              rel='noopener noreferrer'
+              target='_blank'
+            >
               {' '}
               Codecademy
             </a>
             ,
-            <a href='https://www.udemy.com/' target='blank'>
+            <a
+              href='https://www.udemy.com/'
+              rel='noopener noreferrer'
+              target='_blank'
+            >
               {' '}
               Udemy
             </a>
             ,
-            <a href='https://www.teamtreehouse.com/' target='blank'>
+            <a
+              href='https://www.teamtreehouse.com/'
+              rel='noopener noreferrer'
+              target='_blank'
+            >
               {' '}
               TeamTreehouse{' '}
             </a>
             and other resources to learn as many useful languages and tools as
-            time permits. I built my first website in middle school and have
-            learned most of my skills over the last 9 years in case-by-case
-            situations upon project requirements. I am a life-long learner who's{' '}
+            time permits. I am a life-long learner who's{' '}
             <strong>
               always interested in expanding my knowledge and taking on
               projects.
@@ -155,7 +181,7 @@ class Background extends Component {
             <span className='subtitle'>too many, yet not enough words...</span>
           </div>
           <div className='resume'>
-            <a href='./documents/resume.pdf' target='blank'>
+            <a href='./documents/resume.pdf' target='_blank'>
               <img src={pdf} alt='pdf icon' />
               resumé
             </a>

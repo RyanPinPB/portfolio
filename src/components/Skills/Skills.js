@@ -43,10 +43,10 @@ class Skills extends Component {
             <li className='chart-skill' data-level='90'>
               <span className='chart-skill-text '>Wordpress</span>
             </li>
-            <li className='chart-skill' data-level='85'>
+            <li className='chart-skill' data-level='75'>
               <span className='chart-skill-text '>PHP</span>
             </li>
-            <li className='chart-skill' data-level='90'>
+            <li className='chart-skill' data-level='85'>
               <span className='chart-skill-text '>SASS</span>
             </li>
             <li className='chart-skill' data-level='95'>

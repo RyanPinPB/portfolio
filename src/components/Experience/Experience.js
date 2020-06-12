@@ -306,7 +306,11 @@ class Experience extends Component {
             </h3>
             <div className='jobData'>
               <span className='dates'>2018 – 2019</span>
-              <a href='https://www.1point21interactive.com/' target='blank'>
+              <a
+                href='https://www.1point21interactive.com/'
+                rel='noopener noreferrer'
+                target='_blank'
+              >
                 <span className='employer'>
                   High Rank Websites, Inc - 1P21 Interactive
                 </span>
@@ -385,7 +389,11 @@ class Experience extends Component {
             <h3 className='title'>Digital Marketing Manager and Realtor</h3>
             <div className='jobData'>
               <span className='dates'>2011-13 and 2015-18</span>
-              <a href='https://www.lajollaagent.com/' target='blank'>
+              <a
+                href='https://www.lajollaagent.com/'
+                rel='noopener noreferrer'
+                target='_blank'
+              >
                 <span className='employer'>LaJollaAgent.com</span>
               </a>
               <span className='location'>San Diego, CA</span>
@@ -464,7 +472,11 @@ class Experience extends Component {
             <h3 className='title'>Business Finance Consultant</h3>
             <div className='jobData'>
               <span className='dates'>2014 – 2015</span>
-              <a href='https://www.nationalfunding.com/' target='blank'>
+              <a
+                href='https://www.nationalfunding.com/'
+                rel='noopener noreferrer'
+                target='_blank'
+              >
                 <span className='employer'>National Funding</span>
               </a>
               <span className='location'>San Diego, CA</span>
@@ -532,7 +544,11 @@ class Experience extends Component {
             <h3 className='title'>Digital Marketing Manager and Realtor</h3>
             <div className='jobData'>
               <span className='dates'>2013 – 2014</span>
-              <a href='https://hellerthehomeseller.com/' target='blank'>
+              <a
+                href='https://hellerthehomeseller.com/'
+                rel='noopener noreferrer'
+                target='_blank'
+              >
                 <span className='employer'>
                   Heller Real Estate Group – Keller Williams
                 </span>

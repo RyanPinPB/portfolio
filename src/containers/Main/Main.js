@@ -15,7 +15,7 @@ class Main extends Component {
     return (
       <main className={classes.Main}>
         <Switch>
-          <Route path='/projects/project' component={Project} />
+          <Route path='/projects/robot' component={Project} />
           <Route path='/projects' component={Projects} />
           <Route path='/skills' component={Skills} />
           <Route path='/experience' component={Experience} />
