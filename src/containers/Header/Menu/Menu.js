@@ -30,7 +30,6 @@ class Menu extends Component {
     );
 
     let desktopMenu = (
-      // <div className='desktop-nav'>
       <ul className='desktop-nav'>
         <li className='menu-animation'>
           {' '}

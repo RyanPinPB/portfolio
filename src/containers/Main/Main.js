@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Intro from '../../components/Intro/Intro';
+import Intro from '../../components/Home/Home';
 import Projects from '../../components/Projects/Projects';
 import Project from '../../components/Projects/Project/Project';
 import Skills from '../../components/Skills/Skills';

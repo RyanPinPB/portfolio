@@ -26,6 +26,11 @@ class Experience extends Component {
     this.setState({ active: 'all' });
   };
 
+  // deleteJob = () => {
+  //   this.setState({ active: 'all' });
+
+  // };
+
   componentDidMount() {
     const faders = document.querySelectorAll('.fade-in:not(.appear)');
     const sliders = document.querySelectorAll('.slide-up:not(.appear)');
@@ -257,7 +262,7 @@ class Experience extends Component {
         <div className='jobContainer'>
           <div className='job one'>
             <div className='windowHeader slide-up appear'>
-              <button className='browser-button-close'>
+              <button className='browser-button-close' onClick={this.closeJob}>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width='6px'
@@ -282,7 +287,7 @@ class Experience extends Component {
                   <path d='M0 10h24v4h-24z' />
                 </svg>
               </button>
-              <button className='browser-button-expand'>
+              <button className='browser-button-expand' onClick={this.closeJob}>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width='6px'
@@ -342,7 +347,7 @@ class Experience extends Component {
         <div className='jobContainer'>
           <div className='job two'>
             <div className='windowHeader slide-up appear'>
-              <button className='browser-button-close'>
+              <button className='browser-button-close' onClick={this.closeJob}>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width='6px'
@@ -367,7 +372,7 @@ class Experience extends Component {
                   <path d='M0 10h24v4h-24z' />
                 </svg>
               </button>
-              <button className='browser-button-expand'>
+              <button className='browser-button-expand' onClick={this.closeJob}>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width='6px'
@@ -425,7 +430,7 @@ class Experience extends Component {
         <div className='jobContainer'>
           <div className='job three'>
             <div className='windowHeader slide-up appear'>
-              <button className='browser-button-close'>
+              <button className='browser-button-close' onClick={this.closeJob}>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width='6px'
@@ -450,7 +455,7 @@ class Experience extends Component {
                   <path d='M0 10h24v4h-24z' />
                 </svg>
               </button>
-              <button className='browser-button-expand'>
+              <button className='browser-button-expand' onClick={this.closeJob}>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width='6px'
@@ -497,7 +502,7 @@ class Experience extends Component {
         <div className='jobContainer'>
           <div className='job four'>
             <div className='windowHeader slide-up appear'>
-              <button className='browser-button-close'>
+              <button className='browser-button-close' onClick={this.closeJob}>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width='6px'
@@ -522,7 +527,7 @@ class Experience extends Component {
                   <path d='M0 10h24v4h-24z' />
                 </svg>
               </button>
-              <button className='browser-button-expand'>
+              <button className='browser-button-expand' onClick={this.closeJob}>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width='6px'

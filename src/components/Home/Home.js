@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import classes from './Intro.module.scss';
+import classes from './Home.module.scss';
 
 class Intro extends Component {
   componentDidMount() {
@@ -47,7 +47,7 @@ class Intro extends Component {
               animation: 'cycle4 15s linear infinite',
             }}
           >
-            live in San Diego
+            live in Pacific Beach
           </li>
           <li
             style={{

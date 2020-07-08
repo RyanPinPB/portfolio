@@ -202,7 +202,7 @@ class Projects extends Component {
             <div className='browser-button-close'></div>
             <div className='browser-button-minimize'></div>
             <div className='browser-button-expand'></div>
-            <div className='windowTitle'>Burger Builder</div>
+            <div className='windowTitle'>Login/Signup db Auth</div>
           </div>
           <div className='preview burger fade-in'>
             <div className='projectContent burgerContent'>
@@ -234,6 +234,92 @@ class Projects extends Component {
             <div className='browser-button-close'></div>
             <div className='browser-button-minimize'></div>
             <div className='browser-button-expand'></div>
+            <div className='windowTitle'>Jamming</div>
+          </div>
+          <div className='preview jamming fade-in'>
+            <div className='projectContent jammingContent'>
+              <ul className='projectSkills'>
+                <li>React</li>
+                <li>JSX</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+                <li>Spotify API</li>
+                <li>JSON</li>
+              </ul>
+              <a
+                className='viewProject'
+                href='https://zen-heisenberg-861338.netlify.app/'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                View Project
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className='projectContainer'>
+          <div className='windowHeader slide-up'>
+            <div className='browser-button-close'></div>
+            <div className='browser-button-minimize'></div>
+            <div className='browser-button-expand'></div>
+            <div className='windowTitle'>Ravenous</div>
+          </div>
+          <div className='preview ravenous fade-in'>
+            <div className='projectContent ravenousContent'>
+              <ul className='projectSkills'>
+                <li>React</li>
+                <li>JSX</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+                <li>Yelp API</li>
+                <li>JSON</li>
+              </ul>
+              <a
+                className='viewProject'
+                href='https://jolly-gates-109dc9.netlify.app/'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                View Project
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className='projectContainer'>
+          <div className='windowHeader slide-up'>
+            <div className='browser-button-close'></div>
+            <div className='browser-button-minimize'></div>
+            <div className='browser-button-expand'></div>
+            <div className='windowTitle'>AudioDB</div>
+          </div>
+          <div className='preview audioDB fade-in'>
+            <div className='projectContent burgerContent'>
+              <ul className='projectSkills'>
+                <li>JSX</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+                <li>React</li>
+                <li>Material UI</li>
+              </ul>
+              <a
+                className='viewProject'
+                href='https://unruffled-hoover-91181f.netlify.app/'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                View Project
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className='projectContainer'>
+          <div className='windowHeader slide-up'>
+            <div className='browser-button-close'></div>
+            <div className='browser-button-minimize'></div>
+            <div className='browser-button-expand'></div>
             <div className='windowTitle'>Mr Robot</div>
           </div>
           <div className='preview robot fade-in'>
@@ -250,7 +336,8 @@ class Projects extends Component {
           </div>
         </div>
 
-        <div className='projectContainer'>
+        {/* 
+                <div className='projectContainer'>
           <div className='windowHeader slide-up'>
             <div className='browser-button-close'></div>
             <div className='browser-button-minimize'></div>
@@ -269,48 +356,8 @@ class Projects extends Component {
             </div>
           </div>
         </div>
-
+        
         <div className='projectContainer'>
-          <div className='windowHeader slide-up'>
-            <div className='browser-button-close'></div>
-            <div className='browser-button-minimize'></div>
-            <div className='browser-button-expand'></div>
-            <div className='windowTitle'>Jamming</div>
-          </div>
-          <div className='preview jamming fade-in'>
-            <div className='projectContent jammingContent'>
-              <ul className='projectSkills'>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-                <li>React</li>
-                <li>JSON</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div className='projectContainer'>
-          <div className='windowHeader slide-up'>
-            <div className='browser-button-close'></div>
-            <div className='browser-button-minimize'></div>
-            <div className='browser-button-expand'></div>
-            <div className='windowTitle'>Ravenous</div>
-          </div>
-          <div className='preview ravenous fade-in'>
-            <div className='projectContent ravenousContent'>
-              <ul className='projectSkills'>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-                <li>React</li>
-                <li>JSON</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* <div className='projectContainer'>
           <div className='windowHeader slide-up'>
             <div className='browser-button-close'></div>
             <div className='browser-button-minimize'></div>

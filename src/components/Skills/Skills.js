@@ -19,7 +19,6 @@ class Skills extends Component {
           {/* removed y axis labels */}
           <ul className='chart-levels'>
             <li>Can teach it</li>
-            <li>Extensive experience</li>
             <li>Experienced</li>
             <li>Practiced it</li>
             <li>Learned it</li>
@@ -32,9 +31,12 @@ class Skills extends Component {
               <span className='chart-skill-text '>CSS</span>
             </li>
             <li className='chart-skill' data-level='85'>
+              <span className='chart-skill-text '>SASS</span>
+            </li>
+            <li className='chart-skill' data-level='80'>
               <span className='chart-skill-text '>Javascript</span>
             </li>
-            <li className='chart-skill' data-level='50'>
+            <li className='chart-skill' data-level='70'>
               <span className='chart-skill-text '>React</span>
             </li>
             <li className='chart-skill' data-level='25'>
@@ -45,9 +47,6 @@ class Skills extends Component {
             </li>
             <li className='chart-skill' data-level='75'>
               <span className='chart-skill-text '>PHP</span>
-            </li>
-            <li className='chart-skill' data-level='85'>
-              <span className='chart-skill-text '>SASS</span>
             </li>
             <li className='chart-skill' data-level='95'>
               <span className='chart-skill-text '>SEO</span>
@@ -74,6 +73,7 @@ class Skills extends Component {
             <li>Control Panel</li>
             <li>myPHPAdmin</li>
             <li>Xd</li>
+            <li>Photoshop</li>
             <li>Command Line</li>
             <li>Advanced Custom Fields</li>
             <li>Squarespace</li>
