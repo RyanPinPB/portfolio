@@ -12,9 +12,8 @@ class Contact extends Component {
 
     document.querySelector('.social-icon').style.width === '45px'
       ? console.log('Contact Ryan or check out his social media pages')
-      : document.querySelectorAll('.social-icon').forEach((icon) => {
-          icon.style.width = '45px';
-        });
+      : this.displaySocialIcons();
+
     if (window.innerWidth > 768) {
       document.addEventListener('mousemove', this.customCursorFollow);
       document.addEventListener('click', this.customCursorClick);
@@ -22,13 +21,21 @@ class Contact extends Component {
   }
 
   componentWillUnmount() {
-    console.log('Leaving Contact section');
     document.body.style.overflow = 'auto';
     if (window.innerWidth > 768) {
       document.removeEventListener('mousemove', this.customCursorFollow);
       document.removeEventListener('click', this.customCursorClick);
       document.querySelector('.cursor').style.opacity = '0';
     }
+  }
+
+  displaySocialIcons() {
+    document.querySelector('.social-icons').style.visibility = 'visible';
+    setTimeout(() => {
+      document.querySelectorAll('.social-icon').forEach((icon) => {
+        icon.style.width = '45px';
+      });
+    }, 1000);
   }
 
   customCursorFollow(e) {

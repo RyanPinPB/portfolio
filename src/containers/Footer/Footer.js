@@ -10,6 +10,7 @@ class Footer extends Component {
             href='https://www.linkedin.com/in/ryanpinpb/'
             rel='noopener noreferrer'
             target='_blank'
+            aria-label='LinkedIn Profile'
           >
             <svg
               className='linkedin social-icon'
@@ -25,6 +26,7 @@ class Footer extends Component {
             href='https://www.facebook.com/ryanpinpb/'
             rel='noopener noreferrer'
             target='_blank'
+            aria-label='Facebook Profile'
           >
             <svg
               className='facebook social-icon'
@@ -40,6 +42,7 @@ class Footer extends Component {
             href='https://www.twitter.com/ryanpinpb/'
             rel='noopener noreferrer'
             target='_blank'
+            aria-label='Twitter Profile'
           >
             <svg
               className='twitter social-icon'
@@ -55,6 +58,7 @@ class Footer extends Component {
             href='https://www.instagram.com/ryanpinpb/'
             rel='noopener noreferrer'
             target='__blank'
+            aria-label='Instagram Profile'
           >
             <svg
               className='instagram social-icon'
