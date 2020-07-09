@@ -51,6 +51,11 @@ html {
   background: linear-gradient(180deg, var(--orange), var(--orange));
 }
 
+::selection {
+  background-color: black;
+  color: var(--orange);
+}
+
 body {
   margin: 0;
   padding: 0;
