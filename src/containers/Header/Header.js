@@ -1,33 +1,13 @@
-import React, { Component } from 'react';
-// import classes from './Header.module.scss';
+import React, { useState } from 'react';
 import './Header.scss';
 import Menu from './Menu/Menu';
 import Hamburger from './Hamburger/Hamburger';
 
-class Header extends Component {
-  state = {
-    isDesktop: false,
-    mobileMenuOpen: false,
-  };
+const Header = (props) => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  componentDidMount() {
-    this.updatePredicate();
-    window.addEventListener('resize', this.updatePredicate);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updatePredicate);
-  }
-
-  updatePredicate = () => {
-    this.setState({ isDesktop: window.innerWidth > 768 });
-  };
-
-  menuClickHandler = () => {
-    const currentState = this.state.mobileMenuOpen;
-    document.body.style.overflow = 'auto';
-
-    if (!currentState) {
+  const menuClickHandler = () => {
+    if (!mobileMenuOpen) {
       document.querySelector('.mobile-nav').style.height = '100%';
       document.body.style.overflow = 'hidden';
     } else {
@@ -35,28 +15,27 @@ class Header extends Component {
       document.body.style.overflow = 'auto';
     }
 
-    this.setState({ mobileMenuOpen: !this.state.mobileMenuOpen });
+    setMobileMenuOpen(!mobileMenuOpen);
     document.querySelector('.menu-icon').classList.toggle('menu-open');
     document.querySelector('.hamburger-text').classList.toggle('not-visible');
   };
 
-  render() {
-    let hamburger = <Hamburger menuClicked={this.menuClickHandler} />;
-    this.state.isDesktop
-      ? (hamburger = null)
-      : (hamburger = <Hamburger menuClicked={this.menuClickHandler} />);
+  let hamburger = <Hamburger menuClicked={menuClickHandler} />;
+  let windowWidth = props.width;
+  windowWidth > 768
+    ? (hamburger = null)
+    : (hamburger = <Hamburger menuClicked={menuClickHandler} />);
 
-    return (
-      <header className='site-header'>
-        {hamburger}
-        <Menu
-          linkClick={this.state.isDesktop ? null : this.menuClickHandler}
-          desktop={this.state.isDesktop}
-          showContact={this.props.showFooter}
-        />
-      </header>
-    );
-  }
-}
+  return (
+    <header className='site-header'>
+      {hamburger}
+      <Menu
+        linkClick={windowWidth > 768 ? null : menuClickHandler}
+        desktop={windowWidth > 768}
+        showContact={props.showFooter}
+      />
+    </header>
+  );
+};
 
 export default Header;

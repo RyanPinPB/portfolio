@@ -1,350 +1,315 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { useSpring, animated } from 'react-spring';
 
 import './Projects.scss';
 
-class Projects extends Component {
-  componentDidMount() {
-    const faders = document.querySelectorAll('.fade-in');
-    const sliders = document.querySelectorAll('.slide-up');
+const Projects = (props) => {
+  const fadeIn = useSpring({ opacity: 1, from: { opacity: 0 } });
 
-    // document.addEventListener("DOMContentLoaded", function() {
+  const slideUp = useSpring({
+    opacity: 1,
+    transform: 'translateY(0)',
+    from: { opacity: 0, transform: 'translateY(100px)' },
+  });
 
-    if ('IntersectionObserver' in window) {
-      const appearOptions = {
-        threshold: 0.3,
-        // rootMargin: "0px 0px 60px 0px"
-      };
+  return (
+    <section id='projects-content'>
+      <div className='projectContainer'>
+        <animated.div style={slideUp} className='windowHeader'>
+          <div className='browser-button-close'></div>
+          <div className='browser-button-minimize'></div>
+          <div className='browser-button-expand'></div>
+          <div className='windowTitle'>Pacific Beach Homes</div>
+        </animated.div>
+        <animated.div style={fadeIn} className='preview pbhomes'>
+          <div className='projectContent pbhomesContent'>
+            <ul className='projectSkills'>
+              <li>HTML</li>
+              <li>SCSS</li>
+              <li>Javascript</li>
+              <li>PHP</li>
+              <li>GIT</li>
+              <li>Wordpress</li>
+              <li>Advanced Custom Fields</li>
+              <li>Webpack</li>
+              <li>Content</li>
+            </ul>
+            <a
+              className='viewProject'
+              href='https://pacificbeachhomes.com'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              View Project
+            </a>
+          </div>
+        </animated.div>
+      </div>
 
-      const appearOnScroll = new IntersectionObserver(function (
-        entries,
-        appearOnScroll
-      ) {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) {
-            return;
-          } else {
-            entry.target.classList.add('appear');
-            appearOnScroll.unobserve(entry.target);
-          }
-        });
-      },
-      appearOptions);
+      <div className='projectContainer'>
+        <animated.div style={slideUp} className='windowHeader'>
+          <div className='browser-button-close'></div>
+          <div className='browser-button-minimize'></div>
+          <div className='browser-button-expand'></div>
+          <div className='windowTitle'>La Jolla Agent</div>
+        </animated.div>
+        <animated.div style={fadeIn} className='preview ljagent'>
+          <div className='projectContent ljagentContent'>
+            <ul className='projectSkills'>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>SEO</li>
+              <li>Blogging</li>
+              <li>Mailchimp</li>
+              <li>Content</li>
+            </ul>
+            <a
+              className='viewProject'
+              href='https://lajollaagent.com'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              View Project
+            </a>
+          </div>
+        </animated.div>
+      </div>
 
-      faders.forEach((fader) => {
-        appearOnScroll.observe(fader);
-      });
+      <div className='projectContainer'>
+        <animated.div style={slideUp} className='windowHeader'>
+          <div className='browser-button-close'></div>
+          <div className='browser-button-minimize'></div>
+          <div className='browser-button-expand'></div>
+          <div className='windowTitle'>R.H. Bishop Books</div>
+        </animated.div>
+        <animated.div style={fadeIn} className='preview bishop'>
+          <div className='projectContent bishopContent'>
+            <ul className='projectSkills'>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Squarespace</li>
+              <li>Design</li>
+            </ul>
+            <a
+              className='viewProject'
+              href='https://www.rhbishopbooks.com/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              View Project
+            </a>
+          </div>
+        </animated.div>
+      </div>
 
-      sliders.forEach((slider) => {
-        appearOnScroll.observe(slider);
-      });
-    } else {
-      while (faders.length > 0) {
-        faders[0].classList.add('appear');
-      }
-      while (sliders.length > 0) {
-        sliders[0].classList.add('appear');
-      }
-    }
-  }
-  render() {
-    return (
-      <section id='projects-content'>
-        <div className='projectContainer'>
-          <div className='windowHeader slide-up'>
-            <div className='browser-button-close'></div>
-            <div className='browser-button-minimize'></div>
-            <div className='browser-button-expand'></div>
-            <div className='windowTitle'>Pacific Beach Homes</div>
+      <div className='projectContainer'>
+        <animated.div style={slideUp} className='windowHeader'>
+          <div className='browser-button-close'></div>
+          <div className='browser-button-minimize'></div>
+          <div className='browser-button-expand'></div>
+          <div className='windowTitle'>Sam's Portfolio</div>
+        </animated.div>
+        <animated.div style={fadeIn} className='preview samport'>
+          <div className='projectContent samportContent'>
+            <ul className='projectSkills'>
+              <li>HTML</li>
+              <li>SCSS</li>
+              <li>Javascript</li>
+              <li>PHP</li>
+              <li>Wordpress</li>
+              <li>Advanced Custom Fields</li>
+            </ul>
+            <a
+              className='viewProject'
+              href='https://sampearson.digital'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              View Project
+            </a>
           </div>
-          <div className='preview pbhomes fade-in'>
-            <div className='projectContent pbhomesContent'>
-              <ul className='projectSkills'>
-                <li>HTML</li>
-                <li>SCSS</li>
-                <li>Javascript</li>
-                <li>PHP</li>
-                <li>GIT</li>
-                <li>Wordpress</li>
-                <li>Advanced Custom Fields</li>
-                <li>Webpack</li>
-                <li>Content</li>
-              </ul>
-              <a
-                className='viewProject'
-                href='https://pacificbeachhomes.com'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                View Project
-              </a>
-            </div>
-          </div>
-        </div>
+        </animated.div>
+      </div>
 
-        <div className='projectContainer'>
-          <div className='windowHeader slide-up'>
-            <div className='browser-button-close'></div>
-            <div className='browser-button-minimize'></div>
-            <div className='browser-button-expand'></div>
-            <div className='windowTitle'>La Jolla Agent</div>
+      <div className='projectContainer'>
+        <animated.div style={slideUp} className='windowHeader'>
+          <div className='browser-button-close'></div>
+          <div className='browser-button-minimize'></div>
+          <div className='browser-button-expand'></div>
+          <div className='windowTitle'>Travel Theme</div>
+        </animated.div>
+        <animated.div style={fadeIn} className='preview travel'>
+          <div className='projectContent travelContent'>
+            <ul className='projectSkills'>
+              <li>HTML</li>
+              <li>SCSS</li>
+              <li>Javascript</li>
+              <li>PHP</li>
+              <li>GIT</li>
+              <li>Wordpress</li>
+              <li>Advanced Custom Fields</li>
+            </ul>
+            <a
+              className='viewProject'
+              href='https://travel.ryanpearson.website'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              View Project
+            </a>
           </div>
-          <div className='preview ljagent fade-in'>
-            <div className='projectContent ljagentContent'>
-              <ul className='projectSkills'>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>SEO</li>
-                <li>Blogging</li>
-                <li>Mailchimp</li>
-                <li>Content</li>
-              </ul>
-              <a
-                className='viewProject'
-                href='https://lajollaagent.com'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                View Project
-              </a>
-            </div>
-          </div>
-        </div>
+        </animated.div>
+      </div>
 
-        <div className='projectContainer'>
-          <div className='windowHeader slide-up'>
-            <div className='browser-button-close'></div>
-            <div className='browser-button-minimize'></div>
-            <div className='browser-button-expand'></div>
-            <div className='windowTitle'>R.H. Bishop Books</div>
+      <div className='projectContainer'>
+        <animated.div style={slideUp} className='windowHeader'>
+          <div className='browser-button-close'></div>
+          <div className='browser-button-minimize'></div>
+          <div className='browser-button-expand'></div>
+          <div className='windowTitle'>Login/Signup db Auth</div>
+        </animated.div>
+        <animated.div style={fadeIn} className='preview burger'>
+          <div className='projectContent burgerContent'>
+            <ul className='projectSkills'>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+              <li>React</li>
+              <li>Redux</li>
+              <li>User Authentication</li>
+              <li>Local Storage</li>
+              <li>Jest</li>
+              <li>Firebase</li>
+            </ul>
+            <a
+              className='viewProject'
+              href='https://react-my-burger-7ef03.web.app/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              View Project
+            </a>
           </div>
-          <div className='preview bishop fade-in'>
-            <div className='projectContent bishopContent'>
-              <ul className='projectSkills'>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Squarespace</li>
-                <li>Design</li>
-              </ul>
-              <a
-                className='viewProject'
-                href='https://www.rhbishopbooks.com/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                View Project
-              </a>
-            </div>
-          </div>
-        </div>
+        </animated.div>
+      </div>
 
-        <div className='projectContainer'>
-          <div className='windowHeader slide-up'>
-            <div className='browser-button-close'></div>
-            <div className='browser-button-minimize'></div>
-            <div className='browser-button-expand'></div>
-            <div className='windowTitle'>Sam's Portfolio</div>
+      <div className='projectContainer'>
+        <animated.div style={slideUp} className='windowHeader'>
+          <div className='browser-button-close'></div>
+          <div className='browser-button-minimize'></div>
+          <div className='browser-button-expand'></div>
+          <div className='windowTitle'>Jamming</div>
+        </animated.div>
+        <animated.div style={fadeIn} className='preview jamming'>
+          <div className='projectContent jammingContent'>
+            <ul className='projectSkills'>
+              <li>React</li>
+              <li>JSX</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+              <li>Spotify API</li>
+              <li>JSON</li>
+            </ul>
+            <a
+              className='viewProject'
+              href='https://zen-heisenberg-861338.netlify.app/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              View Project
+            </a>
           </div>
-          <div className='preview samport fade-in'>
-            <div className='projectContent samportContent'>
-              <ul className='projectSkills'>
-                <li>HTML</li>
-                <li>SCSS</li>
-                <li>Javascript</li>
-                <li>PHP</li>
-                <li>Wordpress</li>
-                <li>Advanced Custom Fields</li>
-              </ul>
-              <a
-                className='viewProject'
-                href='https://sampearson.digital'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                View Project
-              </a>
-            </div>
-          </div>
-        </div>
+        </animated.div>
+      </div>
 
-        <div className='projectContainer'>
-          <div className='windowHeader slide-up'>
-            <div className='browser-button-close'></div>
-            <div className='browser-button-minimize'></div>
-            <div className='browser-button-expand'></div>
-            <div className='windowTitle'>Travel Theme</div>
+      <div className='projectContainer'>
+        <animated.div style={slideUp} className='windowHeader'>
+          <div className='browser-button-close'></div>
+          <div className='browser-button-minimize'></div>
+          <div className='browser-button-expand'></div>
+          <div className='windowTitle'>Ravenous</div>
+        </animated.div>
+        <animated.div style={fadeIn} className='preview ravenous'>
+          <div className='projectContent ravenousContent'>
+            <ul className='projectSkills'>
+              <li>React</li>
+              <li>JSX</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+              <li>Yelp API</li>
+              <li>JSON</li>
+            </ul>
+            <a
+              className='viewProject'
+              href='https://jolly-gates-109dc9.netlify.app/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              View Project
+            </a>
           </div>
-          <div className='preview travel fade-in'>
-            <div className='projectContent travelContent'>
-              <ul className='projectSkills'>
-                <li>HTML</li>
-                <li>SCSS</li>
-                <li>Javascript</li>
-                <li>PHP</li>
-                <li>GIT</li>
-                <li>Wordpress</li>
-                <li>Advanced Custom Fields</li>
-              </ul>
-              <a
-                className='viewProject'
-                href='https://travel.ryanpearson.website'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                View Project
-              </a>
-            </div>
-          </div>
-        </div>
+        </animated.div>
+      </div>
 
-        <div className='projectContainer'>
-          <div className='windowHeader slide-up'>
-            <div className='browser-button-close'></div>
-            <div className='browser-button-minimize'></div>
-            <div className='browser-button-expand'></div>
-            <div className='windowTitle'>Login/Signup db Auth</div>
+      <div className='projectContainer'>
+        <animated.div style={slideUp} className='windowHeader'>
+          <div className='browser-button-close'></div>
+          <div className='browser-button-minimize'></div>
+          <div className='browser-button-expand'></div>
+          <div className='windowTitle'>AudioDB</div>
+        </animated.div>
+        <animated.div style={fadeIn} className='preview audioDB'>
+          <div className='projectContent burgerContent'>
+            <ul className='projectSkills'>
+              <li>JSX</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+              <li>React</li>
+              <li>Material UI</li>
+            </ul>
+            <a
+              className='viewProject'
+              href='https://unruffled-hoover-91181f.netlify.app/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              View Project
+            </a>
           </div>
-          <div className='preview burger fade-in'>
-            <div className='projectContent burgerContent'>
-              <ul className='projectSkills'>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-                <li>React</li>
-                <li>Redux</li>
-                <li>User Authentication</li>
-                <li>Local Storage</li>
-                <li>Jest</li>
-                <li>Firebase</li>
-              </ul>
-              <a
-                className='viewProject'
-                href='https://react-my-burger-7ef03.web.app/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                View Project
-              </a>
-            </div>
-          </div>
-        </div>
+        </animated.div>
+      </div>
 
-        <div className='projectContainer'>
-          <div className='windowHeader slide-up'>
-            <div className='browser-button-close'></div>
-            <div className='browser-button-minimize'></div>
-            <div className='browser-button-expand'></div>
-            <div className='windowTitle'>Jamming</div>
+      <div className='projectContainer'>
+        <animated.div style={slideUp} className='windowHeader'>
+          <div className='browser-button-close'></div>
+          <div className='browser-button-minimize'></div>
+          <div className='browser-button-expand'></div>
+          <div className='windowTitle'>Mr Robot</div>
+        </animated.div>
+        <animated.div style={fadeIn} className='preview robot'>
+          <div className='projectContent robotContent'>
+            <ul className='projectSkills'>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+            </ul>
+            <Link to='/projects/robot' className='viewProject'>
+              View Project
+            </Link>
           </div>
-          <div className='preview jamming fade-in'>
-            <div className='projectContent jammingContent'>
-              <ul className='projectSkills'>
-                <li>React</li>
-                <li>JSX</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-                <li>Spotify API</li>
-                <li>JSON</li>
-              </ul>
-              <a
-                className='viewProject'
-                href='https://zen-heisenberg-861338.netlify.app/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                View Project
-              </a>
-            </div>
-          </div>
-        </div>
+        </animated.div>
+      </div>
 
-        <div className='projectContainer'>
-          <div className='windowHeader slide-up'>
-            <div className='browser-button-close'></div>
-            <div className='browser-button-minimize'></div>
-            <div className='browser-button-expand'></div>
-            <div className='windowTitle'>Ravenous</div>
-          </div>
-          <div className='preview ravenous fade-in'>
-            <div className='projectContent ravenousContent'>
-              <ul className='projectSkills'>
-                <li>React</li>
-                <li>JSX</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-                <li>Yelp API</li>
-                <li>JSON</li>
-              </ul>
-              <a
-                className='viewProject'
-                href='https://jolly-gates-109dc9.netlify.app/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                View Project
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className='projectContainer'>
-          <div className='windowHeader slide-up'>
-            <div className='browser-button-close'></div>
-            <div className='browser-button-minimize'></div>
-            <div className='browser-button-expand'></div>
-            <div className='windowTitle'>AudioDB</div>
-          </div>
-          <div className='preview audioDB fade-in'>
-            <div className='projectContent burgerContent'>
-              <ul className='projectSkills'>
-                <li>JSX</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-                <li>React</li>
-                <li>Material UI</li>
-              </ul>
-              <a
-                className='viewProject'
-                href='https://unruffled-hoover-91181f.netlify.app/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                View Project
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className='projectContainer'>
-          <div className='windowHeader slide-up'>
-            <div className='browser-button-close'></div>
-            <div className='browser-button-minimize'></div>
-            <div className='browser-button-expand'></div>
-            <div className='windowTitle'>Mr Robot</div>
-          </div>
-          <div className='preview robot fade-in'>
-            <div className='projectContent robotContent'>
-              <ul className='projectSkills'>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-              </ul>
-              <Link to='/projects/robot' className='viewProject'>
-                View Project
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* 
+      {/* 
                 <div className='projectContainer'>
-          <div className='windowHeader slide-up'>
+          <animated.div style={slideUp} className='windowHeader'>
             <div className='browser-button-close'></div>
             <div className='browser-button-minimize'></div>
             <div className='browser-button-expand'></div>
             <div className='windowTitle'>Gates Vacation Homes</div>
-          </div>
-          <div className='preview gatesVacation fade-in'>
+          </animated.div>
+          <animated.div style={fadeIn} className='preview gatesVacation'>
             <div className='projectContent gatesContent'>
               <ul className='projectSkills'>
                 <li>HTML</li>
@@ -354,47 +319,10 @@ class Projects extends Component {
                 <li>Wordpress</li>
               </ul>
             </div>
-          </div>
-        </div>
-        
-        <div className='projectContainer'>
-          <div className='windowHeader slide-up'>
-            <div className='browser-button-close'></div>
-            <div className='browser-button-minimize'></div>
-            <div className='browser-button-expand'></div>
-            <div className='windowTitle'>Musicon</div>
-          </div>
-          <div className='preview musicon fade-in'>
-            <div className='projectContent musiconContent'>
-              <ul className='projectSkills'>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div className='projectContainer'>
-          <div className='windowHeader slide-up'>
-            <div className='browser-button-close'></div>
-            <div className='browser-button-minimize'></div>
-            <div className='browser-button-expand'></div>
-            <div className='windowTitle'>TeaCozy</div>
-          </div>
-          <div className='preview teaCozy fade-in'>
-            <div className='projectContent teaCozyContent'>
-              <ul className='projectSkills'>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-              </ul>
-            </div>
-          </div>
+          </animated.div>
         </div> */}
-      </section>
-    );
-  }
-}
+    </section>
+  );
+};
 
 export default Projects;
