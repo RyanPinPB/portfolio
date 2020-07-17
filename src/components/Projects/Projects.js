@@ -172,11 +172,11 @@ const Projects = (props) => {
         <animated.div style={fadeIn} className='preview burger'>
           <div className='projectContent burgerContent'>
             <ul className='projectSkills'>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Javascript</li>
               <li>React</li>
               <li>Redux</li>
+              <li>JSX</li>
+              <li>CSS</li>
+              <li>Javascript</li>
               <li>User Authentication</li>
               <li>Local Storage</li>
               <li>Jest</li>

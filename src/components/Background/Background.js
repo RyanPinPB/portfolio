@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+// import { useTransition, animated } from 'react-spring';
 
 import './Background.scss';
 import ryanHead from '../../assets/images/background/ryanPearsonHead.png';
@@ -166,6 +167,12 @@ const Background = (props) => {
       </div>
     );
   }
+
+  // const transitions = useTransition({
+  //   from: { opacity: 0, transform: 'translate3d(100%,0,0)' },
+  //   enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
+  //   leave: { opacity: 0, transform: 'translate3d(-50%,0,0)' },
+  // });
 
   return (
     <section id='bg-content'>

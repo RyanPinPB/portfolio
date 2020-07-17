@@ -29,10 +29,10 @@ const Skills = (props) => {
           <li className='chart-skill' data-level='93'>
             <span className='chart-skill-text '>CSS</span>
           </li>
-          <li className='chart-skill' data-level='85'>
+          <li className='chart-skill' data-level='93'>
             <span className='chart-skill-text '>SASS</span>
           </li>
-          <li className='chart-skill' data-level='87'>
+          <li className='chart-skill' data-level='90'>
             <span className='chart-skill-text '>Javascript</span>
           </li>
           <li className='chart-skill' data-level='80'>
@@ -60,6 +60,7 @@ const Skills = (props) => {
           <li>Firebase</li>
           <li>Styled Components</li>
           <li>Redux</li>
+          <li>React-Spring</li>
           <li>Bootstrap</li>
           <li>Node</li>
           <li>SQL</li>

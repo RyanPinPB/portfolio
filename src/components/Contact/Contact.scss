@@ -43,12 +43,12 @@
   right: 0;
   width: fit-content;
   margin: auto;
-  opacity: 1;
   @include fluid-type($min-font-size: 100px, $max-font-size: 700px);
   transform: translate3D(0, -50%, 0);
   // -webkit-text-stroke: 4px rgba(255, 255, 255, 0.08);
   filter: drop-shadow(2px 2px 2px rgba(255, 255, 255, 0.1));
   cursor: none;
+  transition: opacity 2s ease-in-out;
 }
 
 .contactInfo {

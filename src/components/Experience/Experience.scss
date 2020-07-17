@@ -50,7 +50,7 @@ $grey-fifty: rgba(200, 200, 200, 0.5);
   margin: 80px auto 0px auto;
   flex-direction: column;
   transition: transform 0.8s;
-  box-shadow: 0px 0px 10px 5px $grey-zero;
+  // box-shadow: 0px 0px 10px 5px $grey-zero;
   button {
     cursor: pointer;
     display: flex;
@@ -60,8 +60,8 @@ $grey-fifty: rgba(200, 200, 200, 0.5);
 }
 
 .job:hover {
-  transform: scale(1.02);
-  box-shadow: 0px 0px 10px 5px $grey-fifty;
+  transform: scale(1.03);
+  // box-shadow: 0px 0px 10px 5px $grey-fifty;
 }
 
 // window header tabs will load with slide up

@@ -1,0 +1,42 @@
+.TiltButton {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 150px;
+  margin: auto;
+  width: fit-content;
+  background: var(--orange);
+  background: linear-gradient(to right, var(--gold), var(--orange));
+  color: rgba(0, 0, 0, 1);
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 30px -5px rgba(255, 255, 255, 0.3);
+  transition: opacity 0.5s ease-in-out, box-shadow 0.5s;
+  will-change: transform;
+  z-index: 2;
+  opacity: 0;
+  // opacity: 0;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0px 30px 100px -10px rgba(255, 255, 255, 0.4);
+  }
+}
+
+@media (min-width: 400px) {
+  .TiltButton {
+    top: 180px;
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .TiltButton {
+    top: 220px;
+    font-size: 3rem;
+  }
+}

@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Fragment } from 'react';
+import Footer from '../../containers/Footer/Footer';
+import { useSpring, animated } from 'react-spring';
 import './Contact.scss';
 
 const Contact = (props) => {
   useEffect(() => {
     document.body.style.overflow = 'hidden';
 
-    document.querySelector('.social-icon').style.width === '45px'
-      ? console.log('Contact Ryan or check out his social media pages')
-      : displaySocialIcons();
+    displaySocialIcons();
 
     if (window.innerWidth > 768) {
       document.addEventListener('mousemove', customCursorFollow);
@@ -25,8 +25,8 @@ const Contact = (props) => {
   }, []);
 
   const displaySocialIcons = () => {
-    document.querySelector('.social-icons').style.visibility = 'visible';
     setTimeout(() => {
+      document.querySelector('.social-icons').style.visibility = 'visible';
       document.querySelectorAll('.social-icon').forEach((icon) => {
         icon.style.width = '45px';
       });
@@ -58,34 +58,44 @@ const Contact = (props) => {
     }
   };
 
+  let fadeIn = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+  });
+
   return (
-    <section id='contact-content'>
-      <span className='watermark'>RYAN</span>
-      <div className='contactInfo'>
-        <div>
-          Cell:
-          <a
-            className='underline-animation'
-            href='tel:8587408495'
-            title='click to call Ryan'
-          >
-            {' '}
-            +1 (858) 740 8495
-          </a>
+    <Fragment>
+      <section id='contact-content'>
+        <animated.span style={fadeIn} className='watermark'>
+          RYAN
+        </animated.span>
+        <div className='contactInfo'>
+          <div>
+            Cell:
+            <a
+              className='underline-animation'
+              href='tel:8587408495'
+              title='click to call Ryan'
+            >
+              {' '}
+              +1 (858) 740 8495
+            </a>
+          </div>
+          <div>
+            Email:
+            <a
+              className='underline-animation'
+              href='mailto:ryanpinpb@gmail.com'
+              title='click to email Ryan'
+            >
+              {' '}
+              RyanPinPB@gmail.com
+            </a>
+          </div>
         </div>
-        <div>
-          Email:
-          <a
-            className='underline-animation'
-            href='mailto:ryanpinpb@gmail.com'
-            title='click to email Ryan'
-          >
-            {' '}
-            RyanPinPB@gmail.com
-          </a>
-        </div>
-      </div>
-    </section>
+      </section>
+      <Footer />
+    </Fragment>
   );
 };
 

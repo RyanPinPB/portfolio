@@ -1,0 +1,50 @@
+.Main {
+  position: relative;
+  min-height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+.page-container {
+  position: absolute;
+  width: 100%;
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+@media (min-width: 769px) {
+  .Main {
+    min-height: calc(var(--vh, 1vh) * 100);
+  }
+}
+
+// .theme-toggle-button {
+//   // pointer-events: none;
+//   position: fixed;
+//   bottom: -20px;
+//   left: 20px;
+//   width: 10vw;
+//   max-width: 100px;
+//   transform-origin: 0% 0%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   font-weight: 800;
+//   font-size: 10em;
+//   cursor: pointer;
+// }
+
+// #bg {
+//   fill: #2da1dc;
+// }
+// #eye > path:nth-child(2) {
+//   fill: #f0f0f0;
+// }
+// #eye > g:first-of-type > path:nth-child(1) {
+//   fill: #159e97;
+//   // fill: var(--orange);
+// }
+// #eye > g:first-of-type > path:nth-child(2) {
+//   fill: #0f9390;
+// }
+// #eye > g:last-of-type > path:nth-child(2) {
+//   fill: #231f20;
+// }
