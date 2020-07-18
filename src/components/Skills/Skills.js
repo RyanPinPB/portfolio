@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useGlobalState, useGlobalStateUpdate } from '../Context/GlobalState';
 import './Skills.scss';
 
 const Skills = (props) => {
+  const visited = useGlobalState();
+  const toggleVisited = useGlobalStateUpdate();
+
+  useEffect(() => {
+    return () => {
+      if (!visited) {
+        toggleVisited();
+      }
+    };
+  }, [visited, toggleVisited]);
   setTimeout(() => {
     document.querySelectorAll('.chart-skill').forEach((skill) => {
       skill.style.height = skill.getAttribute('data-level') + '%';

@@ -63,11 +63,8 @@ body {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--white);
-  // background-color: var(--black);
+  background-color: var(--black);
   color: var(--white);
-  // transition: background-color 1s var(----cubic);
-  transition: background-color 2s cubic-bezier(0.66, 0.01, 0.99, 0.2);
 }
 
 code {

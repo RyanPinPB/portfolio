@@ -1,9 +1,22 @@
 import React, { useEffect, Fragment } from 'react';
-import Footer from '../../containers/Footer/Footer';
+import { useGlobalState, useGlobalStateUpdate } from '../Context/GlobalState';
 import { useSpring, animated } from 'react-spring';
+
+import Footer from '../../containers/Footer/Footer';
 import './Contact.scss';
 
 const Contact = (props) => {
+  const visited = useGlobalState();
+  const toggleVisited = useGlobalStateUpdate();
+
+  useEffect(() => {
+    return () => {
+      if (!visited) {
+        toggleVisited();
+      }
+    };
+  }, [visited, toggleVisited]);
+
   useEffect(() => {
     document.body.style.overflow = 'hidden';
 

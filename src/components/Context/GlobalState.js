@@ -12,20 +12,15 @@ export function useGlobalStateUpdate() {
 }
 
 export function GlobalStateProvider({ children }) {
-  // const [darkTheme, setDarkTheme] = useState(true);
-  const [homeVisited, setHomeVisisted] = useState(false);
+  const [siteVisited, setSiteVisisted] = useState(false);
 
-  // function toggleTheme() {
-  //   setDarkTheme((prevDarkTheme) => !prevDarkTheme);
-  // }
-
-  function homeWasVisited() {
-    setHomeVisisted(true);
+  function siteWasVisited() {
+    setSiteVisisted(true);
   }
 
   return (
-    <GlobalStateContext.Provider value={homeVisited}>
-      <GlobalStateUpdateContext.Provider value={homeWasVisited}>
+    <GlobalStateContext.Provider value={siteVisited}>
+      <GlobalStateUpdateContext.Provider value={siteWasVisited}>
         {children}
       </GlobalStateUpdateContext.Provider>
     </GlobalStateContext.Provider>

@@ -1,9 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
+import { useGlobalState, useGlobalStateUpdate } from '../Context/GlobalState';
 
 import './Experience.scss';
 
 const Experience = (props) => {
+  const visited = useGlobalState();
+  const toggleVisited = useGlobalStateUpdate();
+
+  useEffect(() => {
+    return () => {
+      if (!visited) {
+        toggleVisited();
+      }
+    };
+  }, [visited, toggleVisited]);
   const [active, setActive] = useState('initial');
 
   const fadeIn = useSpring({ opacity: 1, from: { opacity: 0 } });

@@ -6,13 +6,21 @@ import { useGlobalState, useGlobalStateUpdate } from '../Context/GlobalState';
 import './Home.scss';
 
 const Home = (props) => {
+  // check to see if site has been visited (entered from different page)
   const visited = useGlobalState();
   const toggleVisited = useGlobalStateUpdate();
+  // conditionally do opener animation if visitor enters Home page
+  let fadeInDelay = 5500;
+  const openerAnimation = () => {
+    document.body.style.background = 'var(--black)';
+    document.body.style.transition =
+      'background-color 2s cubic-bezier(0.66, 0.01, 0.99, 0.2)';
+    document.body.style.background = 'var(--black)';
+  };
+  visited ? (fadeInDelay = 1000) : openerAnimation();
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
-    let fadeInDelay = 4000;
-    visited ? (fadeInDelay = 1000) : (fadeInDelay = 4000);
 
     setTimeout(() => {
       document.querySelector('.TiltButton').style.opacity = '1';
@@ -20,9 +28,11 @@ const Home = (props) => {
 
     return () => {
       document.body.style.overflow = 'auto';
-      toggleVisited();
+      if (!visited) {
+        toggleVisited();
+      }
     };
-  }, [visited, toggleVisited]);
+  }, [visited, toggleVisited, fadeInDelay]);
 
   if (visited) {
     setTimeout(() => {
@@ -81,7 +91,7 @@ const Home = (props) => {
           }}
           className='slider-item'
         >
-          am a father
+          am a husband and father
         </li>
         <li
           style={{

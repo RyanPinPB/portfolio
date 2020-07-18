@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { GlobalStateProvider } from './components/Context/GlobalState';
-import { ThemeProvider } from './components/Context/GlobalTheme';
+// import { ThemeProvider } from './components/Context/GlobalTheme';
 // import ThemeToggle from './components/Context/ThemeToggle';
 
 import './App.scss';
@@ -10,10 +10,6 @@ import Header from './containers/Header/Header';
 import Main from './containers/Main/Main';
 
 const App = (props) => {
-  useEffect(() => {
-    document.body.style.background = 'var(--black)';
-  }, []);
-
   //two functions for calculating the width (mobile,tablet,laptop or desktop)
   const getWidth = () =>
     window.innerWidth ||
@@ -63,14 +59,14 @@ const App = (props) => {
 
   return (
     <GlobalStateProvider>
-      <ThemeProvider>
-        {/* <ThemeToggle /> */}
-        <BrowserRouter>
-          {customCursor}
-          <Header width={appWidth} />
-          <Main width={appWidth} />
-        </BrowserRouter>
-      </ThemeProvider>
+      {/* <ThemeProvider> */}
+      {/* <ThemeToggle /> */}
+      <BrowserRouter>
+        {customCursor}
+        <Header width={appWidth} />
+        <Main width={appWidth} />
+      </BrowserRouter>
+      {/* </ThemeProvider> */}
     </GlobalStateProvider>
   );
 };

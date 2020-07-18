@@ -2,6 +2,10 @@ import React, { useContext } from 'react';
 import { __RouterContext } from 'react-router';
 import { Route, Switch } from 'react-router-dom';
 import { useTransition, animated } from 'react-spring';
+// import {
+//   useGlobalState,
+//   useGlobalStateUpdate,
+// } from '../../components/Context/GlobalState';
 // import { useCallback } from 'react';
 // import { useSpring, interpolate } from 'react-spring';
 // import { useTheme, useThemeUpdate } from '../../components/Context/GlobalTheme';

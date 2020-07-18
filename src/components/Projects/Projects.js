@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring';
+import { useGlobalState, useGlobalStateUpdate } from '../Context/GlobalState';
 
 import './Projects.scss';
 
 const Projects = (props) => {
+  const visited = useGlobalState();
+  const toggleVisited = useGlobalStateUpdate();
+
+  useEffect(() => {
+    return () => {
+      if (!visited) {
+        toggleVisited();
+      }
+    };
+  }, [visited, toggleVisited]);
   const fadeIn = useSpring({ opacity: 1, from: { opacity: 0 } });
 
   const slideUp = useSpring({
