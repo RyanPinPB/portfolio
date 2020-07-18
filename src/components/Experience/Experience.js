@@ -9,12 +9,11 @@ const Experience = (props) => {
   const toggleVisited = useGlobalStateUpdate();
 
   useEffect(() => {
-    return () => {
-      if (!visited) {
-        toggleVisited();
-      }
-    };
+    if (!visited) {
+      toggleVisited();
+    }
   }, [visited, toggleVisited]);
+
   const [active, setActive] = useState('initial');
 
   const fadeIn = useSpring({ opacity: 1, from: { opacity: 0 } });

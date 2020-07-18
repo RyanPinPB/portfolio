@@ -10,11 +10,9 @@ const Contact = (props) => {
   const toggleVisited = useGlobalStateUpdate();
 
   useEffect(() => {
-    return () => {
-      if (!visited) {
-        toggleVisited();
-      }
-    };
+    if (!visited) {
+      toggleVisited();
+    }
   }, [visited, toggleVisited]);
 
   useEffect(() => {

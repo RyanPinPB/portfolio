@@ -2,10 +2,7 @@ import React, { useContext } from 'react';
 import { __RouterContext } from 'react-router';
 import { Route, Switch } from 'react-router-dom';
 import { useTransition, animated } from 'react-spring';
-// import {
-//   useGlobalState,
-//   useGlobalStateUpdate,
-// } from '../../components/Context/GlobalState';
+import { useGlobalState } from '../../components/Context/GlobalState';
 // import { useCallback } from 'react';
 // import { useSpring, interpolate } from 'react-spring';
 // import { useTheme, useThemeUpdate } from '../../components/Context/GlobalTheme';
@@ -23,6 +20,7 @@ import './Main.scss';
 // An option to have a dark mode/light mode switch toggle has been commented out
 
 const Main = (props) => {
+  const visited = useGlobalState();
   //theme toggle
   // const darkTheme = useTheme();
   // const toggleTheme = useThemeUpdate();
@@ -87,7 +85,7 @@ const Main = (props) => {
   const transitions = useTransition(location, (location) => location.pathname, {
     from: {
       opacity: 0,
-      transform: 'translate3d(0,-100%,0)',
+      transform: visited ? 'translate3d(0,-100%,0)' : 'translate3d(0,0%,0)',
     },
     enter: {
       opacity: 1,

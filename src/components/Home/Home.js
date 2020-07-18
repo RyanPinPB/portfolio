@@ -9,21 +9,43 @@ const Home = (props) => {
   // check to see if site has been visited (entered from different page)
   const visited = useGlobalState();
   const toggleVisited = useGlobalStateUpdate();
-  // conditionally do opener animation if visitor enters Home page
   let fadeInDelay = 5500;
-  const openerAnimation = () => {
-    document.body.style.background = 'var(--black)';
-    document.body.style.transition =
-      'background-color 2s cubic-bezier(0.66, 0.01, 0.99, 0.2)';
-    document.body.style.background = 'var(--black)';
-  };
-  visited ? (fadeInDelay = 1000) : openerAnimation();
+
+  // conditionally change background color
+  const openAnimation = useSpring({
+    backgroundColor: 'black',
+    from: { backgroundColor: visited ? 'black' : 'white' },
+    config: { duration: 2000, delay: 0 },
+  });
+
+  if (visited) {
+    fadeInDelay = 1000;
+    setTimeout(() => {
+      const sliderItems = document.querySelectorAll('.slider-item');
+      sliderItems.forEach((item) => {
+        item.style.animationDelay = '0s';
+      });
+    }, 0);
+  }
+
+  // add animation for 'Hi, I'm Ryan and I'
+  const spanAnimation = useSpring({
+    opacity: 1,
+    transform: 'scale(1)',
+    from: {
+      opacity: visited ? 1 : 0,
+      transform: visited ? 'scale(1)' : 'scale(0)',
+    },
+    config: { duration: 1800, delay: 0 },
+  });
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
 
     setTimeout(() => {
-      document.querySelector('.TiltButton').style.opacity = '1';
+      if (document.querySelector('.TiltButton')) {
+        document.querySelector('.TiltButton').style.opacity = '1';
+      }
     }, fadeInDelay);
 
     return () => {
@@ -33,15 +55,6 @@ const Home = (props) => {
       }
     };
   }, [visited, toggleVisited, fadeInDelay]);
-
-  if (visited) {
-    setTimeout(() => {
-      const sliderItems = document.querySelectorAll('.slider-item');
-      sliderItems.forEach((item) => {
-        item.style.animationDelay = '0s';
-      });
-    }, 0);
-  }
 
   let slideDelay = 2500;
   visited ? (slideDelay = 0) : (slideDelay = 2500);
@@ -54,8 +67,10 @@ const Home = (props) => {
   });
 
   return (
-    <div className='home-container'>
-      <span className='home-text'>Hi, I'm Ryan and I</span>
+    <animated.div style={openAnimation} className='home-container'>
+      <animated.span style={spanAnimation} className='home-text'>
+        Hi, I'm Ryan and I
+      </animated.span>
       <animated.ul style={slideDown} className='slider'>
         <li
           style={{
@@ -82,7 +97,7 @@ const Home = (props) => {
           }}
           className='slider-item'
         >
-          bond users with products
+          bond users with brands
         </li>
         <li
           style={{
@@ -104,7 +119,7 @@ const Home = (props) => {
         </li>
       </animated.ul>
       <TiltButton to='/projects'>View my work</TiltButton>
-    </div>
+    </animated.div>
   );
 };
 

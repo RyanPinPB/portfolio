@@ -10,12 +10,11 @@ const Projects = (props) => {
   const toggleVisited = useGlobalStateUpdate();
 
   useEffect(() => {
-    return () => {
-      if (!visited) {
-        toggleVisited();
-      }
-    };
+    if (!visited) {
+      toggleVisited();
+    }
   }, [visited, toggleVisited]);
+
   const fadeIn = useSpring({ opacity: 1, from: { opacity: 0 } });
 
   const slideUp = useSpring({

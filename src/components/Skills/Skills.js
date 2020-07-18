@@ -7,12 +7,11 @@ const Skills = (props) => {
   const toggleVisited = useGlobalStateUpdate();
 
   useEffect(() => {
-    return () => {
-      if (!visited) {
-        toggleVisited();
-      }
-    };
+    if (!visited) {
+      toggleVisited();
+    }
   }, [visited, toggleVisited]);
+
   setTimeout(() => {
     document.querySelectorAll('.chart-skill').forEach((skill) => {
       skill.style.height = skill.getAttribute('data-level') + '%';

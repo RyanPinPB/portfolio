@@ -5,12 +5,12 @@ import { useSpring, animated } from 'react-spring';
 import './TiltButton.scss';
 
 const calc = (x, y) => [
-  -(y - window.innerHeight / 2) / 10 + 10,
+  -(y - window.innerHeight / 2) / 5 + 6,
   (x - window.innerWidth / 2) / 20,
   1.05,
 ];
 const trans = (x, y, s) =>
-  `perspective(600px) rotateX(${x * 2}deg) rotateY(${y}deg) scale(${s})`;
+  `perspective(600px) rotateX(${x * 3}deg) rotateY(${y}deg) scale(${s})`;
 
 const TiltButton = (props) => {
   const [tilt, set] = useSpring(() => ({

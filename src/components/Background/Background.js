@@ -12,11 +12,9 @@ const Background = (props) => {
   const toggleVisited = useGlobalStateUpdate();
 
   useEffect(() => {
-    return () => {
-      if (!visited) {
-        toggleVisited();
-      }
-    };
+    if (!visited) {
+      toggleVisited();
+    }
   }, [visited, toggleVisited]);
 
   const [shortVersion, setShortVersion] = useState(true);
@@ -28,7 +26,7 @@ const Background = (props) => {
   const shortStoryAnimation = useSpring({
     opacity: shortVersion ? 1 : 0,
     transform: shortVersion ? `translateY(0%)` : `translateY(-100%)`,
-    config: { duration: 500, delay: 500 },
+    config: { duration: 500 },
   });
   const longStoryAnimation = useSpring({
     transform: !shortVersion ? `translateY(0%)` : `translateY(-100%)`,
