@@ -40,17 +40,30 @@
   margin: auto;
   text-align: center;
   line-height: 1.2;
-  background: var(--white);
-  background: -webkit-linear-gradient(
-    right,
-    var(--red),
-    var(--orange),
-    var(--gold)
-  );
-  background-clip: border-box;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--orange);
+  // background-color: var(--orange);
+
+  // background-image: linear-gradient(
+  //   to right,
+  //   var(--gold) var(--orange),
+  //   var(--red)
+  // );
+
+  // background-image: -webkit-linear-gradient(
+  //   to right,
+  //   var(--gold) var(--orange),
+  //   var(--red)
+  // );
+
+  // background-size: 100%;
+  // background-repeat: repeat;
+
+  // // background-clip: text;
+  // -webkit-background-clip: text;
+  // -moz-background-clip: text;
+
+  // -webkit-text-fill-color: transparent;
+  // -moz-text-fill-color: transparent;
 }
 
 @media (max-width: 400px) and (min-height: 800px) {
