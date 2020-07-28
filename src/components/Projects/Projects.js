@@ -70,6 +70,7 @@ const Projects = (props) => {
               <li>HTML</li>
               <li>CSS</li>
               <li>SEO</li>
+              <li>Wordpress</li>
               <li>Blogging</li>
               <li>Mailchimp</li>
               <li>Content</li>
