@@ -65,13 +65,19 @@ const Skills = (props) => {
 
       <div className='otherSkills'>
         <ul>
+          <li>Chakra UI</li>
+          <li>Framer Motion</li>
           <li>Webpack</li>
           <li>jQuery</li>
           <li>Firebase</li>
-          <li>Styled Components</li>
+          <li>Gatsby</li>
           <li>Redux</li>
+          <li>Styled Components</li>
+          <li>Material UI</li>
+          <li>Emotion</li>
           <li>React-Spring</li>
           <li>Bootstrap</li>
+          <li>Smooth Scrollbar</li>
           <li>Node</li>
           <li>SQL</li>
           <li>Mocha</li>
@@ -86,6 +92,7 @@ const Skills = (props) => {
           <li>Photoshop</li>
           <li>Command Line</li>
           <li>Advanced Custom Fields</li>
+          <li>Local by Flywheel</li>
           <li>Squarespace</li>
           <li>Mailchimp</li>
           <li>Account Management</li>

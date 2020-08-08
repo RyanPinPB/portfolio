@@ -66,12 +66,6 @@
   // -moz-text-fill-color: transparent;
 }
 
-@media (max-width: 400px) and (min-height: 800px) {
-  .slider {
-    height: calc(50vh + 100px);
-  }
-}
-
 @media (min-width: 400px) {
   .home-text,
   .slider-item {
@@ -86,5 +80,21 @@
   .home-text,
   .slider-item {
     font-size: 6rem;
+  }
+}
+
+@media (max-width: 400px) and (min-height: 800px) {
+  .slider {
+    height: calc(50vh + 100px);
+  }
+}
+
+@media (max-height: 550px) {
+  .home-container {
+    padding-top: 80px;
+  }
+  .home-text,
+  .slider-item {
+    font-size: 3rem;
   }
 }

@@ -21,7 +21,7 @@ const Experience = (props) => {
   const slideUp = useSpring({
     opacity: 1,
     transform: 'translateY(0)',
-    from: { opacity: 0, transform: 'translateY(100px)' },
+    from: { opacity: 0, transform: 'translateY(-50px)' },
   });
 
   const oneClick = () => {

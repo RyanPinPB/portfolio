@@ -12,7 +12,7 @@ const Header = (props) => {
     opacity: 1,
     transform: 'translate3d(0,0,0)',
     from: { opacity: 0, transform: 'translate3d(0,-200%,0)' },
-    delay: 500,
+    delay: 1000,
   });
 
   const menuClickHandler = () => {

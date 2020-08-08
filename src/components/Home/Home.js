@@ -10,7 +10,7 @@ const Home = (props) => {
   const visited = useGlobalState();
   const toggleVisited = useGlobalStateUpdate();
   // let fadeInDelay = 5500;
-  let fadeInDelay = 1000;
+  let fadeInDelay = 1750;
 
   // conditionally change background color
   const openAnimation = useSpring({
@@ -30,14 +30,24 @@ const Home = (props) => {
   }
 
   // add animation for 'Hi, I'm Ryan and I'
+  // const spanAnimation = useSpring({
+  // opacity: 1,
+  // transform: 'scale(1)',
+  // from: {
+  //   opacity: visited ? 1 : 0,
+  //   transform: visited ? 'scale(1)' : 'scale(0)',
+  // },
+  // config: { duration: 1800, delay: 0 },
+  // });
+
+  // add animation for 'Hi, I'm Ryan and I'
   const spanAnimation = useSpring({
-    // opacity: 1,
-    // transform: 'scale(1)',
-    // from: {
-    //   opacity: visited ? 1 : 0,
-    //   transform: visited ? 'scale(1)' : 'scale(0)',
-    // },
-    // config: { duration: 1800, delay: 0 },
+    transform: 'translateY(0)',
+    opacity: 1,
+    from: {
+      transform: visited ? 'translateY(0)' : 'translateY(-300px)',
+      opacity: visited ? 1 : 0,
+    },
   });
 
   useEffect(() => {
@@ -58,8 +68,8 @@ const Home = (props) => {
   }, [visited, toggleVisited, fadeInDelay]);
 
   let slideDelay = 2500;
-  // visited ? (slideDelay = 0) : (slideDelay = 2500);
-  visited ? (slideDelay = 0) : (slideDelay = 0);
+  // visited ? (slideDelay = 0) : (slideDelay = 2500); old animation
+  visited ? (slideDelay = 0) : (slideDelay = 750);
 
   let slideDown = useSpring({
     opacity: 1,
@@ -77,7 +87,7 @@ const Home = (props) => {
         <li
           style={{
             animation: 'cycle 15s linear infinite',
-            // animationDelay: '2s',
+            animationDelay: '.75s',
           }}
           className='slider-item'
         >
@@ -86,7 +96,7 @@ const Home = (props) => {
         <li
           style={{
             animation: 'cycle2 15s linear infinite',
-            // animationDelay: '2s',
+            animationDelay: '.75s',
           }}
           className='slider-item'
         >
@@ -95,7 +105,7 @@ const Home = (props) => {
         <li
           style={{
             animation: 'cycle3 15s linear infinite',
-            // animationDelay: '2s',
+            animationDelay: '.75s',
           }}
           className='slider-item'
         >
@@ -104,7 +114,7 @@ const Home = (props) => {
         <li
           style={{
             animation: 'cycle4 15s linear infinite',
-            // animationDelay: '2s',
+            animationDelay: '.75s',
           }}
           className='slider-item'
         >
@@ -113,7 +123,7 @@ const Home = (props) => {
         <li
           style={{
             animation: 'cycle5 15s linear infinite',
-            // animationDelay: '2s',
+            animationDelay: '.75s',
           }}
           className='slider-item'
         >

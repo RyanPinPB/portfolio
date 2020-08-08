@@ -37,3 +37,9 @@
     font-size: 3rem;
   }
 }
+
+@media (max-height: 550px) {
+  .TiltButton {
+    font-size: 2rem;
+  }
+}
