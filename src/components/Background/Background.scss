@@ -147,9 +147,10 @@
     width: 50px;
   }
 
-  .resume img {
+  .resume-pdf {
     width: 50px;
     margin: auto;
+    fill: url(#resume-gradient);
   }
 
   .resume a:hover {
