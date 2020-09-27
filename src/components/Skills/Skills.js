@@ -67,19 +67,24 @@ const Skills = (props) => {
         <ul>
           <li>Chakra UI</li>
           <li>Framer Motion</li>
+          <li>Gatsby</li>
+          <li>Material UI</li>
+          <li>Styled Components</li>
+          <li>Bootstrap</li>
           <li>Webpack</li>
           <li>jQuery</li>
-          <li>Firebase</li>
-          <li>Gatsby</li>
-          <li>Redux</li>
-          <li>Styled Components</li>
-          <li>Material UI</li>
           <li>Emotion</li>
           <li>React-Spring</li>
-          <li>Bootstrap</li>
+          <li>Redux</li>
+          <li>Formik</li>
+          <li>Yup</li>
           <li>Smooth Scrollbar</li>
           <li>Node</li>
+          <li>Python</li>
+          <li>Flask</li>
+          <li>Firebase</li>
           <li>SQL</li>
+          <li>C#</li>
           <li>Mocha</li>
           <li>Chai</li>
           <li>Phantom</li>
@@ -90,7 +95,7 @@ const Skills = (props) => {
           <li>myPHPAdmin</li>
           <li>Xd</li>
           <li>Photoshop</li>
-          <li>Command Line</li>
+          <li>Lightroom</li>
           <li>Advanced Custom Fields</li>
           <li>Local by Flywheel</li>
           <li>Squarespace</li>
