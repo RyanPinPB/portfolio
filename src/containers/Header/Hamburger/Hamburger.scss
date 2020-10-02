@@ -57,13 +57,13 @@
   letter-spacing: 0.1em;
 }
 
-.menu-icon:hover .hamburger-text {
-  color: var(--orange);
-}
+// .menu-icon:hover .hamburger-text {
+//   color: var(--orange);
+// }
 
-.menu-icon:hover .hamburger,
-.menu-icon:hover .hamburger:before,
-.menu-icon:hover .hamburger:after {
+.menu-icon.menu-open .hamburger,
+.menu-icon.menu-open .hamburger:before,
+.menu-icon.menu-open .hamburger:after {
   background: var(--orange);
 }
 
