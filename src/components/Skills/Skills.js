@@ -82,8 +82,11 @@ const Skills = (props) => {
           <li>Node</li>
           <li>Python</li>
           <li>Flask</li>
-          <li>Firebase</li>
+          <li>Django</li>
+          <li>PostgreSQL</li>
+          <li>SQLAlchemy</li>
           <li>SQL</li>
+          <li>Firebase</li>
           <li>C#</li>
           <li>Mocha</li>
           <li>Chai</li>

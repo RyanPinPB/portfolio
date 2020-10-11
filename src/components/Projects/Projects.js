@@ -178,6 +178,37 @@ const Projects = (props) => {
           <div className='browser-button-close'></div>
           <div className='browser-button-minimize'></div>
           <div className='browser-button-expand'></div>
+          <div className='windowTitle'>Chiggy Bank</div>
+        </animated.div>
+        <animated.div style={fadeIn} className='preview chiggybank'>
+          <div className='projectContent chiggyContent'>
+            <ul className='projectSkills'>
+              <li>Python</li>
+              <li>Flask</li>
+              <li>Postgres</li>
+              <li>SQLAlchemy</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+              <li>User Authentication</li>
+              <li>Session</li>
+            </ul>
+            <a
+              className='viewProject'
+              href='https://chiggybank.herokuapp.com/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              View Project
+            </a>
+          </div>
+        </animated.div>
+      </div>
+
+      <div className='projectContainer'>
+        <animated.div style={slideUp} className='windowHeader'>
+          <div className='browser-button-close'></div>
+          <div className='browser-button-minimize'></div>
+          <div className='browser-button-expand'></div>
           <div className='windowTitle'>Login/Signup db Auth</div>
         </animated.div>
         <animated.div style={fadeIn} className='preview burger'>
