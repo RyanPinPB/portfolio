@@ -241,7 +241,7 @@ const Projects = (props) => {
           <div className='browser-button-close'></div>
           <div className='browser-button-minimize'></div>
           <div className='browser-button-expand'></div>
-          <div className='windowTitle'>Jamming</div>
+          <div className='windowTitle'>Jammming</div>
         </animated.div>
         <animated.div style={fadeIn} className='preview jamming'>
           <div className='projectContent jammingContent'>

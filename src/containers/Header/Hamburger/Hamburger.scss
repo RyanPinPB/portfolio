@@ -10,25 +10,26 @@
 
 .hamburger {
   position: absolute;
-  background: var(--white);
+  background-color: var(--white);
   top: 50%;
   left: 50%;
   width: 50px;
   height: 4px;
   transform: translate(-50%, -50%);
   box-shadow: 0px 2px 5px var(--black-twenty);
-  transition: 0.8s;
+  transition: 0.8s, background-color 0.3s ease-in-out 0.7s;
 }
 
 .hamburger:before,
 .hamburger:after {
   content: '';
   position: absolute;
-  background: var(--white);
+  background-color: var(--white);
   width: 50px;
   height: 4px;
   box-shadow: 0px 2px 5px var(--black-twenty);
-  transition: 0.8s, transform 1s cubic-bezier(0.51, -0.91, 0.24, 1.16);
+  transition: 0.8s, background-color 0.3s ease-in-out 0.7s,
+    transform 1s cubic-bezier(0.51, -0.91, 0.24, 1.16);
   z-index: 8;
 }
 
@@ -64,20 +65,27 @@
 .menu-icon.menu-open .hamburger,
 .menu-icon.menu-open .hamburger:before,
 .menu-icon.menu-open .hamburger:after {
-  background: var(--orange);
+  background-color: var(--orange);
+  transition: 0.8s, background-color 0s ease-in-out 0s,
+    transform 1s cubic-bezier(0.51, -0.91, 0.24, 1.16);
 }
 
 .menu-icon.menu-open .hamburger {
-  background: var(--black-zero);
+  background-color: var(--black-zero);
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0);
+  transition: 0.8s, background-color 0s ease-in-out 0s;
 }
 
 .menu-icon.menu-open .hamburger:before {
   transform: rotate(405deg);
   top: 0;
+  transition: 0.8s, background-color 0s ease-in-out 0s,
+    transform 1s cubic-bezier(0.51, -0.91, 0.24, 1.16);
 }
 
 .menu-icon.menu-open .hamburger:after {
   transform: rotate(-405deg);
   top: 0;
+  transition: 0.8s, background-color 0s ease-in-out 0s,
+    transform 1s cubic-bezier(0.51, -0.91, 0.24, 1.16);
 }
