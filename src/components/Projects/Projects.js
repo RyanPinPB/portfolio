@@ -30,6 +30,38 @@ const Projects = (props) => {
           <div className='browser-button-close'></div>
           <div className='browser-button-minimize'></div>
           <div className='browser-button-expand'></div>
+          <div className='windowTitle'>Pearson Digital Marketing</div>
+        </animated.div>
+        <animated.div style={fadeIn} className='preview pdm'>
+          <div className='projectContent pdmContent'>
+            <ul className='projectSkills'>
+              <li>Headless Wordpress</li>
+              <li>React</li>
+              <li>Gatsby</li>
+              <li>GraphQL</li>
+              <li>Chakra UI</li>
+              <li>Framer Motion</li>
+              <li>SCSS</li>
+              <li>Javascript</li>
+              <li>Netlify</li>
+            </ul>
+            <a
+              className='viewProject'
+              href='https://pearsondigitalmarketing.com'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              View Project
+            </a>
+          </div>
+        </animated.div>
+      </div>
+
+      <div className='projectContainer'>
+        <animated.div style={slideUp} className='windowHeader'>
+          <div className='browser-button-close'></div>
+          <div className='browser-button-minimize'></div>
+          <div className='browser-button-expand'></div>
           <div className='windowTitle'>Pacific Beach Homes</div>
         </animated.div>
         <animated.div style={fadeIn} className='preview pbhomes'>
