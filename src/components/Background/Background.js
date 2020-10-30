@@ -58,7 +58,7 @@ const Background = (props) => {
       <p>
         Found myself tinkering on sites and{' '}
         <strong>fell in love with front-end web development</strong>, mostly
-        HTML, CSS and Javascript.
+        with Javascript and React.
       </p>
       <p>
         My favorite resources for learning outside of google and stack overflow:
