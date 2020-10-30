@@ -25,7 +25,7 @@ const Projects = (props) => {
 
   return (
     <section id='projects-content'>
-      <div className='projectContainer'>
+      {/* <div className='projectContainer'>
         <animated.div style={slideUp} className='windowHeader'>
           <div className='browser-button-close'></div>
           <div className='browser-button-minimize'></div>
@@ -55,7 +55,7 @@ const Projects = (props) => {
             </a>
           </div>
         </animated.div>
-      </div>
+      </div> */}
 
       <div className='projectContainer'>
         <animated.div style={slideUp} className='windowHeader'>

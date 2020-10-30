@@ -61,7 +61,16 @@ const Background = (props) => {
         HTML, CSS and Javascript.
       </p>
       <p>
-        Constantly learning new skills from
+        My favorite resources for learning outside of google and stack overflow:
+        <a
+          href='https://cs50.harvard.edu/web/2020/'
+          rel='noopener noreferrer'
+          target='_blank'
+        >
+          {' '}
+          Harvard CS
+        </a>
+        ,
         <a
           href='https://www.codecademy.com/'
           rel='noopener noreferrer'
@@ -81,6 +90,15 @@ const Background = (props) => {
         </a>
         ,
         <a
+          href='https://www.youtube.com/'
+          rel='noopener noreferrer'
+          target='_blank'
+        >
+          {' '}
+          YouTube
+        </a>
+        ,
+        <a
           href='https://www.teamtreehouse.com/'
           rel='noopener noreferrer'
           target='_blank'
@@ -88,8 +106,7 @@ const Background = (props) => {
           {' '}
           TeamTreehouse
         </a>{' '}
-        and other resources to learn as many useful languages and tools as time
-        permits.
+        .
       </p>
       <p>Living in Pacific Beach, San Diego and looking for work.</p>
     </Fragment>
@@ -145,8 +162,18 @@ const Background = (props) => {
         interested in learning about SEO, PPC, social media and web development.
       </p>
       <p>
-        I thoroughly enjoy web development, and I'm continuously taking classes
-        from
+        I thoroughly enjoy web development and enjoy keeping up with the latest
+        languages, frameworks and libraries. My favorite resources for learning
+        outside of google and stack overflow:
+        <a
+          href='https://cs50.harvard.edu/web/2020/'
+          rel='noopener noreferrer'
+          target='_blank'
+        >
+          {' '}
+          Harvard CS
+        </a>
+        ,
         <a
           href='https://www.codecademy.com/'
           rel='noopener noreferrer'
@@ -166,15 +193,23 @@ const Background = (props) => {
         </a>
         ,
         <a
+          href='https://www.youtube.com/'
+          rel='noopener noreferrer'
+          target='_blank'
+        >
+          {' '}
+          YouTube
+        </a>
+        ,
+        <a
           href='https://www.teamtreehouse.com/'
           rel='noopener noreferrer'
           target='_blank'
         >
           {' '}
-          TeamTreehouse{' '}
-        </a>
-        and other resources to learn as many useful languages and tools as time
-        permits. I am a life-long learner who's{' '}
+          TeamTreehouse
+        </a>{' '}
+        . I am a life-long learner who's{' '}
         <strong>
           always interested in expanding my knowledge and taking on projects.
         </strong>
