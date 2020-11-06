@@ -287,7 +287,7 @@ const Projects = (props) => {
             </ul>
             <a
               className='viewProject'
-              href='https://zen-heisenberg-861338.netlify.app/'
+              href='https://jammmming.netlify.app/'
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -316,7 +316,7 @@ const Projects = (props) => {
             </ul>
             <a
               className='viewProject'
-              href='https://jolly-gates-109dc9.netlify.app/'
+              href='https://ravenoussearch.netlify.app/'
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -344,7 +344,7 @@ const Projects = (props) => {
             </ul>
             <a
               className='viewProject'
-              href='https://unruffled-hoover-91181f.netlify.app/'
+              href='https://audiodb.netlify.app/'
               target='_blank'
               rel='noopener noreferrer'
             >
