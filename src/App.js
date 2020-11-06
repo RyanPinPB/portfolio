@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, useLocation, withRouter } from 'react-router-dom';
 import { GlobalStateProvider } from './components/Context/GlobalState';
 // import { ThemeProvider } from './components/Context/GlobalTheme';
 // import ThemeToggle from './components/Context/ThemeToggle';
@@ -8,6 +8,16 @@ import './App.scss';
 import './Animations/Animations.scss';
 import Header from './containers/Header/Header';
 import Main from './containers/Main/Main';
+
+function _ScrollToTop(props) {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return props.children;
+}
+
+const ScrollToTop = withRouter(_ScrollToTop);
 
 const App = (props) => {
   //two functions for calculating the width (mobile,tablet,laptop or desktop)
@@ -62,9 +72,11 @@ const App = (props) => {
       {/* <ThemeProvider> */}
       {/* <ThemeToggle /> */}
       <BrowserRouter>
-        {customCursor}
-        <Header width={appWidth} />
-        <Main width={appWidth} />
+        <ScrollToTop>
+          {customCursor}
+          <Header width={appWidth} />
+          <Main width={appWidth} />
+        </ScrollToTop>
       </BrowserRouter>
       {/* </ThemeProvider> */}
     </GlobalStateProvider>
