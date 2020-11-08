@@ -58,7 +58,7 @@ const Background = (props) => {
       <p>
         Found myself tinkering on sites and{' '}
         <strong>fell in love with front-end web development</strong>, mostly
-        with Javascript and React.
+        with HTML, CSS, Javascript and most recently React.
       </p>
       <p>
         My favorite resources for learning outside of google and stack overflow:
@@ -163,8 +163,9 @@ const Background = (props) => {
       </p>
       <p>
         I thoroughly enjoy web development and enjoy keeping up with the latest
-        languages, frameworks and libraries. My favorite resources for learning
-        outside of google and stack overflow:
+        languages, frameworks and libraries. My concentration is on the
+        front-end web development, mostly with React. My favorite resources for
+        learning outside of google and stack overflow:
         <a
           href='https://cs50.harvard.edu/web/2020/'
           rel='noopener noreferrer'
