@@ -35,15 +35,16 @@ const Projects = (props) => {
         <animated.div style={fadeIn} className='preview pdm'>
           <div className='projectContent pdmContent'>
             <ul className='projectSkills'>
-              <li>Headless Wordpress</li>
               <li>React</li>
               <li>Gatsby</li>
+              <li>Headless Wordpress</li>
               <li>GraphQL</li>
               <li>Chakra UI</li>
               <li>Framer Motion</li>
               <li>SCSS</li>
               <li>Javascript</li>
               <li>Netlify</li>
+              <li>GIT</li>
             </ul>
             <a
               className='viewProject'
@@ -71,11 +72,12 @@ const Projects = (props) => {
               <li>SCSS</li>
               <li>Javascript</li>
               <li>PHP</li>
-              <li>GIT</li>
               <li>Wordpress</li>
               <li>Advanced Custom Fields</li>
               <li>Webpack</li>
               <li>Content</li>
+              <li>SEO</li>
+              <li>GIT</li>
             </ul>
             <a
               className='viewProject'
@@ -217,7 +219,7 @@ const Projects = (props) => {
             <ul className='projectSkills'>
               <li>Python</li>
               <li>Flask</li>
-              <li>Postgres</li>
+              <li>PostgreSQL</li>
               <li>SQLAlchemy</li>
               <li>CSS</li>
               <li>Javascript</li>
@@ -273,35 +275,6 @@ const Projects = (props) => {
           <div className='browser-button-close'></div>
           <div className='browser-button-minimize'></div>
           <div className='browser-button-expand'></div>
-          <div className='windowTitle'>Jammming</div>
-        </animated.div>
-        <animated.div style={fadeIn} className='preview jamming'>
-          <div className='projectContent jammingContent'>
-            <ul className='projectSkills'>
-              <li>React</li>
-              <li>JSX</li>
-              <li>CSS</li>
-              <li>Javascript</li>
-              <li>Spotify API</li>
-              <li>JSON</li>
-            </ul>
-            <a
-              className='viewProject'
-              href='https://jammmming.netlify.app/'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              View Project
-            </a>
-          </div>
-        </animated.div>
-      </div>
-
-      <div className='projectContainer'>
-        <animated.div style={slideUp} className='windowHeader'>
-          <div className='browser-button-close'></div>
-          <div className='browser-button-minimize'></div>
-          <div className='browser-button-expand'></div>
           <div className='windowTitle'>Ravenous</div>
         </animated.div>
         <animated.div style={fadeIn} className='preview ravenous'>
@@ -317,6 +290,35 @@ const Projects = (props) => {
             <a
               className='viewProject'
               href='https://ravenoussearch.netlify.app/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              View Project
+            </a>
+          </div>
+        </animated.div>
+      </div>
+
+      <div className='projectContainer'>
+        <animated.div style={slideUp} className='windowHeader'>
+          <div className='browser-button-close'></div>
+          <div className='browser-button-minimize'></div>
+          <div className='browser-button-expand'></div>
+          <div className='windowTitle'>Jammming</div>
+        </animated.div>
+        <animated.div style={fadeIn} className='preview jamming'>
+          <div className='projectContent jammingContent'>
+            <ul className='projectSkills'>
+              <li>React</li>
+              <li>JSX</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+              <li>Spotify API</li>
+              <li>JSON</li>
+            </ul>
+            <a
+              className='viewProject'
+              href='https://jammmming.netlify.app/'
               target='_blank'
               rel='noopener noreferrer'
             >
