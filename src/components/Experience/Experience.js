@@ -40,6 +40,10 @@ const Experience = (props) => {
     setActive('four');
   };
 
+  const fiveClick = () => {
+    setActive('five');
+  };
+
   const closeJob = () => {
     setActive('all');
   };
@@ -49,6 +53,53 @@ const Experience = (props) => {
   if (active === 'initial') {
     job = (
       <div className='jobsContainer'>
+        <div className='job five'>
+          <animated.div style={slideUp} className='windowHeader appear'>
+            <button className='browser-button-close'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='6px'
+                height='6px'
+                fill='rgba(0,0,0,0)'
+                viewBox='0 0 24 24'
+              >
+                <path d='M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z' />
+              </svg>
+            </button>
+            <button className='browser-button-minimize'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='6px'
+                height='6px'
+                fill='rgba(0,0,0,0)'
+                viewBox='0 0 24 24'
+              >
+                <path d='M0 10h24v4h-24z' />
+              </svg>
+            </button>
+            <button className='browser-button-expand' onClick={fiveClick}>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='6px'
+                height='6px'
+                fill='rgba(0,0,0,0)'
+                viewBox='0 0 24 24'
+              >
+                <path d='M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z' />
+              </svg>
+            </button>
+            <div className='windowTitle'>Ascent Funding</div>
+          </animated.div>
+          <animated.div
+            style={fadeIn}
+            className='preview ascent fade-in'
+            onClick={fiveClick}
+          ></animated.div>
+          {/* <div
+            className='preview ascent fade-in appear'
+            onClick={fiveClick}
+          ></div> */}
+        </div>
         <div className='job one'>
           <animated.div style={slideUp} className='windowHeader'>
             <button className='browser-button-close'>
@@ -534,9 +585,123 @@ const Experience = (props) => {
         </div>
       </div>
     );
+  } else if (active === 'five') {
+    job = (
+      <div className='jobContainer'>
+        <div className='job five'>
+          <animated.div style={slideUp} className='windowHeader appear'>
+            <button className='browser-button-close' onClick={closeJob}>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='6px'
+                height='6px'
+                fill='rgba(0,0,0,0)'
+                viewBox='0 0 24 24'
+              >
+                <path d='M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z' />
+              </svg>
+            </button>
+            <button className='browser-button-minimize' onClick={closeJob}>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='6px'
+                height='6px'
+                fill='rgba(0,0,0,0)'
+                viewBox='0 0 24 24'
+              >
+                <path d='M0 10h24v4h-24z' />
+              </svg>
+            </button>
+            <button className='browser-button-expand' onClick={closeJob}>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='6px'
+                height='6px'
+                fill='rgba(0,0,0,0)'
+                viewBox='0 0 24 24'
+              >
+                <path d='M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z' />
+              </svg>
+            </button>
+            <div className='windowTitle'>Ascent Funding</div>
+          </animated.div>
+          <div
+            className='preview ascent fade-in appear'
+            onClick={closeJob}
+          ></div>
+        </div>
+        <div id='fourContent' className='jobContent' onClick={closeJob}>
+          <h3 className='title'>UX Front End Developer</h3>
+          <div className='jobData'>
+            <span className='dates'>2021 – now</span>
+            <a
+              href='https://www.ascentfunding.com/'
+              rel='noopener noreferrer'
+              target='_blank'
+            >
+              <span className='employer'>Ascent Funding</span>
+            </a>
+            <span className='location'>San Diego, CA</span>
+          </div>
+          <div className='jobSummary'>
+            "Optimize User Experience for company growth"
+          </div>
+          <ul className='tasks'>
+            <li>Wordpress website development.</li>
+            <li>
+              Work hand in hand with marketing team to deploy ideas to the site.
+            </li>
+            <li>Optimize speed, accessiblity and user experience.</li>
+          </ul>
+        </div>
+      </div>
+    );
   } else if (active === 'all') {
     job = (
       <div className='jobsContainer'>
+        <div className='job five'>
+          <animated.div style={slideUp} className='windowHeader appear'>
+            <button className='browser-button-close'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='6px'
+                height='6px'
+                fill='rgba(0,0,0,0)'
+                viewBox='0 0 24 24'
+              >
+                <path d='M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z' />
+              </svg>
+            </button>
+            <button className='browser-button-minimize'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='6px'
+                height='6px'
+                fill='rgba(0,0,0,0)'
+                viewBox='0 0 24 24'
+              >
+                <path d='M0 10h24v4h-24z' />
+              </svg>
+            </button>
+            <button className='browser-button-expand' onClick={fiveClick}>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='6px'
+                height='6px'
+                fill='rgba(0,0,0,0)'
+                viewBox='0 0 24 24'
+              >
+                <path d='M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z' />
+              </svg>
+            </button>
+            <div className='windowTitle'>Ascent Funding</div>
+          </animated.div>
+          <div
+            className='preview ascent fade-in appear'
+            onClick={fiveClick}
+          ></div>
+        </div>
+
         <div className='job one'>
           <animated.div style={slideUp} className='windowHeader appear'>
             <button className='browser-button-close'>

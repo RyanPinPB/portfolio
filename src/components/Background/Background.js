@@ -108,7 +108,12 @@ const Background = (props) => {
         </a>{' '}
         .
       </p>
-      <p>Living in Pacific Beach, San Diego and looking for work.</p>
+      <p>
+        Living and working in San Diego with my wife and son.{' '}
+        <span role='img' aria-label='Smiley face with sun glasses emoji'>
+          😎
+        </span>
+      </p>
     </Fragment>
   );
 
@@ -163,9 +168,9 @@ const Background = (props) => {
       </p>
       <p>
         I thoroughly enjoy web development and enjoy keeping up with the latest
-        languages, frameworks and libraries. My concentration is on the
-        front-end web development, mostly with React. My favorite resources for
-        learning outside of google and stack overflow:
+        languages, frameworks and libraries. My concentration is on front-end
+        web development, mostly with React. My favorite resources for learning
+        outside of google and stack overflow:
         <a
           href='https://cs50.harvard.edu/web/2020/'
           rel='noopener noreferrer'
@@ -215,13 +220,18 @@ const Background = (props) => {
           always interested in expanding my knowledge and taking on projects.
         </strong>
       </p>
-      <p>I live in Pacific Beach, San Diego and am looking for work.</p>
+      <p>
+        I live and work in San Diego and enjoy spending time with my wife
+        Samantha and son Jack (born June 2020). When we have free time, we like
+        to do beach yoga, bike, play tennis, volleyball, grab bites to eat,
+        binge shows and get up to the mountains to play in the snow.
+      </p>
     </Fragment>
   );
 
   let storyLength = 'short story';
 
-  shortVersion ? (storyLength = 'short story') : (storyLength = 'long story');
+  shortVersion ? (storyLength = 'long story') : (storyLength = 'short story');
 
   return (
     <section id='bg-content'>

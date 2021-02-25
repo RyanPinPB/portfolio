@@ -81,7 +81,8 @@ $grey-fifty: rgba(200, 200, 200, 0.5);
 .one,
 .two,
 .three,
-.four {
+.four,
+.five {
   transition: 1s;
 }
 
@@ -143,19 +144,23 @@ $grey-fifty: rgba(200, 200, 200, 0.5);
 }
 
 .point {
-  background-image: url('../../assets/images/experience/1p21.png');
+  background-image: url('../../assets/images/experience/1p21.jpg');
 }
 
 .ljagent {
-  background-image: url('../../assets/images/experience/ljagent.png');
+  background-image: url('../../assets/images/experience/ljagent.jpg');
 }
 
 .nfunding {
-  background-image: url('../../assets/images/experience/nationalfunding.png');
+  background-image: url('../../assets/images/experience/nationalfunding.jpg');
 }
 
 .heller {
-  background-image: url('../../assets/images/experience/heller.png');
+  background-image: url('../../assets/images/experience/heller.jpg');
+}
+
+.ascent {
+  background-image: url('../../assets/images/experience/newascent.jpg');
 }
 
 @media (min-width: 500px) {
